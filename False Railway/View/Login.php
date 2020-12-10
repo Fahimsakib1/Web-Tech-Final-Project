@@ -10,6 +10,7 @@
 		</style>
 
 		<link rel="stylesheet" href="../asset/css/style.css">
+		<link rel="stylesheet" href="../asset/css1/style1.css">
 
 		
 	</head>
@@ -27,7 +28,7 @@
 
 
 
-    <div style="width:fit-content; margin-left:auto; margin-right:auto; text-align: left;">
+    <div  style="width:fit-content; margin-left:auto; margin-right:auto; text-align: left;">
 			<table style="width: auto; border: 2px solid #000; border-collapse: collapse;">
 				<tr>
 					<td style="border: 2px solid #000; border-collapse: collapse;">
@@ -49,7 +50,7 @@
 								<span class="error">* <?php echo $pwdErr;?></span>
 								<br><br>
 
-								<input class = " mainDivFormButton" type="submit" name="submit1" value="Submit" action = "Dashboard.php">
+								<input class = " mainDivFormButton" type="submit" name="submit1" value="Login" action = "Dashboard.php">
 								&nbsp
 
 								</a>

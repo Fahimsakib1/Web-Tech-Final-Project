@@ -56,7 +56,7 @@
 
 							<h2 style="color:green; font-size:25px; text-align: center; font-weight: bold">Sign Up Form</h2>
 
-							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+							<form method="post" action="../Model/DataBaseForSignUp.php"> 
 
 							 
 								Name: <input type="text" name="name">

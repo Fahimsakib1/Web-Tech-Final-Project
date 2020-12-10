@@ -2,7 +2,12 @@
 <html>
 	<head>
 		<title>Dashboard</title>
+
+		<link rel="stylesheet" href="../asset/css/style.css">
+		
 	</head>
+
+
 	<body>
 		<div style="max-width: fit-content; margin-left: auto; margin-right:auto">
 			<table style="width: fit-content; border: 2px solid #000; border-collapse: collapse;">

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<body>
 		<table width="1000px" align="center">
 			<tr>
@@ -10,16 +11,24 @@
 					<img width="350" height="200" src="\WEB TECH CODES PHP\MID TERM\Railway\View\Rail Logo.jpg" alt="Logo of Railway Management">
 
 				</td>
+
+
 				
 				<td align="left">
 
-					<!-- <a href="Dashboard.php"> Home </a>
-					&nbsp | &nbsp -->
-					<a href="Login.php"> Login </a>
-					&nbsp | &nbsp
-					<!-- <a href="Registration.php"> Sign Up </a> -->
+					
+					<!-- <a href="Login.php"> Login </a> -->
 
-					<a href="Registration.php"> Sign Up </a>
+					<!-- <a href="Registration.php"> Sign Up </a>  -->
+
+                    <button style="color:blue; font-size:18px; font-weight: bold" type="button" onClick="document.location.href='Login.php'">Login</button>
+
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+					<button style="color:green; font-size:18px; font-weight: bold" type="button" onClick="document.location.href='Registration.php'">Sign Up</button>
+
+
+
 					
 				</td>
 			</tr>
