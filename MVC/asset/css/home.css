@@ -41,6 +41,9 @@
     border-radius: 5px;
     margin-top: 30px;
 }
+.homeMainDivCardLogout:hover{
+    background-color: #B03A2E;
+}
 .mainDiv2{
     display: flex;
     padding-top: 70px;

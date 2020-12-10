@@ -14,6 +14,9 @@
     padding: 10px 22px;
     text-decoration: none;
 }
+.salaryMainDivFormButton:hover{
+    background-color: #239B56 ;
+}
 .MainDivTable{
     color: white;
     font-size: 20px;
