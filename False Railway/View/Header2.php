@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<head>
+
+ <link rel="stylesheet" href="../asset/css/style.css">
+
+</head>
 	<body>
 		<table width="1000px" align="center">
 			<tr>
