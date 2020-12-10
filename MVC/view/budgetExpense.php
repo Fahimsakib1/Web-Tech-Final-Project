@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../asset/css/style.css">
     <link rel="stylesheet" href="../asset/css/budgetExpense.css">
     <link rel="stylesheet" href="../asset/css/discount.css">
-    <title>Budget And Expenses</title>
+    <title>Budget $ Expenses</title>
 </head>
 <body>
     <div class="bodyBG">
@@ -49,7 +49,7 @@
                         <br>
                     </form>
                 </div>
-            
+
             </main>
             <footer class="footer">
                 <?php  include('footer.php');  ?>
