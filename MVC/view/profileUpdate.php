@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../asset/javaScript/profileUpdateValidation.js"></script>
     <link rel="stylesheet" href="../asset/css/style.css">
     <title>Document</title>
 </head>
@@ -18,13 +19,13 @@
                     <?php
                         require('../controller/profileUpdateVerification.php');
                     ?>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="mainDivForm">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" method="post" class="mainDivForm">
                         <label for="mobile" class="mainDivFormLabel">Enter New Mobile No</label>
                         <br>
                         <br>
                         <input type="text" name="mobile" id="mobile" placeholder="Enter New Mobile No" value="<?php echo $mobile ?>" class="mainDivFormInput">
                         <br>
-                        <label for="mobileErr" class="mainDivFormLabelError"><?php echo $mobileErr;?></label>
+                        <label for="mobileErr" id="mobileErr" class="mainDivFormLabelError"><?php echo $mobileErr;?></label>
                         <label for="mobileOk" class="mainDivFormLabelOk"><?php echo $mobileOk;?></label>
                         <br>
                         <br>

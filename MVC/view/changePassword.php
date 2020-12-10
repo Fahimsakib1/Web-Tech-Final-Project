@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../asset/javaScript/changePasswordValidation.js"></script>
     <link rel="stylesheet" href="../asset/css/style.css">
     <title>Change Password</title>
 </head>
@@ -18,7 +19,7 @@
                     <?php
                         require('../controller/changePasswordVerification.php');
                     ?>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="mainDivForm">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" method="post" class="mainDivForm">
                         <label for="currentPassword" class="mainDivFormLabel">Enter Current Password</label>
                         <br>
                         <input type="password" name="currentPassword" id="currentPassword" placeholder="Enter Current Password" value="<?php echo $currentPassword;?>" class="mainDivFormInput">

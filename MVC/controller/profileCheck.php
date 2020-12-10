@@ -7,7 +7,7 @@
     fclose($myfile);
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        header('Location: http://'.$_SERVER['HTTP_HOST'].'/midproject/MVC/view/profileUpdate.php',true,303);
+        header('Location: http://'.$_SERVER['HTTP_HOST'].'/Web-Tech-Final-Project/MVC/view/profileUpdate.php',true,303);
         exit;
     }
 ?>
