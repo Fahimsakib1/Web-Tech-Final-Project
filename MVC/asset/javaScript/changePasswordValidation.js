@@ -3,7 +3,8 @@
         var currentPassword = document.getElementById("currentPassword").value;
         var newPassword = document.getElementById("newPassword").value;
         var confirmPassword = document.getElementById("confirmPassword").value;
-
+        document.getElementById("updatePassword").innerHTML="";  
+        
         if(currentPassword == "" ){
             document.getElementById("currentPasswordErr").innerHTML="Current Password is required";
         }

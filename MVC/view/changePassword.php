@@ -37,7 +37,7 @@
                         <input type="text" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" value="<?php echo $confirmPassword;?>" class="mainDivFormInput">
                         <br>
                         <label for="confirmPasswordErr" id="confirmPasswordErr" class="mainDivFormLabelError"><?php echo $confirmPasswordErr;?></label>
-                        <label for="mainDivFormLabelOk" class="mainDivFormLabelOk"><?php echo $updatePassword;?></label>
+                        <label for="mainDivFormLabelOk" id="updatePassword" class="mainDivFormLabelOk"><?php echo $updatePassword;?></label>
                         <br>
                         <input type="submit" value="Confirm" name="confirm" class="mainDivFormAdd">
                         <br>
