@@ -15,7 +15,7 @@
                         $newPassword=$_POST["newPassword"];
                     }
                     if (empty($_POST["confirmPassword"])) {
-                        $confirmPasswordErr = "Confirmation is required";
+                        $confirmPasswordErr = "Confirm Password is required";
                     }
                     else{
                         $confirmPassword=$_POST["confirmPassword"];
