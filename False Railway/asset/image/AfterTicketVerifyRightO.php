@@ -11,7 +11,7 @@
 				<td align="middle ">
 
 
-					<img width="350" height="200" src="\project\Web-Tech-Final-Project\False Railway\asset\image\RegistrationDone.jfif" alt="Train Added Image">
+					<img width="350" height="200" src="\WEB TECH CODES PHP\MID TERM\Railway\View\RegistrationDone.jfif" alt="Image of Registration Done ">
 
 
 				</td>
@@ -20,8 +20,8 @@
 				<td align="left">
 
 
-					<font color = "green" : align = left> <h1>Train Added Successfully </h1> </font>
-					<a href="AddTrainO.php">Go Back</a>
+					<h1> Your Ticket Is Verified... Enjoy The Journey</h1>
+					Go Back To <a href="DashboardO.php">Home Page</a>
 
 
 				</td>

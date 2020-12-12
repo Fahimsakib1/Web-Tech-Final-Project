@@ -2,8 +2,6 @@
 
 
 
-
-
 $StartingStation = $ArrivalStation ='';
 $StartingStationErr = $ArrivalStationErr = '';
 
@@ -115,11 +113,10 @@ function test_input($data)
 
                              
 
-                             header('Location: InvalidFare.php');
+                             header('Location: InvalidFareO.php');
 
 
                              }
-
 
                         
            }

@@ -11,7 +11,7 @@
 				<td align="middle ">
 
 
-					<img width="350" height="200" src="\WEB TECH CODES PHP\MID TERM\Railway\View\Ticket Verification Failed.webp" alt=" Invalid Route Fare">
+					<img width="350" height="200" src="\project\Web-Tech-Final-Project\False Railway\asset\image\Ticket Verification Failed.webp" alt=" Invalid Route Fare">
 
 
 				</td>

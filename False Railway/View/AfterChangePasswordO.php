@@ -11,7 +11,11 @@
 				<td align="middle ">
 
 
-					<img width="350" height="200" src="\WEB TECH CODES PHP\MID TERM\Railway\View\PasswordChangeLogo1.png" alt="Image of Registration Done ">
+					<!-- <img width="350" height="200" src="\WEB TECH CODES PHP\MID TERM\Railway\View\PasswordChangeLogo1.png" alt="Image of Registration Done "> -->
+
+					<img width="350" height="200" src="\project\Web-Tech-Final-Project\False Railway\asset\image\PasswordChangeLogo1.png" alt="Image of Registration Done ">
+
+					
 
 
 				</td>

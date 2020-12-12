@@ -9,8 +9,8 @@
 
 		</style>
 
-		<link rel="stylesheet" href="../asset/css/style.css">
-		<link rel="stylesheet" href="../asset/css1/style1.css">
+		<link rel="stylesheet" href="../asset/css/styleO.css">
+		<link rel="stylesheet" href="../asset/css/style1O.css">
 
 		
 	</head>

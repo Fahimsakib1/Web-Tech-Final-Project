@@ -11,7 +11,7 @@
 				<td align="middle ">
 
 
-					<img width="350" height="200" src="\WEB TECH CODES PHP\MID TERM\Railway\View\Edit Profile Logo.png" alt="Image of Registration Done ">
+					<img width="350" height="200" src="\project\Web-Tech-Final-Project\False Railway\asset\image\Edit Profile Logo.png" alt="Image of Registration Done ">
 
 
 				</td>

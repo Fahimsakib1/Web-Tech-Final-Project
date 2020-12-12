@@ -3,6 +3,7 @@
 <head>
 
  <link rel="stylesheet" href="../asset/css/style.css">
+ <link rel="stylesheet" href="../asset/css/home.css">
 
 </head>
 	<body>
@@ -12,9 +13,9 @@
 				<td align="left">
 
 
-					<img width="350" height="200" src="\WEB TECH CODES PHP\MID TERM\Railway\View\Rail Pic.jpg" alt="Image of Railway Management">
+					<img width="350" height="200" src="\project\Web-Tech-Final-Project\False Railway\asset\image\Rail Pic.jpg" alt="Image of Railway Management">
 
-					<img width="350" height="200" src="\WEB TECH CODES PHP\MID TERM\Railway\View\Rail Logo.jpg" alt="Logo of Railway Management">
+					<img width="350" height="200" src="\project\Web-Tech-Final-Project\False Railway\asset\image\Rail Logo.jpg" alt="Logo of Railway Management">
 
 
 				</td>
@@ -41,7 +42,7 @@
 				          	Logged in as <a href="PersonalProfileO.php"> <?php echo $_SESSION['name'] ?> </a> or 
 
                                <!--  <input type="submit" value="Logout" name="Logout" >  -->
-                                <input class = "homeMainDivCardLogout" type="submit" value="Logout" name="Logout" >
+                                <input class = "homeMainDivCardLogout" type="submit" value="Logout"  name="Logout" >
 
                             </form>
 

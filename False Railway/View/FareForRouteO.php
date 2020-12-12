@@ -90,7 +90,11 @@
 
 
                     
-                    <font color = "green" : align = left> <h2>Full Fare Details</h2> </font><a href="Train Fare.png"><h3> <font color = "blue" > Click Image</h3></a>  </font>
+                    <!-- <font color = "green" : align = left> <h2>Full Fare Details</h2> </font><a href="Train Fare.png"><h3> <font color = "blue" > Click Image</h3></a>  </font> -->
+
+                    <font color = "green" : align = left> <h2>Full Fare Details</h2> </font><a href="\project\Web-Tech-Final-Project\False Railway\asset\image\Train Fare.png"><h3> <font color = "blue" > Click Image</h3></a>  </font>
+                    
+
                     
 
 
