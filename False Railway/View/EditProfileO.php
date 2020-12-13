@@ -1,9 +1,20 @@
 <!DOCTYPE HTML>
 
 <html>
+
 <style>
     .error {color: #FF0000;}
-</style>
+
+    
+
+        </style>
+
+        <link rel="stylesheet" href="../asset/css/styleO.css">
+       
+
+    
+
+
 
 <head>
     <title>Dashboard</title>
@@ -45,38 +56,21 @@
                         </tr>
                         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
                         <tr>
-                            <td style="width: fit-content;">
-
-                                <p align="margin-left">
-
-                                    Name : <br>
-                                    <br>
-                                    E-mail : <br>
-                                    <br>
-                                    Gender : <br>
-                                    <br>
-                                    Date of Birth : <br>
-                                    <br>
-                                    Address : <br>
-                                        <br>
-                                </p>
-
-                            </td>
-
+                            
 
                             <td style="width: fit-content;">
 
                                 <p align="margin-left">
 
 
-                                    <input type="text" name="name"><span class="error">* <?php echo $nameErr; ?></span>
+                                    Name: <input type="text" name="name"><span class="error">* <?php echo $nameErr; ?></span>
                                     <br><br>
 
 
-                                    <input type="text" name="email"><span class="error">* <?php echo $emailErr; ?></span>
+                                    E-mail : <input type="text" name="email"><span class="error">* <?php echo $emailErr; ?></span>
                                     <br><br>
 
-
+                                    Gender :
                                     <input type="radio" name="gender" value="Male">Male
                                     <input type="radio" name="gender" value="Female">Female
                                     <input type="radio" name="gender" value="Other">Other
@@ -84,10 +78,10 @@
                                     <br><br>
 
 
-                                    <input type="date" name="dob"><span class="error">* <?php echo $dobErr; ?></span>
+                                    Date of Birth :<input type="date" name="dob"><span class="error">* <?php echo $dobErr; ?></span>
                                     <br><br>
 
-                                    <input type="text" name="address"><span class="error">* <?php echo $addressErr; ?></span>
+                                    Address :<input type="text" name="address"><span class="error">* <?php echo $addressErr; ?></span>
                                     <br><br>
 
 
@@ -134,7 +128,7 @@
 
             <tr>
                 <td colspan="2" style="border: 2px solid #000; border-collapse: collapse;">
-                    <?php include 'FooterO.php'; ?>
+                    <?php include 'NewFooterO.php'; ?>
                 </td>
             </tr>
 

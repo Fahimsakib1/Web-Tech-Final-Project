@@ -6,7 +6,26 @@
 <html>
 <style>
     .error {color: #FF0000;}
-</style>
+
+    input
+
+           {
+
+            width: 20%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px grey; 
+
+           }
+
+
+        </style>
+
+        <link rel="stylesheet" href="../asset/css/styleO.css">
+
 
 <head>
     <title>Dashboard</title>
@@ -56,20 +75,7 @@
                         </tr>
                         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
                         <tr>
-                            <td style="width: fit-content;">
-
-                                <p align="margin-left">
-
-                                    Name : <br>
-                                    <br>
-                                    Ticket ID : <br>
-                                    <br>
-                                    Mobile : <br>
-                                    <br>
-                                   
-                                </p>
-
-                            </td>
+                            
 
 
                             <td style="width: fit-content;">
@@ -77,19 +83,19 @@
                                 <p align="margin-left">
 
 
-                                    <input type="text" name="name"><span class="error">* <?php echo $nameErr; ?></span>
+                                     Name: <input type="text" name="name"><span class="error">* <?php echo $nameErr; ?></span>
                                     <br><br>
 
 
-                                    <input type="text" name="ticketID"><span class="error">* <?php echo $ticketIDErr; ?></span>
+                                    Ticket ID:<input type="text" name="ticketID"><span class="error">* <?php echo $ticketIDErr; ?></span>
                                     <br><br>
 
 
-                                    <input type="text" name="mobile"><span class="error">* <?php echo $mobileErr; ?></span>
+                                    Mobile:<input type="text" name="mobile"><span class="error">* <?php echo $mobileErr; ?></span>
                                     <br><br>
 
 
-                                    <input type="submit" name="submit1" value="Submit">
+                                    <input style = "font-size:23px; font-weight: bold ; color:green" type="submit" name="submit1" value="Submit">
                                     <br><br>
 
 
@@ -109,7 +115,7 @@
 
             <tr>
                 <td colspan="2" style="border: 2px solid #000; border-collapse: collapse;">
-                    <?php include 'FooterO.php'; ?>
+                    <?php include 'NewFooterO.php'; ?>
                 </td>
             </tr>
 

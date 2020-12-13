@@ -3,7 +3,28 @@
 	<head>
 		<style>
 			.error {color: #FF0000;}
+
+			input
+
+           {
+
+            width: 25%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px grey; 
+
+           }
+
 		</style>
+
+		<link rel="stylesheet" href="../asset/css/styleO.css">
+	
+
+		
+
 	</head>
 	<body>  
 
@@ -35,17 +56,17 @@
 
 								Current Password: <input type="Password" name="pwd">
 								<span class="error">* <?php echo $pwdErr;?></span>
-								<br><br>
+								<br>
 
 								<font color="green">New Password: </font><input type="Password" name="pwdN">
 								<span class="error">* <?php echo $pwdNErr;?></span>
-								<br><br>
+								<br>
 
 								<font color="red">Retype New Password: </font><input type="Password" name="pwdR">
 								<span class="error">* <?php echo $pwdRErr;?></span>
-								<br><br>
+								<br>
 
-								<input type="submit" name="submit" value="Submit">  
+								<input class = "mainDivFormButton" type="submit" name="submit" value="Submit">  
 							</form>
 
 							
@@ -58,7 +79,7 @@
 
 					<td colspan="2" style="border: 2px solid #000; border-collapse: collapse;">
 
-						<?php include 'FooterO.php';?>
+						<?php include 'NewFooterO.php';?>
 					</td>
 
 				</tr>

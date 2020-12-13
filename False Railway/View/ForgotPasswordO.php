@@ -4,7 +4,25 @@
 		<title>Forgot Password</title>
 		<style>
 			.error {color: #FF0000;}
+
+			input
+
+           {
+
+            width: 75%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px grey; 
+
+           }
+
 		</style>
+
+		<link rel="stylesheet" href="../asset/css/styleO.css">
+		
 	</head>
 	<body>  
 
@@ -57,7 +75,8 @@
 								<br><br> 
 
 
-								<input type="submit" name="submit1" value="Submit">
+								<input class = "mainDivFormButton" type="submit" name="submit1" value="Submit">
+
 							</form>
 
 							<br><br>
@@ -83,7 +102,7 @@
 				</tr>
 				<tr>
 					<td style="border: 2px solid #000; border-collapse: collapse;">
-						<?php include 'FooterO.php';?>
+						<?php include 'NewFooterO.php';?>
 					</td>
 			</table>
 

@@ -71,11 +71,19 @@ p{
     margin-top: 7%;
     margin-bottom: 40%;
     margin-left: 2px;
-    font-size: 20px;
+    font-size: 15px;
     background-color: #2ECC71 ;
     border: none;
-    color: white;
-    padding: 10px 22px;
+    color: red;
+    padding: 15px 22px;
+    text-decoration: none;
+}
+.mainDivFormButton1{
+    
+    background-color:red ;
+    border: none;
+    color: red;
+    padding: 15px 22px;
     text-decoration: none;
 }
 .mainDivFormAdd{
@@ -119,5 +127,6 @@ p{
     padding-top: 50px;
     text-align: center;
 }
+
 
   

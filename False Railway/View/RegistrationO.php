@@ -128,7 +128,7 @@
 				</tr>
 				<tr>
 					<td style="border: 2px solid #000; border-collapse: collapse;">
-						<?php include 'FooterO.php';?>
+						<?php include 'NewFooterO.php';?>
 					</td>
 			</table>
 		<div>
