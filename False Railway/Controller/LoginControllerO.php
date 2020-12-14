@@ -6,6 +6,18 @@
 	if ($_SERVER["REQUEST_METHOD"] == "POST") 
 
 	{
+
+		if (isset($_POST['submit2'])) 
+
+        {
+           
+
+            header('Location:../View/RegistrationO.php',true,303);
+            exit;
+
+        }
+
+
 		
 		//echo "Hello World";		
 		$counter = 0;

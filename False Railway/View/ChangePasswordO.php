@@ -14,7 +14,7 @@
             border-radius: 15px;
             padding: 7px 15px 10px 15px;
             margin: 10px 0px 15px 0px;
-            box-shadow: 1px 1px 2px 1px grey; 
+            box-shadow: 1px 1px 2px 1px green; 
 
            }
 
@@ -66,7 +66,7 @@
 								<span class="error">* <?php echo $pwdRErr;?></span>
 								<br>
 
-								<input class = "mainDivFormButton" type="submit" name="submit" value="Submit">  
+								<input class = "mainDivFormButton"  type="submit" name="submit" value="Submit">  
 							</form>
 
 							

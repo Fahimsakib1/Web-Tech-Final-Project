@@ -15,9 +15,9 @@
             height: 5%;
             border: 10px;
             border-radius: 15px;
-            padding: 7px 15px 10px 15px;
-            margin: 10px 0px 15px 0px;
-            box-shadow: 1px 1px 2px 1px grey; 
+            padding: 7px 10px 7px 10px;
+            margin: 10px 10px 15px 0px;
+            box-shadow: 1px 1px 2px 1px blue; 
 
            }
 
@@ -56,29 +56,38 @@
 
 							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
 
-								<p style = "font-size:28px; font-weight: bold ; color:white"> User Name: </p> <input style = "font-size:20px" type="text" name="name">
+								<!-- <p style = "font-size:25px; font-weight: bold ; color:white"> User Name: </p> <input style = "font-size:15px"  type="text" name="name">
 								<span class="error">* <?php echo $nameErr;?></span>
 								<br> 
 
-								<p style = "font-size:28px; font-weight: bold ; color:white"> Password: </p> <input class = "mainDivFormLabel" type="Password" name="pwd">
+								<p style = "font-size:25px; font-weight: bold ; color:white"> Password: </p> <input class ="mainDivFormLabel" type="Password" name="pwd">
+								<span class="error">* <?php echo $pwdErr;?></span>
+								<br> -->
+
+
+								<p style = "font-size:25px; font-weight: bold ; color:white" > User Name: </p> <input class="mainDivFormLabel" type="text" name="name">
+								<span class="error">* <?php echo $nameErr;?></span>
+								<br> 
+
+								<p style = "font-size:25px; font-weight: bold ; color:white"> Password: </p> <input class ="mainDivFormLabel" type="Password" name="pwd">
 								<span class="error">* <?php echo $pwdErr;?></span>
 								<br>
 
-								<input class = "mainDivFormButton" type="submit" name="submit1" value="Login" action = "DashboardO.php">
+
+
+								<input class = "mainDivFormButtonLogin" type="submit" name="submit1" value="Login" action = "DashboardO.php">
 								<br>
 								
-								<button class = "mainDivFormButton1" type="button" onClick="document.location.href='RegistrationO.php'">Sign Up</button>
 								
 
-
-								
-
+								<input  class = "mainDivFormButtonSignup" type="submit" name="submit2" value="Signup" >
+								<br>
 								
 								 
 
 								<h2> 
 
-									<a style= "font-color:white" href="ForgotPasswordO.php"> Forgot Password?</a>
+									<a class = "demo" href="ForgotPasswordO.php"> Forgot Password?</a>
 
 								</h2>
 								 

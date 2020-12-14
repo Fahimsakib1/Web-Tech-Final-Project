@@ -11,13 +11,13 @@
 
            {
 
-            width: 20%;
+            width: 25%;
             height: 5%;
             border: 10px;
             border-radius: 15px;
             padding: 7px 15px 10px 15px;
             margin: 10px 0px 15px 0px;
-            box-shadow: 1px 1px 2px 1px grey; 
+            box-shadow: 1px 1px 2px 1px green; 
 
            }
 
@@ -95,7 +95,7 @@
                                     <br><br>
 
 
-                                    <input style = "font-size:23px; font-weight: bold ; color:green" type="submit" name="submit1" value="Submit">
+                                    <input class = "mainDivFormButton" type="submit" name="submit1" value="Submit">
                                     <br><br>
 
 

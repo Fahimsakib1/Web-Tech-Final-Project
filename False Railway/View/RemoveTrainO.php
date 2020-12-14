@@ -3,9 +3,24 @@
 <html>
 <style>
     .error {color: #FF0000;}
+
+    input
+
+           {
+
+            width: 23%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 10px 7px 10px;
+            margin: 10px 10px 15px 0px;
+            box-shadow: 1px 1px 2px 1px blue; 
+
+           }
 </style>
 
 <head>
+  <link rel="stylesheet" href="../asset/css/styleO.css">
     <title>Dashboard</title>
 
 </head>
@@ -28,7 +43,9 @@
         
 
         
-        $myfile = fopen("../Data/AddTrain.txt", "r") or die("Unable to open file!");
+      $myfile = fopen("../Data/AddTrain.txt", "r") or die("Unable to open file!");
+
+      
 
 
         $counter=0;
@@ -56,10 +73,12 @@
           fclose($myfile);
 
 
-          $file_out = file("data.txt");
+          $file_out = file("..Data/data.txt");
+          
           unset($file_out[$row_number]);
 
           file_put_contents("../Data/AddTrain.txt", implode("", $file_out));
+          
 
       }
 
@@ -94,11 +113,11 @@
                              <br><br>
 
 
-                             <input type="text" name="Tid" value="<?php echo $Tid; ?>">
+                             Train ID  :<input type="text" name="Tid" value="<?php echo $Tid; ?>">
                              <br><br>
 
 
-                             <input type="submit" name="Remove" value="Remove Train">
+                             <input class = "mainDivFormButtonRemoveTrain" type="submit" name="Remove" value="Remove">
                              
 
 

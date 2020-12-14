@@ -3,9 +3,24 @@
 <html>
 <style>
     .error {color: #FF0000;}
+    input
+
+           {
+
+            width: 25%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 10px 7px 10px;
+            margin: 10px 10px 15px 0px;
+            box-shadow: 1px 1px 2px 1px blue; 
+
+           }
+
 </style>
 
 <head>
+  <link rel="stylesheet" href="../asset/css/styleO.css">
     <title>Dashboard</title>
 
 </head>
@@ -60,38 +75,38 @@
 
                         
 
-                             <font color = "green" : align = left> <h1>Add Train</h1> </font>
+                             <font color = "blue" : align = middle> <h2>Add Train</h2> </font>
                       
                       
                              <form class="" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 
 
-                              <label for="Tid">Train ID :</label>
-                              <br>
-                              <input type="text" name="Tid" value="<?php echo $Tid; ?>">
+                              <label for="Tid">Train ID  :</label>
+                              
+                              <input type="text" text-align="center" name="Tid" value="<?php echo $Tid; ?>">
                               <br><br>
 
 
-                              <label for="Tname">Train Name :</label>
-                              <br>
+                              <label for="Tname">Train Name : </label>
+                              
                                <input type="text" name="Tname" value="<?php echo $Tname; ?>">
                               <br><br>
 
 
 
                               <label for="StartingStation">Starting Station :</label>
-                              <br>
+                              
                               <input type="text" name="StartingStation" value="<?php echo $StartingStation; ?>">
                               <br><br>
 
 
                               <label for="ArrivalStation">Arrival Station :</label>
-                              <br>
+                              
                               <input type="text" name="ArrivalStation" value="<?php echo $ArrivalStation; ?>">
                               <br><br>
 
 
-                              <input type="submit" name="Add" value="Add Train">
+                              <input class = "mainDivFormButton" type="submit" name="Add" value="Add Train">
                               <br><br>
 
                              

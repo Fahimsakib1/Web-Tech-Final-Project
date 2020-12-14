@@ -3,9 +3,24 @@
 <html>
 <style>
     .error {color: #FF0000;}
+    input
+
+           {
+
+            width: 25%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 10px 7px 10px;
+            margin: 10px 10px 15px 0px;
+            box-shadow: 1px 1px 2px 1px blue; 
+
+           }
+
 </style>
 
 <head>
+  <link rel="stylesheet" href="../asset/css/styleO.css">
     <title>Dashboard</title>
 
 </head>
@@ -114,11 +129,11 @@
                              <br><br>
 
 
-                             <input type="text" name="Tid" value="<?php echo $Tid; ?>">
-                             <br><br>
+                             Train ID : <input type="text" name="Tid" value="<?php echo $Tid; ?>">
+                             <br>
 
 
-                             <input type="submit" name="Search" value="Search ">
+                             <input class = "mainDivFormButtonSearchTrain" type="submit" name="Search" value="Search ">
                              
 
 

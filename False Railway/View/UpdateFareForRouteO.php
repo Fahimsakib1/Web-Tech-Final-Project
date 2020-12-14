@@ -6,9 +6,24 @@
 <html>
 <style>
     .error {color: #FF0000;}
+
+    input
+
+           {
+
+            width: 30%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px blue; 
+
+           }
 </style>
 
 <head>
+    <link rel="stylesheet" href="../asset/css/styleO.css">
     <title>Dashboard</title>
 
 </head>
@@ -54,19 +69,7 @@
                         </tr>
                         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
                         <tr>
-                            <td style="width: fit-content;">
-
-                                <p align="margin-middle">
-  
-                                    Starting Station : <br>
-                                    <br>
-
-                                    Arrival Station : <br>
-                                    <br>
-                                
-                                </p>
-
-                            </td>
+                            
 
 
                             <td style="width: fit-content;">
@@ -74,14 +77,14 @@
                                 <p align="margin-middle">
 
 
-                                   <input type="text" name="StartingStation"><span class="error">* <?php echo $StartingStationErr; ?></span>
+                                   Starting Station  : <input type="text" name="StartingStation"><span class="error">* <?php echo $StartingStationErr; ?></span>
                                     <br><br>
 
-                                    <input type="text" name="ArrivalStation"><span class="error">* <?php echo $ArrivalStationErr; ?></span>
+                                    Arrival Station  : <input type="text" name="ArrivalStation"><span class="error">* <?php echo $ArrivalStationErr; ?></span>
                                     <br><br>
 
 
-                                    <input type="submit" name="Update" value="Update">
+                                    <input class = "mainDivFormButton" type="submit" name="Update" value="Update">
                                     <br><br>
 
 

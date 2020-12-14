@@ -3,9 +3,24 @@
 <html>
 <style>
     .error {color: #FF0000;}
+
+    input
+
+           {
+
+            width: 23%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 10px 7px 10px;
+            margin: 10px 10px 15px 0px;
+            box-shadow: 1px 1px 2px 1px green; 
+
+           }
 </style>
 
 <head>
+    <link rel="stylesheet" href="../asset/css/styleO.css">
     <title>Dashboard</title>
 
 </head>
@@ -48,24 +63,12 @@
                     <table width="75%">
                         <tr>
                             <td colspan="3">
-                                <font color = "green" : align = left> <h2>Passenger List By Train</h2> </font>
+                                <font color = "blue" : align = middle> <h2>Passenger List By Train</h2> </font>
                             </td>
                         </tr>
                         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
                         <tr>
-                            <td style="width: fit-content;">
-
-                                <p align="margin-left">
-  
-                                    Train ID : <br>
-                                    <br>
-
-                                    Train Name : <br>
-                                    <br>
-                                
-                                </p>
-
-                            </td>
+                            
 
 
                             <td style="width: fit-content;">
@@ -73,14 +76,14 @@
                                 <p align="margin-left">
 
 
-                                   <input type="text" name="trainID"><span class="error">* <?php echo $trainIDErr; ?></span>
+                                   Train ID  : <input type="text" name="trainID"><span class="error">* <?php echo $trainIDErr; ?></span>
                                     <br><br>
 
-                                    <input type="text" name="trainName"><span class="error">* <?php echo $trainNameErr; ?></span>
+                                    Train Name  : <input type="text" name="trainName"><span class="error">* <?php echo $trainNameErr; ?></span>
                                     <br><br>
 
 
-                                    <input type="submit" name="submit1" value="Submit">
+                                    <input class = "mainDivFormButton" type="submit" name="submit1" value="Submit">
                                     <br><br>
 
 
