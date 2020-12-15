@@ -29,6 +29,7 @@
 	.error {color: #FF0000;}
 
 	</style>
+	<link rel="stylesheet" href="../asset/css/styleO.css">
 
 	</head>
 	<body>  
@@ -97,7 +98,7 @@
 								<br><br>
 
 
-								<input style="color:green; font-size:20px; font-weight: bold" type="submit" name="submit1" value="Submit">
+								<input class = "mainDivFormButton" type="submit" name="submit1" value="Submit">
 								<br><br>
 								
 
@@ -136,3 +137,7 @@
 			</center>
 	</body>
 </html>
+
+
+
+

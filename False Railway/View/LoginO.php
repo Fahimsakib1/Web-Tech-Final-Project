@@ -80,7 +80,7 @@
 								
 								
 
-								<input  class = "mainDivFormButtonSignup" type="submit" name="submit2" value="Signup" >
+								<!-- <input  class = "mainDivFormButtonSignup" type="submit" name="submit2" value="Signup" > -->
 								<br>
 								
 								 
