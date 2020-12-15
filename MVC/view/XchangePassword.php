@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../asset/javaScript/changePasswordValidation.js"></script>
-    <link rel="stylesheet" href="../asset/css/style.css">
+    <script src="../asset/javaScript/XchangePasswordValidation.js"></script>
+    <link rel="stylesheet" href="../asset/css/Xstyle.css">
     <title>Change Password</title>
 </head>
 <body>
     <div class="bodyBG">
         <div class="container">
             <header class="header">
-                <?php  include('header.php');  ?>
+                <?php  include('Xheader.php');  ?>
             </header>
             <main>
                 <div class="mainDiv1">
                     <p class="mainDiv1P">Change Passowrd</p>
                     <?php
-                        require('../controller/changePasswordVerification.php');
+                        require('../controller/XchangePasswordVerification.php');
                     ?>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" method="post" class="mainDivForm">
                         <label for="currentPassword" class="mainDivFormLabel">Enter Current Password</label>
@@ -46,7 +46,7 @@
 
             </main>
             <footer class="footer">
-                <?php  include('footer.php');  ?>
+                <?php  include('Xfooter.php');  ?>
             </footer>
         </div>
     </div>

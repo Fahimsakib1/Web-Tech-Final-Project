@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../asset/javaScript/loginValidation.js"></script>
-    <link rel="stylesheet" href="../asset/css/style.css">
+    <script src="../asset/javaScript/XloginValidation.js"></script>
+    <link rel="stylesheet" href="../asset/css/Xstyle.css">
     <title>User Login</title>
 </head>
 <body>
     <div class="bodyBG">
         <div class="container">
             <header class="header">
-                <?php  include('header.php');  ?>
+                <?php  include('Xheader.php');  ?>
             </header>
             <main>
                 <div class="mainDiv1">
                     <p class="mainDiv1P">User Login</p>
                     <?php
-                        require('../controller/loginVerification.php');
+                        require('../controller/XloginVerification.php');
                     ?>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" method="post" class="mainDivForm">
                         <label for="id" class="mainDivFormLabel">User Id</label>
@@ -37,7 +37,7 @@
                         <label for="rm"class="mainDivFormRememerMe">Remember me</label>
                         <br>
                         <br>
-                        <a href="forgotPassword.php"class="mainDivFormA">Forgot Password?</a>
+                        <a href="XforgotPassword.php"class="mainDivFormA">Forgot Password?</a>
                         
                         <input type="submit" value="Login" name="login" id="login" class="mainDivFormButton">
                     </form>
@@ -45,7 +45,7 @@
             
             </main>
             <footer class="footer">
-                <?php  include('footer.php');  ?>
+                <?php  include('Xfooter.php');  ?>
             </footer>
         </div>
     </div>

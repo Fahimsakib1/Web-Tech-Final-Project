@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../asset/css/style.css">
-    <link rel="stylesheet" href="../asset/css/forgotPassword.css">
+    <link rel="stylesheet" href="../asset/css/Xstyle.css">
+    <link rel="stylesheet" href="../asset/css/XforgotPassword.css">
     <title>Document</title>
 </head>
 <body>
     <div class="bodyBG">
         <div class="container">
             <header class="header">
-                <?php  include('header.php');  ?>
+                <?php  include('Xheader.php');  ?>
             </header>
             <main>
                 <div class="mainDiv1">
                     <p class="mainDiv1P">Forgot Password?</p>
                     <?php
-                        require('../controller/forgotPasswordVerfication.php');
+                        require('../controller/XforgotPasswordVerfication.php');
                     ?>
                     <p class="mainDiv1P"><?php echo $passwordText;?></p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="mainDivForm">
@@ -39,7 +39,7 @@
             
             </main>
             <footer class="footer">
-                <?php  include('footer.php');  ?>
+                <?php  include('Xfooter.php');  ?>
             </footer>
         </div>
     </div>

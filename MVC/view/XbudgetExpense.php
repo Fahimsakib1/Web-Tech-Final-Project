@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../asset/css/style.css">
-    <link rel="stylesheet" href="../asset/css/budgetExpense.css">
-    <link rel="stylesheet" href="../asset/css/discount.css">
+    <link rel="stylesheet" href="../asset/css/Xstyle.css">
+    <link rel="stylesheet" href="../asset/css/XbudgetExpense.css">
+    <link rel="stylesheet" href="../asset/css/Xdiscount.css">
     <title>Budget And Expenses</title>
 </head>
 <body>
     <div class="bodyBG">
         <div class="container">
             <header class="header">
-                <?php  include('header.php');  ?>
+                <?php  include('Xheader.php');  ?>
             </header>
             <main>
                 <div class="mainDiv1">
                     <p class="mainDiv1P">Budget And Expenses</p>
                     <?php
-                        require('../controller/budgetExpenseVerification.php');
+                        require('../controller/XbudgetExpenseVerification.php');
                     ?>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="mainDivForm">
                         <label for="budget" class="mainDivFormLabel">Enter Budget Amount</label>
@@ -52,7 +52,7 @@
             
             </main>
             <footer class="footer">
-                <?php  include('footer.php');  ?>
+                <?php  include('Xfooter.php');  ?>
             </footer>
         </div>
     </div>
