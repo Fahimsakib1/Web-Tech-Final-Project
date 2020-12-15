@@ -66,7 +66,7 @@
                                 setcookie('pass',$password,time()-1);
                             }
     
-                            header('Location: http://'.$_SERVER['HTTP_HOST'].'/Web-Tech-Final-Project/MVC/view/home.php',true,303);
+                            header('Location: http://'.$_SERVER['HTTP_HOST'].'/Web-Tech-Final-Project/MVC/view/Xhome.php',true,303);
                             exit;
                         }
                         else{

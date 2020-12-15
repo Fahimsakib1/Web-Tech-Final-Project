@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../asset/css/style.css">
-    <link rel="stylesheet" href="../asset/css/salary.css">
+    <link rel="stylesheet" href="../asset/css/Xstyle.css">
+    <link rel="stylesheet" href="../asset/css/Xsalary.css">
     <title>Document</title>
 </head>
 <body>
     <div class="bodyBG">
         <div class="container">
         <header class="header">
-            <?php  include('header.php');  ?>
+            <?php  include('Xheader.php');  ?>
         </header>
         <main>
             <div class="">
                 <p class="mainDiv1P">Salary</p>
                 <?php
-                    require('../controller/salaryVerification.php');
+                    require('../controller/XsalaryVerification.php');
                 ?>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="salaryMainDivForm">
                     <input type="submit" value="Generate Salary" name="salary" class="salaryMainDivFormButton">
@@ -57,7 +57,7 @@
         
         </main>
         <footer class="footer">
-            <?php  include('footer.php');  ?>
+            <?php  include('Xfooter.php');  ?>
         </footer>
         </div>
     </div>
