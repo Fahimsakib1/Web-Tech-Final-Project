@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../asset/javaScript/XdiscountValidation.js"></script>
     <link rel="stylesheet" href="../asset/css/Xstyle.css">
     <link rel="stylesheet" href="../asset/css/Xdiscount.css">
     <title>Discount</title>
@@ -19,12 +20,12 @@
                     <?php
                         require('../controller/XdiscountVerification.php');
                     ?>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="mainDivForm">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" method="post" class="mainDivForm">
                         <label for="discount" class="mainDivFormLabel">Enter Percentage</label>
                         <br>
                         <input type="text" name="discount" id="discount" placeholder="Enter discount Percentage - Only numbers" value="<?php echo $addDiscount?>" class="mainDivFormInput">
                         <br>
-                        <label for="discountErr" class="mainDivFormLabelError"><?php echo $addDiscountErr;?></label>
+                        <label for="discountErr" id="discountErr" class="mainDivFormLabelError"><?php echo $addDiscountErr;?></label>
                         <label for="addDiscountSuccessful" class="mainDivFormLabelOk"><?php echo $addDiscountSuccessful;?></label>
                         <br>
                         <input type="submit" value="Add Discount" name="addDiscountButton" class="mainDivFormAdd">
