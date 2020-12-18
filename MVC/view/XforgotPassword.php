@@ -20,7 +20,7 @@
                     <?php
                         require('../controller/XforgotPasswordVerfication.php');
                     ?>
-                    <p class="mainDiv1P"><?php echo $passwordText;?></p>
+                    <p class="mainDiv1P2"><?php echo $passwordText;?></p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" method="post" class="mainDivForm">
                         <label for="id" class="mainDivFormLabel">User Id</label>
                         <br>

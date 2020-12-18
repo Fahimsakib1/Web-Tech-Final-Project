@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/20e901a9e1.js" crossorigin="anonymous"></script>
     <script src="../asset/javaScript/XloginValidation.js"></script>
     <link rel="stylesheet" href="../asset/css/Xstyle.css">
     <title>User Login</title>
@@ -22,13 +23,19 @@
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" method="post" class="mainDivForm">
                         <label for="id" class="mainDivFormLabel">User Id</label>
                         <br>
-                        <input type="text" name="id" id="id" placeholder="User Id" value="<?php echo $id?>" class="mainDivFormInput">
+                        <div class="iconDiv">
+                            <i class="fas fa-user icon"></i>
+                            <input type="text" name="id" id="id" placeholder="User Id" value="<?php echo $id?>" class="mainDivFormInputLogin">
+                        </div>
                         <br>
                         <label for="idErr" id="idErr" class="mainDivFormLabelError"><?php echo $idErr;?></label>
                         <br>
                         <label for="password" class="mainDivFormLabel">Password</label>
                         <br>
-                        <input type="password" name="password" id="password" placeholder="Password" value="<?php echo $password?>" class="mainDivFormInput">
+                        <div class="iconDiv">
+                            <i class="fas fa-lock icon"></i>
+                            <input type="password" name="password" id="password" placeholder="Password" value="<?php echo $password?>" class="mainDivFormInputLogin">
+                        </div>
                         <br>
                         <label for="passwordErr" id="passwordErr" class="mainDivFormLabelError"><?php echo $passwordErr;?></label>
                         <label for="loginErr" class="mainDivFormLabelError"><?php echo $loginErr;?></label>
