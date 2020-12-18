@@ -37,7 +37,7 @@
                         <label for="rm"class="mainDivFormRememerMe">Remember me</label>
                         <br>
                         <br>
-                        <a href="XforgotPassword.php"class="mainDivFormA">Forgot Password?</a>
+                        <a href="XforgotPassword.php"class="mainDivFormAForgotPass">Forgot Password?</a>
                         
                         <input type="submit" value="Login" name="login" id="login" class="mainDivFormButton">
                     </form>

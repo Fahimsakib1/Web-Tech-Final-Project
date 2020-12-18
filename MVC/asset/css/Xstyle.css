@@ -74,6 +74,11 @@ p{
     padding-left: 5px;
     color: #A569BD;
 }
+.mainDivFormAForgotPass{
+    text-decoration: none;
+    padding-left: 5px;
+    color: #BDC3C7;
+}
 .mainDivFormButton{
     margin-top: 7%;
     margin-bottom: 40%;
