@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     if (empty($_POST["name"])) 
 
     {
-        $nameErr = "Name is required";
+        $nameErr = "Name is Empty";
 
 
     } 
@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     if (empty($_POST["email"])) 
 
     {
-        $emailErr = "E-mail is required";
+        $emailErr = "E-mail is Empty";
     } 
 
     else 
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     if (empty($_POST["gender"])) 
 
     {
-        $genderErr = "Gender is required";
+        $genderErr = "Gender is Empty";
     } 
 
     else
@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     if (empty($_POST["dob"])) 
 
     {
-        $dobErr = "Date of Birth is required";
+        $dobErr = "Date of Birth is Empty";
     } 
 
     else 
@@ -108,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     if (empty($_POST["address"])) 
 
     {
-        $addressErr = "Address is required";
+        $addressErr = "Address is Empty";
     } 
 
     else

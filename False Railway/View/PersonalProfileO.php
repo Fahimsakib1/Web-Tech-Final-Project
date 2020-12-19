@@ -23,6 +23,7 @@
 				<tr>
 					<td style="border: 2px solid #000; border-collapse: collapse; " width="20%">
 						<?php include 'NavigationbarO.php';?>
+						
 					</td>
 
 					<td>

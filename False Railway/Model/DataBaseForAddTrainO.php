@@ -1,15 +1,15 @@
 <?php 
-$name = filter_input(INPUT_POST,'name');
-$email = filter_input(INPUT_POST,'email');
-$username = filter_input(INPUT_POST,'username');
-$password = filter_input(INPUT_POST,'pwdN');
-$dob = filter_input(INPUT_POST,'dob');
+$Tid = filter_input(INPUT_POST,'Tid');
+$Tname = filter_input(INPUT_POST,'Tname');
+$StartingStation = filter_input(INPUT_POST,'StartingStation');
+$ArrivalStation = filter_input(INPUT_POST,'ArrivalStation');
 
-if(!empty($name))
+
+if(!empty($Tid))
 
 {
 
-	    if (!empty($email))
+	    if (!empty($Tname))
 
 	    {
              
@@ -34,7 +34,7 @@ if(!empty($name))
 							
 
 
-					    $sql = "INSERT INTO signupdata (name,email,username,password,dob) values ('$name','$email','$username','$password','$dob')";
+					    $sql = "INSERT INTO addtrain (id,trainname,startingstation,arrivalstation) values ('$Tid','$Tname','$StartingStation','$ArrivalStation')";
 
                          if ($conn->query($sql))
 
@@ -42,31 +42,32 @@ if(!empty($name))
 
                         	echo " New Record Added Successfully";
 
-						     $sql = "SELECT name,email,username,password,dob FROM signupdata"; // Query
+						    
+						    $sql = "SELECT id,trainname,startingstation,arrivalstation FROM addtrain"; // Query
 							$result = $conn -> query($sql); // result set
 
-							 if($result->num_rows > 0) 
+							if($result->num_rows > 0) 
 
 							{
 									// show result
-							echo "<h1> Sign Up Details: </h1>";
+							echo "<h2>Database Results </h2>";
 
 							echo "<ol>";
 							while($row = $result -> fetch_assoc()) 
 
 							{
-										
+										/* echo " <li> id = " . $row['id'] . " and " . "fullName = " . $row['fullName'] . "</li>"; */
+
                              echo "<br>";
-                             echo " Name = " . $row['name'];
+                             echo " Train ID = " . $row['id'];
                              echo "<br>";
-                             echo " Email = " . $row['email'];
+                             echo " Train Name = " . $row['trainname'];
                              echo "<br>";
-                             echo "  User Name= " . $row['username'];
+                             echo "  Starting Station = " . $row['startingstation'];
                              echo "<br>";
-                             echo "  Password = " . $row['password'];
+                             echo "  Arrival Station = " . $row['arrivalstation'];
                              echo "<br>";
-                             echo "  Date-Of-Birth = " . $row['dob'];
-                             echo "<br>";
+                             
 
 							}
 
@@ -79,8 +80,7 @@ if(!empty($name))
 							else 
 								{
 									echo "<p>Result is zero</p>";
-								} 
-
+								}
 							
                         } 
 
@@ -111,7 +111,7 @@ if(!empty($name))
            else
            {
 
-           	echo " Name must be filled";
+           	echo " Train ID must be filled";
            	die();
            }
 
@@ -124,7 +124,7 @@ else
 
 {
 
-	echo " Please Fill The Necessary Details";
+	echo " Train Name Must be filled";
 	die();
 }
 
@@ -140,7 +140,7 @@ else
 			<table style="width: auto; border: 2px solid #000; border-collapse: collapse;">
 
 
- <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/LoginO.php'">Back</button>
+ <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/MainDashboardO.html'">Back</button>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 
 

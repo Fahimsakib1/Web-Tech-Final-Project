@@ -20,6 +20,7 @@
 </style>
 
 <head>
+    <script src="../asset/javaScript/PassengerListByTrainValidationO.js"></script>
     <link rel="stylesheet" href="../asset/css/styleO.css">
     <title>Dashboard</title>
 
@@ -66,7 +67,7 @@
                                 <font color = "blue" : align = middle> <h2>Passenger List By Train</h2> </font>
                             </td>
                         </tr>
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" > 
                         <tr>
                             
 
@@ -76,10 +77,10 @@
                                 <p align="margin-left">
 
 
-                                   Train ID  : <input type="text" name="trainID"><span class="error">* <?php echo $trainIDErr; ?></span>
+                                   Train ID  : <input type="text" id = "trainID" name="trainID"><span class="error" id = "errorMsgtrainID"> <?php echo $trainIDErr; ?></span>
                                     <br><br>
 
-                                    Train Name  : <input type="text" name="trainName"><span class="error">* <?php echo $trainNameErr; ?></span>
+                                    Train Name  : <input type="text" id = "trainName" name="trainName"><span class="error" id = "errorMsgtrainName"> <?php echo $trainNameErr; ?></span>
                                     <br><br>
 
 

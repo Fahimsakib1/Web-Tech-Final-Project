@@ -24,7 +24,7 @@
 	  			if (empty($_POST["pwdN"])) 
 
 			  	{
-			  		$pwdNErr = "Password is required";
+			  		$pwdNErr = "Password is Empty";
 			  	}
 
 			  	else
@@ -47,7 +47,7 @@
 
 			  	if (empty($_POST["pwdR"])) 
 			  	{
-			  		$pwdRErr = "Please retype Password";
+			  		$pwdRErr = "Retype Password Field is Empty ";
 			  		$pwdN = "";
 			  	}
 			  	

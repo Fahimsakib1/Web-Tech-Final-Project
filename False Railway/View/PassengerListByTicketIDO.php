@@ -24,6 +24,7 @@
 </style>
 
 <head>
+    <script src="../asset/javaScript/PassengerListByTicketIDValidationO.js"></script>
     <title>Dashboard</title>
     <link rel="stylesheet" href="../asset/css/styleO.css">
 
@@ -66,7 +67,7 @@
                                 <h2> See Passenger List By Ticket ID</h2>
                             </td>
                         </tr>
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()"> 
                         <tr>
                             
 
@@ -76,7 +77,7 @@
                                 <p align="margin-left">
 
 
-                                   Ticket ID  :  <input type="text" name="ticketID"><span class="error">* <?php echo $ticketIDErr; ?></span>
+                                   Ticket ID  :  <input type="text" id = "ticketID" name="ticketID"><span class="error" id = "errorMsgticketID"> <?php echo $ticketIDErr; ?></span>
                                     <br><br>
 
 

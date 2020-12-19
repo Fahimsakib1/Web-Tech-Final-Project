@@ -1,8 +1,4 @@
 <!DOCTYPE HTML>
-
-
-
-
 <html>
 <style>
     .error {color: #FF0000;}
@@ -23,6 +19,7 @@
 </style>
 
 <head>
+    <script src="../asset/javaScript/UpdateFareForRouteValidationO.js"></script>
     <link rel="stylesheet" href="../asset/css/styleO.css">
     <title>Dashboard</title>
 
@@ -33,15 +30,9 @@
 
         <?php
           
-
          //header('Location: ../View/DhakaToJoydebpurFare.php');
-         
-    
-
+ 
           require('../Controller/UpdateFareForRouteControllerO.php');
-
-          
-
 
         ?>
 
@@ -67,7 +58,7 @@
                                 <font color = "red" : align = left> <h2>Update Fare For Rutes</h2> </font>
                             </td>
                         </tr>
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()"> 
                         <tr>
                             
 
@@ -77,10 +68,12 @@
                                 <p align="margin-middle">
 
 
-                                   Starting Station  : <input type="text" name="StartingStation"><span class="error">* <?php echo $StartingStationErr; ?></span>
+                                   Starting Station  : <input type="text" id = "StartingStation" name="StartingStation"> <br>
+                                   <span class="error" id="errorMsgStartingStation"> <?php echo $StartingStationErr; ?></span>
                                     <br><br>
 
-                                    Arrival Station  : <input type="text" name="ArrivalStation"><span class="error">* <?php echo $ArrivalStationErr; ?></span>
+                                    Arrival Station  : <input type="text" id ="ArrivalStation" name="ArrivalStation"> <br>
+                                    <span class="error" id="errorMsgArrivalStation"> <?php echo $ArrivalStationErr; ?></span>
                                     <br><br>
 
 

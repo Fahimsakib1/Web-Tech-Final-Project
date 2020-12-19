@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+
+		<script src="../asset/javaScript/ChangePasswordValidationO.js"></script>
+
 		<style>
 			.error {color: #FF0000;}
 
@@ -21,21 +24,16 @@
 		</style>
 
 		<link rel="stylesheet" href="../asset/css/styleO.css">
-	
-
-		
+			
 
 	</head>
 	<body>  
 
 		<?php
                    
+            require('../Controller/ChangePasswordControllerO.php');
 
-
-                   require('../Controller/ChangePasswordControllerO.php');
 		?>
-
-
 
 
 		<div style="max-width: 1000px; margin-left: auto; margin-right:auto">
@@ -52,23 +50,22 @@
 					<td>
 						<div style="max-width:790px; margin-left: auto; margin-right:auto">
 							<h2> CHANGE PASSWORD</h2>
-							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()"> 
 
-								Current Password: <input type="Password" name="pwd">
-								<span class="error">* <?php echo $pwdErr;?></span>
+								Current Password: <input type="Password" id ="pwd" name="pwd"> 
+								<span class="error" id = "errorMsgpwd">* <?php echo $pwdErr;?></span>
 								<br>
 
-								<font color="green">New Password: </font><input type="Password" name="pwdN">
-								<span class="error">* <?php echo $pwdNErr;?></span>
+								<font color="green">New Password: </font><input type="Password" id ="pwdN" name="pwdN"> 
+								<span class="error" id = "errorMsgpwdN">* <?php echo $pwdNErr;?></span>
 								<br>
 
-								<font color="red">Retype New Password: </font><input type="Password" name="pwdR">
-								<span class="error">* <?php echo $pwdRErr;?></span>
+								Retype New Password:<input type="Password" id ="pwdR" name="pwdR">
+								<span class="error" id = "errorMsgpwdR">* <?php echo $pwdRErr;?></span>
 								<br>
 
 								<input class = "mainDivFormButton"  type="submit" name="submit" value="Submit">  
 							</form>
-
 							
 						</div>
 					</td>
@@ -76,14 +73,12 @@
 
                <tr>
                      
-
 					<td colspan="2" style="border: 2px solid #000; border-collapse: collapse;">
 
 						<?php include 'NewFooterO.php';?>
 					</td>
 
 				</tr>
-
 
 			</table>
 		<div>

@@ -1,8 +1,4 @@
 <!DOCTYPE HTML>
-
-
-
-
 <html>
 <style>
     .error {color: #FF0000;}
@@ -24,44 +20,34 @@
 
         </style>
 
-        <link rel="stylesheet" href="../asset/css/styleO.css">
-
-
 <head>
+
+    <script src="../asset/javaScript/VerifyTicketValidationO.js"></script>
+    <link rel="stylesheet" href="../asset/css/styleO.css">
     <title>Dashboard</title>
 
 </head>
 
 <body>
 
-
-            <?php
+        <?php
           
-
-
-    
-
           require('../Controller/VerifyTicketControllerO.php');
-
-
-
 
         ?>
 
 
-
-
-
-
-
-
     <div style="max-width: fit-content; margin-left: auto; margin-right:auto">
-        <table style="width: fit-content; border: 2px solid #000; border-collapse: collapse;">
+
+    <table style="width: fit-content; border: 2px solid #000; border-collapse: collapse;">
+
             <tr>
                 <td colspan="2" style="border: 2px solid #000; border-collapse: collapse;">
                     <?php include 'Header2O.php'; ?>
                 </td>
+                
             </tr>
+
             <tr>
                 <td style="border: 2px solid #000; border-collapse: collapse; " width="20%">
                     <?php include 'NavigationbarO.php'; ?>
@@ -73,25 +59,27 @@
                                 <h2> Ticket Verification </h2>
                             </td>
                         </tr>
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" > 
                         <tr>
                             
-
 
                             <td style="width: fit-content;">
 
                                 <p align="margin-left">
 
 
-                                     Name: <input type="text" name="name"><span class="error">* <?php echo $nameErr; ?></span>
+                                     Name: <input type="text" id="name" name="name"> <br>
+                                     <span class="error" id ="errorMsgName"> <?php echo $nameErr; ?></span>
                                     <br><br>
 
 
-                                    Ticket ID:<input type="text" name="ticketID"><span class="error">* <?php echo $ticketIDErr; ?></span>
+                                    Ticket ID:<input type="text" id="ticketID" name="ticketID"> <br>
+                                    <span class="error" id ="errorMsgticketID"> <?php echo $ticketIDErr; ?></span>
                                     <br><br>
 
 
-                                    Mobile:<input type="text" name="mobile"><span class="error">* <?php echo $mobileErr; ?></span>
+                                    Mobile:<input type="text" id="mobile" name="mobile">  <br>
+                                    <span class="error" id ="errorMsgMobile"> <?php echo $mobileErr; ?></span>
                                     <br><br>
 
 

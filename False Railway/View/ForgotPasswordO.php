@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+
+		<script src="../asset/javaScript/ForgotPasswordValidationO.js"></script>
+
 		<title>Forgot Password</title>
 		<style>
 			.error {color: #FF0000;}
@@ -58,20 +61,22 @@
 						<div style="max-width:fit-content; margin-left: auto; margin-right:auto">
 							<h2>FORGOT PASSWORD</h2>
 
-							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" > 
 
 
-								E-mail: <input type="text" name="email">
-								<span class="error">* <?php echo $emailErr;?></span>
+								E-mail: <input type="text" id = "email" name="email">
+								<span class="error" id = "errorMsgemail">* <?php echo $emailErr;?></span>
 								<br><br> 
 
-								Password:<input type="Password" name="pwdN">
-								<span class="error">* <?php echo $pwdNErr;?></span>
+								Password:<input type="Password" id = "pwdN" name="pwdN">
+								<span class="error" id = "errorMsgepwdN">* <br>
+									<?php echo $pwdNErr;?></span>
 								<br><br>
 
 
-								Confirm Password: </font><input type="Password" name="pwdR">
-								<span class="error">* <?php echo $pwdRErr;?></span>
+								Confirm Password: </font><input type="Password" id = "pwdR" name="pwdR">
+								<span class="error" id = "errorMsgepwdR" >* <br>
+									<?php echo $pwdRErr;?></span>
 								<br><br> 
 
 

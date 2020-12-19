@@ -1,10 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+
+		<script src="../asset/javaScript/RegistrationValidationO.js"></script>
 		<title>Registration Page</title>
+
 		<style>
 
-        <style>
+   
    	
    body
    {
@@ -29,6 +32,7 @@
 	.error {color: #FF0000;}
 
 	</style>
+
 	<link rel="stylesheet" href="../asset/css/styleO.css">
 
 	</head>
@@ -55,33 +59,33 @@
 					<td style="text-align: center;">
 						<div style="width:fit-content; margin-left:auto; margin-right:auto; text-align: left;">
 
-							<h2 style="color:green; font-size:25px; text-align: center; font-weight: bold">Sign Up Form</h2>
+							<h2 style="color:black; font-size:25px; text-align: center; font-weight: bold">Sign Up Form</h2>
 
-							<form method="post" action="../Model/DataBaseForSignUpO.php"> 
+							<form method="post" action="../Model/DataBaseForSignUpO.php" onsubmit="return validateForm()"> 
 
 							 
-								Name: <input type="text" name="name">
-								<span class="error">* <?php echo $nameErr;?></span>
+							<font size="4px"> Name: </font>	 <input type="text" id="name" name="name"> <br>
+								<span class="error" id="errorMsgName" ><?php echo $nameErr;?></span>
 								<br><br>
 
 
-								E-mail: <input type="text" name="email">
-								<span class="error">* <?php echo $emailErr;?></span>
+								<font size="4px"> E-mail:</font> <input type="text" id="email" name="email"> <br>
+								<span class="error" id="errorMsgEmail"> <?php echo $emailErr;?></span>
 								<br><br>
 
 
-								User Name: <input type="text" name="username">
-								<span class="error">* <?php echo $usernameErr;?></span>
+								<font size="4px"> User Name:</font> <input type="text" id="username" name="username"> <br>
+								<span class="error" id="errorMsgUserName"><?php echo $usernameErr;?></span>
 								<br><br>
 
 
-								Password:<input type="Password" name="pwdN">
-								<span class="error">* <?php echo $pwdNErr;?></span>
+								<font size="4px"> Password:</font><input type="Password" id="pwdN" name="pwdN"> <br>
+								<span class="error" id="errorMsgpwdN"> <?php echo $pwdNErr;?></span>
 								<br><br>
 
 
-								Confirm Password: </font><input type="Password" name="pwdR">
-								<span class="error">* <?php echo $pwdRErr;?></span>
+								<font size="4px"> Confirm Password:</font></font><input type="Password" id="pwdR" name="pwdR"> <br>
+								<span class="error" id="errorMsgpwdR"> <?php echo $pwdRErr;?></span>
 								<br><br>
 
 
@@ -93,8 +97,8 @@
 								<br><br> -->
 
 
-								</b>Date of Birth: <input type="date" name="dob">
-								<span class="error">* <?php echo $dobErr;?></span>
+								<font size="4px"> Date of Birth: </font> </b><input type="date" id = "dob" name="dob"> <br>
+								<span class="error" id="errorMsgDOB"> <?php echo $dobErr;?></span>
 								<br><br>
 
 

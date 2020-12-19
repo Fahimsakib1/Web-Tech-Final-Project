@@ -17,6 +17,16 @@
 
         }
 
+        if (isset($_POST['submit3'])) 
+
+        {
+           
+
+            header('Location:../View/indexO.html',true,303);
+            exit;
+
+        }
+
 
 		
 		//echo "Hello World";		
@@ -85,7 +95,7 @@
 		 	//echo "<a href='../View/Dashboard.php'>Home</a>";
 		 	session_start();
 			$_SESSION['name']=$name;
-			header('Location: ../View/DashboardO.php');
+			header('Location: ../View/MainDashboardO.html');
 		}
 
 

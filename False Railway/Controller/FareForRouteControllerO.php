@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     if (empty($_POST["StartingStation"])) 
 
     {
-        $StartingStationErr = "Starting Station Name is required";
+        $StartingStationErr = "Starting Station Name is Empty";
     } 
 
     else 
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     if (empty($_POST["ArrivalStation"])) 
 
     {
-        $ArrivalStationErr = "Arrival Station Name is required";
+        $ArrivalStationErr = "Arrival Station Name is Empty";
     } 
 
     else 

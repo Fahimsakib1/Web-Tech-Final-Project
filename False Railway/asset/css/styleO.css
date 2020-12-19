@@ -99,7 +99,7 @@ p{
     color: black;
     /* padding: 15px 22px; */
     text-decoration: none;
-    width:255px;
+    width:240px;
     
     
 }
@@ -107,6 +107,28 @@ p{
     background-color:   #9ccb11 ;   
   
 }
+
+.mainDivFormButtonBack{
+    /*margin-top: 7%;
+    margin-bottom: 40%;
+    margin-left: 2px; */
+    font-size: 15px;
+    font-weight: bold;
+    background-color:#928b03;
+    border: none;
+    color: black;
+    /* padding: 15px 22px; */
+    text-decoration: none;
+    width:240px;
+    
+    
+}
+.mainDivFormButtonBack:hover{
+    background-color: #d5f5e3;
+   
+  
+}
+
 
 .mainDivFormAdd{
     margin-top: 3%;

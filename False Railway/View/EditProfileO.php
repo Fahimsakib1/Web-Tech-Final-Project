@@ -6,18 +6,16 @@
     .error {color: #FF0000;}
 
     
-
-        </style>
-
-        <link rel="stylesheet" href="../asset/css/styleO.css">
-       
-
-    
+</style>
 
 
 
 <head>
+
     <title>Dashboard</title>
+    <script src="../asset/javaScript/EditProfileValidationO.js"></script>
+    <link rel="stylesheet" href="../asset/css/styleO.css">
+    
 
 </head>
 
@@ -54,7 +52,8 @@
                                 <h2>EDIT YOUR PROFILE</h2>
                             </td>
                         </tr>
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+
+                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" > 
                         <tr>
                             
 
@@ -63,25 +62,30 @@
                                 <p align="margin-left">
 
 
-                                    Name: <input type="text" name="name"><span class="error">* <?php echo $nameErr; ?></span>
+                                    Name: <input type="text" id = "name" name="name">
+                                    <span class="error" >* <?php echo $nameErr; ?> </span>
+                                    <p id = "errorMsgName"></p>
                                     <br><br>
 
 
-                                    E-mail : <input type="text" name="email"><span class="error">* <?php echo $emailErr; ?></span>
+                                    E-mail : <input type="text" id = "email" name="email">
+                                    <span class="error" id ="errorMsgEmail">* <?php echo $emailErr; ?></span>
                                     <br><br>
 
                                     Gender :
-                                    <input type="radio" name="gender" value="Male">Male
-                                    <input type="radio" name="gender" value="Female">Female
-                                    <input type="radio" name="gender" value="Other">Other
-                                    <span class="error">* <?php echo $genderErr; ?></span>
+                                    <input type="radio" id = "male" name="gender" value="Male">Male
+                                    <input type="radio" id = "female" name="gender" value="Female">Female
+                                    <input type="radio" id = "other" name="gender" value="Other">Other
+                                    <span class="error" id ="errorMsgGender">* <?php echo $genderErr; ?></span>
                                     <br><br>
 
 
-                                    Date of Birth :<input type="date" name="dob"><span class="error">* <?php echo $dobErr; ?></span>
+                                Date of Birth :<input type="date" id = "dob" name="dob">
+                                <span class="error" id ="errorMsgDOB">* <?php echo $dobErr; ?></span>
                                     <br><br>
 
-                                    Address :<input type="text" name="address"><span class="error">* <?php echo $addressErr; ?></span>
+                                    Address :<input type="text" id = "address" name="address">
+                                    <span class="error" id ="errorMsgAddress">* <?php echo $addressErr; ?></span>
                                     <br><br>
 
 
