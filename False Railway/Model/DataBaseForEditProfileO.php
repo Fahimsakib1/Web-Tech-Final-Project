@@ -1,15 +1,15 @@
 <?php 
-$Tid = filter_input(INPUT_POST,'Tid');
-$Tname = filter_input(INPUT_POST,'Tname');
-$StartingStation = filter_input(INPUT_POST,'StartingStation');
-$ArrivalStation = filter_input(INPUT_POST,'ArrivalStation');
+$name = filter_input(INPUT_POST,'name');
+$email = filter_input(INPUT_POST,'email');
+$gender = filter_input(INPUT_POST,'gender');
+$dob = filter_input(INPUT_POST,'dob');
+$address = filter_input(INPUT_POST,'address');
 
-
-if(!empty($Tid))
+if(!empty($name))
 
 {
 
-	    if (!empty($Tname))
+	    if (!empty($email))
 
 	    {
              
@@ -34,40 +34,38 @@ if(!empty($Tid))
 							
 
 
-					    $sql = "INSERT INTO addtrain (id,trainname,startingstation,arrivalstation) values ('$Tid','$Tname','$StartingStation','$ArrivalStation')";
+					    $sql = "INSERT INTO editprofileinfo (name,email,gender,dob,address) values ('$name','$email','$gender','$dob','$address')";
 
                          if ($conn->query($sql))
 
                         {
 
-                        	echo " Train Added Successfully";
-                        	echo "<br>";
-                        	echo " <h2> Train Lists Are Given Below </h2";
+                        	echo " New Record Added Successfully";
 
-						    
-						    $sql = "SELECT id,trainname,startingstation,arrivalstation FROM addtrain"; // Query
+						     $sql = "SELECT name,email,gender,dob,address FROM editprofileinfo"; // Query
 							$result = $conn -> query($sql); // result set
 
-							if($result->num_rows > 0) 
+							 if($result->num_rows > 0) 
 
 							{
 									// show result
-							echo "<h2>Database Results </h2>";
+							echo "<h1> Edited Profile Information: </h1>";
 
 							echo "<ol>";
 							while($row = $result -> fetch_assoc()) 
 
 							{
-										/* echo " <li> id = " . $row['id'] . " and " . "fullName = " . $row['fullName'] . "</li>"; */
-
+										
                              echo "<br>";
-                             echo " Train ID = " . $row['id'];
+                             echo " Name = " . $row['name'];
                              echo "<br>";
-                             echo " Train Name = " . $row['trainname'];
+                             echo " Email = " . $row['email'];
                              echo "<br>";
-                             echo "  Starting Station = " . $row['startingstation'];
+                             echo " Gender = " . $row['gender'];
                              echo "<br>";
-                             echo "  Arrival Station = " . $row['arrivalstation'];
+                             echo "  Date Of Birth= " . $row['dob'];
+                             echo "<br>";
+                             echo "  Address = " . $row['address'];
                              echo "<br>";
                              
 
@@ -81,8 +79,9 @@ if(!empty($Tid))
 
 							else 
 								{
-									echo "<p>Result is zero</p>";
-								}
+									echo "<p> Result is zero</p>";
+								} 
+
 							
                         } 
 
@@ -113,7 +112,7 @@ if(!empty($Tid))
            else
            {
 
-           	echo " Train ID must be filled";
+           	echo " Name must be filled";
            	die();
            }
 
@@ -125,14 +124,17 @@ if(!empty($Tid))
 else
 
 {
+    
+	 echo "<h2> Please Fill The Necessary Details </h2";
 
-	echo " Train Name Must be filled";
+
 	die();
 }
 
 
 
  ?>
+
 
 
 

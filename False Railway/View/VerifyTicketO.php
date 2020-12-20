@@ -70,21 +70,21 @@
 
                                      Name: <input type="text" id="name" name="name"> <br>
                                      <span class="error" id ="errorMsgName"> <?php echo $nameErr; ?></span>
-                                    <br><br>
+                                    <br>
 
 
                                     Ticket ID:<input type="text" id="ticketID" name="ticketID"> <br>
                                     <span class="error" id ="errorMsgticketID"> <?php echo $ticketIDErr; ?></span>
-                                    <br><br>
+                                    <br>
 
 
                                     Mobile:<input type="text" id="mobile" name="mobile">  <br>
                                     <span class="error" id ="errorMsgMobile"> <?php echo $mobileErr; ?></span>
-                                    <br><br>
+                                    <br>
 
 
                                     <input class = "mainDivFormButton" type="submit" name="submit1" value="Submit">
-                                    <br><br>
+                                    <br>
 
 
                                 </p>

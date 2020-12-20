@@ -5,6 +5,8 @@
 <style>
     .error {color: #FF0000;}
 
+   
+
     
 </style>
 
@@ -31,9 +33,6 @@
 
 
 
-
-
-
     <div style="max-width: fit-content; margin-left: auto; margin-right:auto">
         <table style="width: fit-content; border: 2px solid #000; border-collapse: collapse;">
             <tr>
@@ -53,7 +52,10 @@
                             </td>
                         </tr>
 
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" > 
+                        <!--  <form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" > -->
+
+                        <form method="post" action="../Model/DataBaseForEditProfileO.php" onsubmit="return validateForm()" > 
+
                         <tr>
                             
 
@@ -69,15 +71,24 @@
 
 
                                     E-mail : <input type="text" id = "email" name="email">
-                                    <span class="error" id ="errorMsgEmail">* <?php echo $emailErr; ?></span>
+                                    <span class="error" id ="errorMsgEmail">* <?php echo $emailErr; ?> </span>
                                     <br><br>
 
-                                    Gender :
-                                    <input type="radio" id = "male" name="gender" value="Male">Male
+
+                                     Gender :
+                                    <input type="radio" id = "male" name="gender" value="Male" required="">Male
                                     <input type="radio" id = "female" name="gender" value="Female">Female
                                     <input type="radio" id = "other" name="gender" value="Other">Other
                                     <span class="error" id ="errorMsgGender">* <?php echo $genderErr; ?></span>
-                                    <br><br>
+                                    <br><br> 
+
+
+                                    <!-- Gender:
+                                    <input type="radio" name="gender" value="Male">Male
+                                    <input type="radio" name="gender" value="Female">Female
+                                    <input type="radio" name="gender" value="Other">Other
+                                    <span class="error" id ="errorMsgGender">* <?phpecho $genderErr; ?></span>
+                                    <br><br> -->
 
 
                                 Date of Birth :<input type="date" id = "dob" name="dob">
@@ -87,6 +98,7 @@
                                     Address :<input type="text" id = "address" name="address">
                                     <span class="error" id ="errorMsgAddress">* <?php echo $addressErr; ?></span>
                                     <br><br>
+
 
 
                                     <input type="submit" name="submit1" value="Submit">
@@ -133,6 +145,7 @@
             <tr>
                 <td colspan="2" style="border: 2px solid #000; border-collapse: collapse;">
                     <?php include 'NewFooterO.php'; ?>
+
                 </td>
             </tr>
 

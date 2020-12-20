@@ -1,15 +1,15 @@
 <?php 
-$Tid = filter_input(INPUT_POST,'Tid');
-$Tname = filter_input(INPUT_POST,'Tname');
-$StartingStation = filter_input(INPUT_POST,'StartingStation');
-$ArrivalStation = filter_input(INPUT_POST,'ArrivalStation');
+$name = filter_input(INPUT_POST,'name');
+$address = filter_input(INPUT_POST,'address');
+$phone = filter_input(INPUT_POST,'phone');
+$journeydate = filter_input(INPUT_POST,'journeydate');
 
 
-if(!empty($Tid))
+if(!empty($name))
 
 {
 
-	    if (!empty($Tname))
+	    if (!empty($address))
 
 	    {
              
@@ -34,25 +34,26 @@ if(!empty($Tid))
 							
 
 
-					    $sql = "INSERT INTO addtrain (id,trainname,startingstation,arrivalstation) values ('$Tid','$Tname','$StartingStation','$ArrivalStation')";
+					    $sql = "INSERT INTO passengerinfo (name,address,phone,journeydate) values ('$name','$address','$phone','$journeydate')";
 
                          if ($conn->query($sql))
 
                         {
 
-                        	echo " Train Added Successfully";
+                        	echo " Passenger Added Successfully";
                         	echo "<br>";
-                        	echo " <h2> Train Lists Are Given Below </h2";
+                        	echo " <h2> Passenger Lists Are Given Below </h2";
 
 						    
-						    $sql = "SELECT id,trainname,startingstation,arrivalstation FROM addtrain"; // Query
+						    $sql = "SELECT name,address,phone,journeydate FROM passengerinfo"; // Query
 							$result = $conn -> query($sql); // result set
 
 							if($result->num_rows > 0) 
 
 							{
-									// show result
-							echo "<h2>Database Results </h2>";
+						    
+						    echo " <br> ";			// show result
+							echo "<h2> Results </h2>";
 
 							echo "<ol>";
 							while($row = $result -> fetch_assoc()) 
@@ -61,13 +62,13 @@ if(!empty($Tid))
 										/* echo " <li> id = " . $row['id'] . " and " . "fullName = " . $row['fullName'] . "</li>"; */
 
                              echo "<br>";
-                             echo " Train ID = " . $row['id'];
+                             echo " Passenger Name = " . $row['name'];
                              echo "<br>";
-                             echo " Train Name = " . $row['trainname'];
+                             echo " Address = " . $row['address'];
                              echo "<br>";
-                             echo "  Starting Station = " . $row['startingstation'];
+                             echo " Phone = " . $row['phone'];
                              echo "<br>";
-                             echo "  Arrival Station = " . $row['arrivalstation'];
+                             echo " Journey Date = " . $row['journeydate'];
                              echo "<br>";
                              
 
@@ -113,8 +114,9 @@ if(!empty($Tid))
            else
            {
 
-           	echo " Train ID must be filled";
+           	echo " Name must be filled";
            	die();
+
            }
 
 
@@ -126,7 +128,7 @@ else
 
 {
 
-	echo " Train Name Must be filled";
+	echo "Passenger Information Must Be Filled";
 	die();
 }
 

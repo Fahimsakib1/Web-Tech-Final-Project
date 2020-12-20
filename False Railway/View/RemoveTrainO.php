@@ -20,6 +20,8 @@
 </style>
 
 <head>
+
+  <script src="../asset/javaScript/RemoveTrainValidationO.js"></script>
   <link rel="stylesheet" href="../asset/css/styleO.css">
     <title>Dashboard</title>
 
@@ -28,64 +30,7 @@
 <body>
 
 
-    <?php
 
-
-      $Tid = $Tname = $StartingStation = $ArrivalStation = "";
-      if ($_SERVER["REQUEST_METHOD"] == "POST") 
-
-      {
-
-
-   
-
-        $Tid= $_POST['Tid'];
-        
-
-        
-      $myfile = fopen("../Data/AddTrain.txt", "r") or die("Unable to open file!");
-
-      
-
-
-        $counter=0;
-
-          while ($line = fgets($myfile)) 
-
-          {
-              $words = explode(",",$line);
-
-              if($Tid==$words[0])
-
-              {
-                $row_number = $counter;
-                break;
-              }
-
-              else
-
-              {
-                $counter++;
-              }
-          }
-
-
-          fclose($myfile);
-
-
-          $file_out = file("..Data/data.txt");
-          
-          unset($file_out[$row_number]);
-
-          file_put_contents("../Data/AddTrain.txt", implode("", $file_out));
-          
-
-      }
-
-
-    ?>
-
- 
     <div style="max-width: fit-content; margin-left: auto; margin-right:auto">
         <table style="width: fit-content; border: 2px solid #000; border-collapse: collapse;">
             <tr>
@@ -106,21 +51,18 @@
                              <font color = "green" : align = left> <h1>Remove Train</h1> </font>
                       
                       
-                             <form class="" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                             <form class="" action="../Model/DataBaseForRemoveTrainO.php"  method="post" onsubmit="return validateForm()">
 
 
                              <label for="">Enter Train ID To Remove Train</label>
                              <br><br>
 
-
-                             Train ID  :<input type="text" name="Tid" value="<?php echo $Tid; ?>">
-                             <br><br>
-
-
+                             Train ID  :<input type="text" id ="Tid" name="Tid"> <br>
+                             <span class="error" id ="errorMsgTid" ></span>
+                              <br><br>
+                            
                              <input class = "mainDivFormButtonRemoveTrain" type="submit" name="Remove" value="Remove">
                              
-
-
                              </form>
 
   

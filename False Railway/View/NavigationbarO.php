@@ -16,7 +16,7 @@
 	
 		● <a href="ChangePasswordO.php">Change Password</a><br>
 		
-		● <a href="PassengerDetailsO.php">Passenger Details</a><br>
+		● <a href="NewPassengerDetailsO.php">Passenger Details</a><br>
 	
 		● <a href="ChangeTicketStatusO.php">Change Ticket Status</a><br>
 		

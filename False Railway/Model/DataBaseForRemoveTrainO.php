@@ -9,9 +9,9 @@ if(!empty($Tid))
 
 {
 
-	    if (!empty($Tname))
+	    
 
-	    {
+	    
              
                     $servername = "localhost";
 					$dbusername = "root";
@@ -34,15 +34,17 @@ if(!empty($Tid))
 							
 
 
-					    $sql = "INSERT INTO addtrain (id,trainname,startingstation,arrivalstation) values ('$Tid','$Tname','$StartingStation','$ArrivalStation')";
+					    /*$sql = "INSERT INTO addtrain (id,trainname,startingstation,arrivalstation) values ('$Tid','$Tname','$StartingStation','$ArrivalStation')"; */
+
+					    $sql = "DELETE FROM addtrain WHERE id='".$Tid."'";
 
                          if ($conn->query($sql))
 
                         {
 
-                        	echo " Train Added Successfully";
+                        	echo " Train Removed Successfully";
                         	echo "<br>";
-                        	echo " <h2> Train Lists Are Given Below </h2";
+                        	echo " Train Lists Are Given Below";
 
 						    
 						    $sql = "SELECT id,trainname,startingstation,arrivalstation FROM addtrain"; // Query
@@ -106,17 +108,11 @@ if(!empty($Tid))
                         
 
 
-	    }
+	    
 
 
 
-           else
-           {
-
-           	echo " Train ID must be filled";
-           	die();
-           }
-
+           
 
 
 }
@@ -126,14 +122,13 @@ else
 
 {
 
-	echo " Train Name Must be filled";
+	echo " Train ID Must be filled";
 	die();
 }
 
 
 
  ?>
-
 
 
  <br><br>
@@ -144,7 +139,6 @@ else
 
  <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/MainDashboardO.html'">Back</button>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-
 
 
 

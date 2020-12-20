@@ -61,7 +61,10 @@
 
 							<h2 style="color:black; font-size:25px; text-align: center; font-weight: bold">Sign Up Form</h2>
 
-							<form method="post" action="../Model/DataBaseForSignUpO.php" onsubmit="return validateForm()"> 
+							<form method="post" action="../Model/DataBaseForSignUpO.php" onsubmit="return validateForm()">
+
+
+							<!-- <form method="post" 	action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()"> -->
 
 							 
 							<font size="4px"> Name: </font>	 <input type="text" id="name" name="name"> <br>
