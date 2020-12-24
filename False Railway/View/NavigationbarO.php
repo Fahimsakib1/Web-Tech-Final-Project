@@ -18,10 +18,12 @@
 		
 		● <a href="NewPassengerDetailsO.php">Passenger Details</a><br>
 	
-		● <a href="ChangeTicketStatusO.php">Change Ticket Status</a><br>
+		● <a href="NewChangeTicketStatusO.php">Change Ticket Status</a><br>
 		
-		● <a href="TrainScheduleO.php">Make Train Schedule</a><br>
-		
+		● <a href="NewTrainScheduleO.php">Make Train Schedule</a><br>
+
+		● <a href="BuyTicketO.php">Buy Ticket</a><br>
+
 		● <a href="VerifyTicketO.php">Verify Ticket</a><br>
 		
 		● <a href="SalaryHistoryO.php">Personal Salary History</a><br>

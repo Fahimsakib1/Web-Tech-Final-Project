@@ -25,8 +25,6 @@ function validateForm() {
 					document.getElementById('errorMsgpwdR').style.color = "red";
 					return false;	
 				}
-
-				
 				
 				return true;
 			}

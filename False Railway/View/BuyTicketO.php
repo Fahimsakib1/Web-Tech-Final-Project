@@ -7,13 +7,13 @@
 
            {
 
-            width: 35%;
+            width: 38%;
             height: 5%;
             border: 10px;
             border-radius: 15px;
             padding: 7px 15px 10px 15px;
             margin: 10px 0px 15px 0px;
-            box-shadow: 1px 1px 2px 1px green; 
+            box-shadow: 1px 1px 2px 1px blue; 
 
            }
 
@@ -22,7 +22,7 @@
 
 <head>
 
-    <script src="../asset/javaScript/VerifyTicketValidationO.js"></script>
+    <script src="../asset/javaScript/BuyTicketValidationO.js"></script>
     <link rel="stylesheet" href="../asset/css/styleO.css">
     <title>Dashboard</title>
 
@@ -30,11 +30,7 @@
 
 <body>
 
-        <?php
-          
-          require('../Controller/VerifyTicketControllerO.php');
-
-        ?>
+        
 
 
     <div style="max-width: fit-content; margin-left: auto; margin-right:auto">
@@ -54,44 +50,47 @@
                 </td>
                 <td>
                     <table width="75%">
-                       
 
-                        <font color = "blue" : align = middle> <h2> Verify Ticket</h2> </font>
+                        <font color = "blue" : align = middle> <h2> Buy Ticket</h2> </font>
 
+                         <form method="post" action="../Model/DataBaseForBuyTicketO.php" onsubmit="return validateForm()" > 
 
-                        <form method="post" action="../Model/DataBaseForVerifyTicketO.php" onsubmit="return validateForm()" > 
                         <tr>
                             
+                            <!-- action="../Model/DataBaseForPassengerDetailsO.php" 
+                                action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" -->
 
                             <td style="width: fit-content;">
 
                                 <p align="margin-left">
 
 
-                                    <!-- Name: <br>
+                                    User Name: <br>
                                     <input type="text" id="name" name="name">
-                                    <span class="error" id ="errorMsgName"> <?php //echo $nameErr; ?></span>
+                                    <span class="error" id ="errorMsgName"> </span>
                                     <br>
 
 
-
-                                    Ticket ID: <br>
-                                    <input type="text" id="ticketID" name="ticketID">
-                                    <span class="error" id ="errorMsgticketID"> <?phpecho $ticketIDErr; ?></span>
-                                    <br> -->
-
+                                    Train Name: <br>
+                                    <input type="text" id="trainname" name="trainname"> 
+                                    <span class="error" id ="errorMsgTrainname"> </span>
+                                    <br>
 
 
+                                    Destination: <br>
+                                    <input type="text" id="destination" name="destination">
+                                    <span class="error" id ="errorMsgDestination"> </span>
+                                    <br>
 
-                                    Mobile:<br>
+                                    
+
+                                    Mobile: <br>
                                     <input type="text" id="mobile" name="mobile">
-                                    <span class="error" id ="errorMsgMobile"> <?php echo $mobileErr; ?></span>
+                                    <span class="error" id ="errorMsgMobile"> </span>
                                     <br>
 
 
-
-
-                                    <input class = "mainDivFormButton" type="submit" name="submit" value="Verify">
+                                    <input class = "mainDivFormButton" type="submit" name="submit" value="Buy">
                                     <br>
 
 
