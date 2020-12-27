@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>login Page</title>
+		<title>Login Page</title>
 		
     
       <script src="../asset/javaScript/LoginValidationO.js"></script>
@@ -61,32 +61,31 @@
 							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()">  
 
 								<!-- <p style = "font-size:25px; font-weight: bold ; color:white"> User Name: </p> <input style = "font-size:15px"  type="text" name="name">
-								<span class="error">* <?php echo $nameErr;?></span>
+								<span class="error">* <?php //echo $nameErr;?></span>
 								<br> 
 
 								<p style = "font-size:25px; font-weight: bold ; color:white"> Password: </p> <input class ="mainDivFormLabel" type="Password" name="pwd">
-								<span class="error">* <?php echo $pwdErr;?></span>
+								<span class="error">* <?php //echo $pwdErr;?></span>
 								<br> -->
 
 
-								<p style = "font-size:25px; font-weight: bold ; color:white" > User Name: </p> <input class="mainDivFormLabel" type="text" id = "name" name="name">
+								<p style = "font-size:25px; font-weight: bold ; color:white" > User Name: </p>    <input class="mainDivFormLabel" type="text" id = "name" name="name">
 
-								<!-- <p id = "errorMsgName"></p>
- -->
+								<!-- <p id = "errorMsgName"></p>-->
                                 <br>
-
-
-								<span class="error" id ="errorMsgName">* <?php echo $nameErr;?></span>
+								<span class="error" id ="errorMsgName"> <?php echo $nameErr;?></span>
 								<br> 
 
-								<p style = "font-size:25px; font-weight: bold ; color:white"> Password: </p> <input class ="mainDivFormLabel" type="Password" id="pwd" name="pwd">
+
+
+								<p style = "font-size:25px; font-weight: bold ; color:white"> Password: </p>      <input class ="mainDivFormLabel" type="Password" id="pwd" name="pwd">
 								<br>
-								<span class="error" id = "errorMsgPwd">* <?php echo $pwdErr;?></span>
+								<span class="error" id = "errorMsgPwd"> <?php echo $pwdErr;?></span>
 								<br>
 
                                 
 
-								<input class = "mainDivFormButtonLogin" type="submit" name="submit1" value="Login" action = "MainDashboardO.html">
+								<input class = "mainDivFormButtonLogin" type="submit" name="submit1" value="Login" action = "FinalMainDashboardO.html">
 								<br>
 								
 								

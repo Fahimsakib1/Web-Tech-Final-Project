@@ -25,10 +25,10 @@ body{
 
 
 .sidebar header{
-	font-size: 22px;
+	font-size: 20px;
 	color: white;
 	text-align: center;
-	line-height: 47px;
+	line-height: 44px;
 	background: #063146;
 	user-select: none;
 }
@@ -38,11 +38,11 @@ body{
 	display: block;
 	height: 100%;
 	width: 100%;
-	line-height: 35px; /*Main 37*/
-	font-size: 14px;   /*Main 15*/
+	line-height: 35px;
+	font-size: 14px;
 	
 	color: white;
-	padding-left: 20px;  /*Main 40*/
+	padding-left: 25px;
 	box-sizing: border-box;
 	transition: 0.4s;
 	border-top: 1px solid rgba(255,255,255,.1);
@@ -115,7 +115,7 @@ label #cencel{
 }
 
 section{
-	background: url("../image/33.jpg");
+	
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;

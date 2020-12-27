@@ -2,8 +2,8 @@
 
 
 
-$StartingStation = $ArrivalStation ='';
-$StartingStationErr = $ArrivalStationErr = '';
+$startingstation = $arrivalstation ='';
+$startingstationErr = $arrivalstationErr = '';
 
 
 
@@ -13,32 +13,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
     
 
-    if (empty($_POST["StartingStation"])) 
+    if (empty($_POST["startingstation"])) 
 
     {
-        $StartingStationErr = "Starting Station Name is Empty";
+        $startingstationErr = "Starting Station is Empty";
     } 
 
     else 
 
     {
-        $StartingStation = test_input($_POST["StartingStation"]);
+        $startingstation = test_input($_POST["startingstation"]);
 
         
     }
 
 
 
-    if (empty($_POST["ArrivalStation"])) 
+    if (empty($_POST["arrivalstation"])) 
 
     {
-        $ArrivalStationErr = "Arrival Station Name is Empty";
+        $arrivalstationErr = "Arrival Station is Empty";
     } 
 
     else 
 
     {
-        $ArrivalStation = test_input($_POST["ArrivalStation"]);
+        $arrivalstation = test_input($_POST["arrivalstation"]);
 
         
     }
@@ -56,10 +56,10 @@ function test_input($data)
 }
 
 
-        if( !empty($_POST["StartingStation"]) &&  !empty($_POST["ArrivalStation"]))
+        if( !empty($_POST["startingstation"]) &&  !empty($_POST["arrivalstation"]))
 
            {
-                        if ( $StartingStation == "Dhaka" && $ArrivalStation == "Joydebpur" )
+                        if ( $startingstation == "Dhaka" && $arrivalstation == "Joydebpur" )
 
                         {
                            
@@ -82,7 +82,7 @@ function test_input($data)
 
                         }
 
-                        else if ($StartingStation == "Dhaka" && $ArrivalStation == "Narsingdi")
+                        else if ($startingstation == "Dhaka" && $arrivalstation == "Narsingdi")
 
                              {
                             

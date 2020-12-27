@@ -5,6 +5,21 @@
 <style>
     .error {color: #FF0000;}
 
+    input
+
+           {
+
+            
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px green; 
+
+           }
+
+    
+
    
 
     
@@ -64,23 +79,26 @@
                                 <p align="margin-left">
 
 
-                                    Name: <input type="text" id = "name" name="name">
+                                    Name: <br>
+                                     <input type="text" id = "name" name="name">
                                     <span class="error" >* <?php echo $nameErr; ?> </span>
                                     <p id = "errorMsgName"></p>
-                                    <br><br>
+                                   
 
 
-                                    E-mail : <input type="text" id = "email" name="email">
+                                    E-mail : <br>
+                                     <input type="text" id = "email" name="email">
                                     <span class="error" id ="errorMsgEmail">* <?php echo $emailErr; ?> </span>
-                                    <br><br>
+                                    <br>
+                                    
 
 
-                                     Gender :
+                                    Gender :
                                     <input type="radio" id = "male" name="gender" value="Male" required="">Male
                                     <input type="radio" id = "female" name="gender" value="Female">Female
                                     <input type="radio" id = "other" name="gender" value="Other">Other
                                     <span class="error" id ="errorMsgGender">* <?php echo $genderErr; ?></span>
-                                    <br><br> 
+                                    <br>
 
 
                                     <!-- Gender:
@@ -91,17 +109,19 @@
                                     <br><br> -->
 
 
-                                Date of Birth :<input type="date" id = "dob" name="dob">
+                                Date of Birth : <br>
+                                <input type="date" id = "dob" name="dob">
                                 <span class="error" id ="errorMsgDOB">* <?php echo $dobErr; ?></span>
-                                    <br><br>
+                                    <br>
 
-                                    Address :<input type="text" id = "address" name="address">
+                                    Address : <br>
+                                    <input type="text" id = "address" name="address">
                                     <span class="error" id ="errorMsgAddress">* <?php echo $addressErr; ?></span>
-                                    <br><br>
+                                    <br>
 
 
 
-                                    <input type="submit" name="submit1" value="Submit">
+                                    <input class = "mainDivFormButton" type="submit" name="submit1" value="Submit">
                                     <br><br>
 
 

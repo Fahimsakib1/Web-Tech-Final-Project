@@ -21,7 +21,7 @@
 
 <head>
   <!-- <script src="../asset/javaScript/NewAddTrainValidationO.js"></script> -->
-  <script src="../asset/javaScript/NewPassengerDetailsValidationO.js"></script> 
+  <script src="../asset/javaScript/AddPassengerValidationO.js"></script> 
   <link rel="stylesheet" href="../asset/css/styleO.css">
     <title>Dashboard</title>
 
@@ -48,8 +48,7 @@
 
                     <table width="75%">
 
-                       <font color = "green" > <h2> Full Passenger Details: <a href="PassengerDetailsO.php"> Click here</a> </h2> </font>
-
+                       
 
                         
 

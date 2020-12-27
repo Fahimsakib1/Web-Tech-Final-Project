@@ -1,17 +1,14 @@
 <?php 
-$name = filter_input(INPUT_POST,'name');
-$email = filter_input(INPUT_POST,'email');
-$gender = filter_input(INPUT_POST,'gender');
-$dob = filter_input(INPUT_POST,'dob');
-$address = filter_input(INPUT_POST,'address');
+$ticketID = filter_input(INPUT_POST,'ticketID');
 
-if(!empty($name))
+
+if(!empty($ticketID))
 
 {
 
-	    if (!empty($email))
+	    
 
-	    {
+	    
              
                     $servername = "localhost";
 					$dbusername = "root";
@@ -34,39 +31,60 @@ if(!empty($name))
 							
 
 
-					    $sql = "INSERT INTO editprofileinfo (name,email,gender,dob,address) values ('$name','$email','$gender','$dob','$address')";
+					    //$sql = "INSERT INTO buyticket (name,trainname,destination,mobile) values ('$name','$trainname','$destination','$mobile')";
+
+
+					$sql = "SELECT ticketid FROM passengerlistbyticketid WHERE ticketid='".$ticketID."'"; 
 
                          if ($conn->query($sql))
 
                         {
 
-                        	echo " New Record Added Successfully";
+                        	//echo " <h2> Your Ticket Is Verified </h2";
+                        	echo "<br>";
+                        	
 
-						     $sql = "SELECT name,email,gender,dob,address FROM editprofileinfo"; // Query
+						    
+						    $sql = "SELECT ticketid,trainname,passengername,journeydate,journeytime,startingstation,arrivalstation,arrivaltime,mobile FROM passengerlistbyticketid WHERE ticketid='".$ticketID."' "; // Query
+
 							$result = $conn -> query($sql); // result set
 
-							 if($result->num_rows > 0) 
+							if($result->num_rows > 0) 
 
 							{
 									// show result
-							echo "<h1> Edited Profile Information: </h1>";
+							//echo "<br>";
+							echo " <h2> Passenger Is Verified </h2";
+							echo "<br>";
+							echo "<h2> Passenger Details:</h2>";
+
 
 							echo "<ol>";
 							while($row = $result -> fetch_assoc()) 
 
 							{
 										
+
                              echo "<br>";
-                             echo " Name = " . $row['name'];
+                             echo " Train ID = " . $row['ticketid'];
                              echo "<br>";
-                             echo " Email = " . $row['email'];
+                             echo " Train Name = " . $row['trainname'];
                              echo "<br>";
-                             echo " Gender = " . $row['gender'];
+                             echo " Passenger Name = " . $row['passengername'];
                              echo "<br>";
-                             echo "  Date Of Birth= " . $row['dob'];
+                             echo " Journey Date = " . $row['journeydate'];
                              echo "<br>";
-                             echo "  Address = " . $row['address'];
+                             echo " Journey Time = " . $row['journeytime'];
                              echo "<br>";
+                             echo " Starting Station = " . $row['startingstation'];
+                             echo "<br>";
+                             echo " Arrival Station = " . $row['arrivalstation'];
+                             echo "<br>";
+                             echo " Arrival Time = " . $row['arrivaltime'];
+                             echo "<br>";
+                             echo " Mobile = " . $row['mobile'];
+                             echo "<br>";
+                             
                              
 
 							}
@@ -79,12 +97,17 @@ if(!empty($name))
 
 							else 
 								{
-									echo "<p> Result is zero</p>";
-								} 
+									echo "<h1> Wrong Ticket ID Inserted...</h1>";
 
+									echo "<h2> Your Ticket ID Is Not Verified </h2";
+
+
+									
+								}
 							
                         } 
 
+                            
                             else
 
                            {
@@ -103,20 +126,7 @@ if(!empty($name))
 
                     }
                         
-
-
-	    }
-
-
-
-           else
-           {
-
-           	echo " Name must be filled";
-           	die();
-           }
-
-
+      
 
 }
 
@@ -124,17 +134,14 @@ if(!empty($name))
 else
 
 {
-    
-	 echo "<h2> Please Fill The Necessary Details </h2";
 
-
+	echo " Ticket ID Must be filled";
 	die();
 }
 
 
 
  ?>
-
 
 
 

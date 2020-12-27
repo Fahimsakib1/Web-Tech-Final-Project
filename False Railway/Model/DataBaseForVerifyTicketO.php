@@ -1,3 +1,4 @@
+
 <?php 
 $name = filter_input(INPUT_POST,'name');
 $trainname = filter_input(INPUT_POST,'trainname');
@@ -127,13 +128,18 @@ else
 
 {
 
-	echo " The Details Must be filled";
+	echo " <h2> Enter Mobile Number Please </h2>";
 	die();
+
+
 }
 
 
 
  ?>
+
+ 
+
 
 
 
@@ -143,8 +149,9 @@ else
 			<table style="width: auto; border: 2px solid #000; border-collapse: collapse;">
 
 
- <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/MainDashboardO.html'">Back</button>
+ <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/FinalMainDashboardO.html'">Back</button>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
 
 
 
@@ -154,9 +161,4 @@ else
 <div> 
 
 
-
-
-	
-
-	
 

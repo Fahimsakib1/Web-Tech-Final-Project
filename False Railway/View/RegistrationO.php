@@ -12,7 +12,7 @@
    body
    {
 
-   	background-color: #9020E7;
+   	background-color: #f7d677;
    }
 
    input
@@ -96,7 +96,7 @@
 								<input type="radio" name="gender" value="Male">Male
 								<input type="radio" name="gender" value="Female">Female
 								<input type="radio" name="gender" value="Other">Other
-								<span class="error">* <?php echo $genderErr;?></span>
+								<span class="error">* <?php //echo $genderErr;?></span>
 								<br><br> -->
 
 

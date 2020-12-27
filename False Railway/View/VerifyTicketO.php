@@ -23,8 +23,9 @@
 <head>
 
     <script src="../asset/javaScript/VerifyTicketValidationO.js"></script>
-    <link rel="stylesheet" href="../asset/css/styleO.css">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="../asset/css/styleO.css">
+    
 
 </head>
 
@@ -82,11 +83,14 @@
 
 
 
-
+                                    
                                     Mobile:<br>
                                     <input type="text" id="mobile" name="mobile">
                                     <span class="error" id ="errorMsgMobile"> <?php echo $mobileErr; ?></span>
-                                    <br>
+                                    <br> 
+
+
+                                    
 
 
 

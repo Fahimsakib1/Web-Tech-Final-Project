@@ -38,7 +38,7 @@
 
     
 
-          require('../Controller/PassengerListByTicketIDControllerO.php');
+          //require('../Controller/PassengerListByTicketIDControllerO.php');
 
 
 
@@ -67,7 +67,7 @@
                                 <h2> See Passenger List By Ticket ID</h2>
                             </td>
                         </tr>
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()"> 
+                        <form method="post" action="../Model/DataBaseForPassengerListByTicketIDO.php" onsubmit="return validateForm()"> 
                         <tr>
                             
 
@@ -77,7 +77,13 @@
                                 <p align="margin-left">
 
 
-                                   Ticket ID  :  <input type="text" id = "ticketID" name="ticketID"><span class="error" id = "errorMsgticketID"> <?php echo $ticketIDErr; ?></span>
+                                   
+                                   <!-- Main Ticket ID Code -->
+                                   <!-- Ticket ID  :  <input type="text" id = "ticketID" name="ticketID"><span class="error" id = "errorMsgticketID"> <?php //echo $ticketIDErr; ?></span>
+                                    <br><br> -->
+
+
+                                    Ticket ID  :  <input type="text" id = "ticketID" name="ticketID"><span class="error" id = "errorMsgticketID"> </span>
                                     <br><br>
 
 

@@ -1,21 +1,21 @@
 function validateForm() {
 				
-				var startStation = document.getElementById('startStation').value;
-				var arrivalStation = document.getElementById('arrivalStation').value;
+				var startingstation = document.getElementById('startingstation').value;
+				var arrivalstation = document.getElementById('arrivalstation').value;
 				
 				var flag1=true;
 				var flag2=true;
 
 
 				// console.log(x);
-				if(startStation == "") 
+				if(startstation == "") 
 				{
 					document.getElementById('errorMsg1').innerHTML = "Starting Station is empty";
 					document.getElementById('errorMsg1').style.color = "red";
 					flag1=false;	
 				}
 
-				else if(arrivalStation == "") 
+				else if(arrivalstation == "") 
 				{
 					document.getElementById('errorMsg2').innerHTML = "Arrival Station is empty";
 					document.getElementById('errorMsg2').style.color = "red";

@@ -1,17 +1,15 @@
 <?php 
-$name = filter_input(INPUT_POST,'name');
-$email = filter_input(INPUT_POST,'email');
-$gender = filter_input(INPUT_POST,'gender');
-$dob = filter_input(INPUT_POST,'dob');
-$address = filter_input(INPUT_POST,'address');
+$startingstation = filter_input(INPUT_POST,'startingstation');
+$arrivalstation = filter_input(INPUT_POST,'arrivalstation');
 
-if(!empty($name))
+
+if(!empty($startingstation))
 
 {
 
-	    if (!empty($email))
+	    
 
-	    {
+	    
              
                     $servername = "localhost";
 					$dbusername = "root";
@@ -34,39 +32,59 @@ if(!empty($name))
 							
 
 
-					    $sql = "INSERT INTO editprofileinfo (name,email,gender,dob,address) values ('$name','$email','$gender','$dob','$address')";
+					    //$sql = "INSERT INTO buyticket (name,trainname,destination,mobile) values ('$name','$trainname','$destination','$mobile')";
+
+
+					$sql = "SELECT startingstation AND arrivalstation FROM fareforroute WHERE startingstation='".$startingstation."'AND arrivalstation = '".$arrivalstation."'"; 
+
+
+
+
 
                          if ($conn->query($sql))
 
                         {
 
-                        	echo " New Record Added Successfully";
+                        	//echo " <h2> Your Ticket Is Verified </h2";
+                        	echo "<br>";
+                        	
 
-						     $sql = "SELECT name,email,gender,dob,address FROM editprofileinfo"; // Query
+						    
+						    $sql = "SELECT startingstation,arrivalstation,shovonchair,acchair,acberth,nonacberth FROM fareforroute WHERE startingstation='".$startingstation."' AND arrivalstation = '".$arrivalstation."' "; // Query
+
 							$result = $conn -> query($sql); // result set
 
-							 if($result->num_rows > 0) 
+							if($result->num_rows > 0) 
 
 							{
 									// show result
-							echo "<h1> Edited Profile Information: </h1>";
+							//echo "<br>";
+							echo " <h2> Route Is Verified </h2";
+							echo "<br>";
+							echo "<h2> Route Fare Details:</h2>";
+
 
 							echo "<ol>";
 							while($row = $result -> fetch_assoc()) 
 
 							{
 										
+
                              echo "<br>";
-                             echo " Name = " . $row['name'];
+                             echo " Starting Station = " . $row['startingstation'];
                              echo "<br>";
-                             echo " Email = " . $row['email'];
+                             echo " Arrival Station = " . $row['arrivalstation'];
                              echo "<br>";
-                             echo " Gender = " . $row['gender'];
+                             echo " Shovon Chair = " . $row['shovonchair'];
                              echo "<br>";
-                             echo "  Date Of Birth= " . $row['dob'];
+                             echo " AC Chair = " . $row['acchair'];
                              echo "<br>";
-                             echo "  Address = " . $row['address'];
+                             echo " AC Berth = " . $row['acberth'];
                              echo "<br>";
+                             echo " Non AC Berth = " . $row['nonacberth'];
+                             echo "<br>";
+                             
+                             
                              
 
 							}
@@ -79,12 +97,17 @@ if(!empty($name))
 
 							else 
 								{
-									echo "<p> Result is zero</p>";
-								} 
+									echo "<h1> Wrong Route Inserted...</h1>";
 
+									echo "<h2> This Route Is Not Verified </h2";
+
+
+									
+								}
 							
                         } 
 
+                            
                             else
 
                            {
@@ -103,20 +126,7 @@ if(!empty($name))
 
                     }
                         
-
-
-	    }
-
-
-
-           else
-           {
-
-           	echo " Name must be filled";
-           	die();
-           }
-
-
+      
 
 }
 
@@ -124,17 +134,14 @@ if(!empty($name))
 else
 
 {
-    
-	 echo "<h2> Please Fill The Necessary Details </h2";
 
-
+	echo " <h2> Please Fill The Starting Station And Arrival Station </h2> ";
 	die();
 }
 
 
 
  ?>
-
 
 
 

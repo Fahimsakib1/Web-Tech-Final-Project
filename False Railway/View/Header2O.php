@@ -1,11 +1,14 @@
+
 <!DOCTYPE html>
 <html>
+
 <head>
 
  <link rel="stylesheet" href="../asset/css/style.css">
  <link rel="stylesheet" href="../asset/css/home.css">
 
 </head>
+
 	<body>
 		<table width="1000px" align="center">
 			<tr>
@@ -22,7 +25,7 @@
 
 				<td align="middle">
 
-				   <!-- Logged in as <a href="PersonalProfile.php"><?php echo $_SESSION['name'] ?> </a> | -->
+				   <!-- Logged in as <a href="PersonalProfile.php"><?php //echo $_SESSION['name'] ?> </a> | -->
 
 				    <!-- Logged in as <a href="PersonalProfile.php">Fahim </a> or  -->
 
@@ -42,17 +45,9 @@
 				          	Logged in as <a href="PersonalProfileO.php"> <?php echo $_SESSION['name'] ?> </a> or 
 
                                <!--  <input type="submit" value="Logout" name="Logout" >  -->
-                                <input class = "homeMainDivCardLogout" type="submit" value="Logout"  name="Logout" >
+                                <input class = "homeMainDivCardLogout" type="submit" value="Logout" name="Logout" >
 
                             </form>
-
-				   
-				  
-
-
-
-
-
 
 
 				</td>
@@ -62,3 +57,22 @@
 		</table>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

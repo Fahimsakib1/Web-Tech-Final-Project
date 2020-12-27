@@ -66,7 +66,7 @@
                                 <font color = "red" : align = left> <h2>Fare For Rutes</h2> </font>
                             </td>
                         </tr>
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()"> 
+                        <form method="post" action="../Model/DataBaseForFareForRouteO.php" onsubmit="return validateForm()"> 
                         <tr>
                             
 
@@ -76,10 +76,10 @@
                                 <p align="margin-left">
 
 
-                                   Starting Station  :  <input type="text" id = "startStation" name="StartingStation"><span class="error" id = "errorMsg1" >* <?php echo $StartingStationErr; ?></span>
+                                   Starting Station  :  <input type="text" id = "startingstation" name="startingstation"><span class="error" id = "errorMsg1" ><?php echo $startingstationErr; ?></span>
                                     <br><br>
 
-                                    Arrival Station  : <input type="text" id = "arrivalStation" name="ArrivalStation"><span class="error" id = "errorMsg1" >* <?php echo $ArrivalStationErr; ?></span>
+                                    Arrival Station  : <input type="text" id = "arrivalstation" name="arrivalstation"><span class="error" id = "errorMsg2" > <?php echo $arrivalstationErr; ?></span>
                                     <br><br>
 
 

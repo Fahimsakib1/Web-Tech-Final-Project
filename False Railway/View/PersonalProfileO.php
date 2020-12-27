@@ -76,7 +76,7 @@
 
 
 								<td align="center" width="30%">
-									<img style="border: 3px solid #555 " width="200"height="200" src="\project\Web-Tech-Final-Project\False Railway\asset\image\Pro Pic 1.jpg" alt="Profile Picture">
+									<img style="border: 3px solid #555 " width="200"height="200" src="\project\Web-Tech-Final-Project\False Railway\asset\image\Pro Pic 2.jpg" alt="Profile Picture">
 									
 									<!-- <a href="ChangePicture.php">Change Picture </a> -->
 								</td>

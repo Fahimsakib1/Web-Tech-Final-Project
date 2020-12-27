@@ -16,7 +16,9 @@
 	
 		● <a href="ChangePasswordO.php">Change Password</a><br>
 		
-		● <a href="NewPassengerDetailsO.php">Passenger Details</a><br>
+		● <a href="PassengerDetailsO.php">See Passenger Details</a><br>
+
+		● <a href="AddPassengerO.php">Add Passenger</a><br>
 	
 		● <a href="NewChangeTicketStatusO.php">Change Ticket Status</a><br>
 		
@@ -50,7 +52,7 @@
 		<br>
 		<!-- <button type="button" onClick="document.location.href='MainDashboardO.html'">Dashboard</button> -->
 
-		● <a href="MainDashboardO.html">Dashboard</a><br>
+		● <a href="FinalMainDashboardO.html">Dashboard</a><br>
 		<br>
 		
 		</p>
