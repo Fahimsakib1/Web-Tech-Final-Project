@@ -57,7 +57,7 @@
                     <table width="75%">
                        
 
-                        <font color = "blue" : align = middle> <h2> Verify Ticket</h2> </font>
+                        <font color = "blue" : align = left> <h2> Verify Ticket</h2> </font>
 
 
                         <form method="post" action="../Model/DataBaseForVerifyTicketO.php" onsubmit="return validateForm()" > 

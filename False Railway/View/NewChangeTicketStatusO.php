@@ -66,7 +66,7 @@
                               <br>
 
 
-                              <label for="name">Name: </label>     <br>                       
+                              <label for="name">Passenger Name: </label>     <br>                       
                                <input type="text" id="name" name="name">
                                <span class="error" id = "errorMsgName" >*</span>
                               <br>

@@ -21,87 +21,16 @@
 
 <head>
   <link rel="stylesheet" href="../asset/css/styleO.css">
-    <title>Dashboard</title>
+  <!-- <script src="../asset/javaScript/NewSearchTrainByIDValidationO.js"></script> -->
+
+ 
 
 </head>
 
 <body>
 
 
-    <?php
-
-      //$value = "";
-      $Tid = $Tname = $StartingStation = $ArrivalStation = "";
-      if ($_SERVER["REQUEST_METHOD"] == "POST") 
-
-      {
-
-
    
-
-        $Tid= $_POST['Tid'];
-        
-
-         $flag=false;
-        $myfile = fopen("../Data/AddTrain.txt", "r") or die("Unable to open file!");
-
-
-       
-
-          while ($line = fgets($myfile)) 
-
-          {
-              $words = explode(",",$line);
-                 
-              if($Tid==$words[0])
-
-              {
-                 //$Tname = $words[1];
-                 //$StartingStation = $words[2];
-                 //$ArrivalStation = $words[3];
-
-                $flag=true;
-                break;
-              }
-
-            
-                 //$name = "Train Name Not Found";
-                 //$StartingStation = " Starting Station Not Found";
-                 //$ArrivalStation = " Arrival Station Not Found";
-
-                  }
-
-
-          if($flag)
-
-          {
-                  //echo " Train Found";
-                  //$Value = " Train Found ";
-                  header('Location: TrainFoundO.php');
-
-
-          }
-
-              else
-              {
-                  //echo " Train Not Found";
-                  //$Value = " Train Not Found ";
-                  header('Location: TrainNotFoundO.php');
-              }
-
-
-          fclose($myfile);
-
-
-         
-      }
-
-
-    ?>
-
-
-
- 
     <div style="max-width: fit-content; margin-left: auto; margin-right:auto">
         <table style="width: fit-content; border: 2px solid #000; border-collapse: collapse;">
             <tr>
@@ -122,29 +51,32 @@
                              <font color = "green" : align = left> <h1>Search Train</h1> </font>
                       
                       
-                             <form class="" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                             
 
 
                              <label for="">Enter Train ID To Search Train</label>
                              <br><br>
 
+                             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" > 
 
-                             Train ID : <input type="text" name="Tid" value="<?php echo $Tid; ?>">
+
+                             Train ID : <input type="text" id = "tid" name="tid" value="">
                              <br>
+                             <span class="error" id ="errorMsgid"></span>
+                              <br> 
+
+                              <p id="mytext"> </p>
 
 
                              <input class = "mainDivFormButtonSearchTrain" type="submit" name="Search" value="Search ">
+
+                             
                              
 
 
                              </form>
 
-
-
-
-  
-
-                    </table>
+                   </table>
                 </td>
             </tr>
 

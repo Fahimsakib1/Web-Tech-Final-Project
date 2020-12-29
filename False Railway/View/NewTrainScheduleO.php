@@ -56,7 +56,7 @@
                             <form method="post" class="" action="../Model/DataBaseForNewTrainScheduleO.php" onsubmit="return validateForm()">
 
 
-                              <label for="id">Ticket ID :</label>
+                              <label for="id">Train ID :</label>
                               <br>
                               <input type="text" text-align="center" id="id" name="id">
                               <span class="error" id = "errorMsgID" >*</span>

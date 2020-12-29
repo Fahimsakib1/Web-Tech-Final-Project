@@ -1,11 +1,12 @@
 <?php 
-$Tid = filter_input(INPUT_POST,'Tid');
-$Tname = filter_input(INPUT_POST,'Tname');
-$StartingStation = filter_input(INPUT_POST,'StartingStation');
-$ArrivalStation = filter_input(INPUT_POST,'ArrivalStation');
+$startingstation = filter_input(INPUT_POST,'startingstation');
+$arrivalstation = filter_input(INPUT_POST,'arrivalstation');
+$shovonchair = filter_input(INPUT_POST,'shovonchair');
+$acchair = filter_input(INPUT_POST,'acchair');
+$acberth = filter_input(INPUT_POST,'acberth');
+$nonacberth = filter_input(INPUT_POST,'nonacberth');
 
-
-if(!empty($Tid))
+if(!empty($startingstation))
 
 {
 
@@ -34,45 +35,59 @@ if(!empty($Tid))
 							
 
 
-					    /*$sql = "INSERT INTO addtrain (id,trainname,startingstation,arrivalstation) values ('$Tid','$Tname','$StartingStation','$ArrivalStation')"; */
+					    $sql = "INSERT INTO updatefareforroute (startingstation,arrivalstation,shovonchair,acchair,acberth,nonacberth) values ('$startingstation','$arrivalstation','$shovonchair','$acchair','$acberth','$nonacberth')";
 
-					    $sql = "DELETE FROM addtrain WHERE id='".$Tid."'";
+
+					//$sql = "SELECT startingstation AND arrivalstation FROM fareforroute WHERE startingstation='".$startingstation."'AND arrivalstation = '".$arrivalstation."'"; 
+
+
+
+
 
                          if ($conn->query($sql))
 
                         {
 
-                        	//echo " Train Removed Successfully";
-                        	//echo "<br>";
-                        	//echo " Train Lists Are Given Below";
+                        	//echo " <h2>Ticket Fare Is Updated</h2";
+                        	echo "<br>";
+                        	
 
 						    
-						    $sql = "SELECT id,trainname,startingstation,arrivalstation FROM addtrain"; // Query
+						    $sql = "SELECT startingstation,arrivalstation,shovonchair,acchair,acberth,nonacberth FROM updatefareforroute"; // Query
+
 							$result = $conn -> query($sql); // result set
 
 							if($result->num_rows > 0) 
 
 							{
 									// show result
-							echo " <h2> Train Removed Successfully </h2>";
 							//echo "<br>";
-							echo "<h2>Database Results After Train Removed</h2>";
+							echo " <h2> Ticket Fare Is Updated</h2";
+							echo "<br>";
+							echo "<h2> Updated Ticket Fare Details:</h2>";
+
 
 							echo "<ol>";
 							while($row = $result -> fetch_assoc()) 
 
 							{
-										/* echo " <li> id = " . $row['id'] . " and " . "fullName = " . $row['fullName'] . "</li>"; */
+										
 
                              echo "<br>";
-                             echo " Train ID = " . $row['id'];
+                             echo " Starting Station = " . $row['startingstation'];
                              echo "<br>";
-                             echo " Train Name = " . $row['trainname'];
+                             echo " Arrival Station = " . $row['arrivalstation'];
                              echo "<br>";
-                             echo "  Starting Station = " . $row['startingstation'];
+                             echo " Shovon Chair = " . $row['shovonchair'];
                              echo "<br>";
-                             echo "  Arrival Station = " . $row['arrivalstation'];
+                             echo " AC Chair = " . $row['acchair'];
                              echo "<br>";
+                             echo " AC Berth = " . $row['acberth'];
+                             echo "<br>";
+                             echo " Non AC Berth = " . $row['nonacberth'];
+                             echo "<br>";
+                             
+                             
                              
 
 							}
@@ -85,13 +100,17 @@ if(!empty($Tid))
 
 							else 
 								{
-									echo "<h1> Wrong Train ID Inserted...</h1>";
+									echo "<h1> Wrong Input Inserted...</h1>";
 
-									echo "<h2> Train ID Is Not Verified </h2";
+									echo "<h2> This Input Is Not Verified </h2";
+
+
+									
 								}
 							
                         } 
 
+                            
                             else
 
                            {
@@ -110,14 +129,7 @@ if(!empty($Tid))
 
                     }
                         
-
-
-	    
-
-
-
-           
-
+      
 
 }
 
@@ -126,13 +138,14 @@ else
 
 {
 
-	echo " Train ID Must be filled";
+	echo " <h2> Please Fill The Starting Station And Arrival Station </h2> ";
 	die();
 }
 
 
 
  ?>
+
 
 
  <br><br>
@@ -143,6 +156,7 @@ else
 
  <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/FinalMainDashboardO.html'">Back</button>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
 
 
 

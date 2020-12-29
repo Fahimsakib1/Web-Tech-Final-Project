@@ -41,7 +41,7 @@ if(!empty($Tid))
                         {
 
                         	echo " Train Added Successfully";
-                        	echo "<br>";
+                        	
                         	echo " <h2> Train Lists Are Given Below </h2";
 
 						    
@@ -51,10 +51,11 @@ if(!empty($Tid))
 							if($result->num_rows > 0) 
 
 							{
-									// show result
+							echo "<br>";	// show result
 							echo "<h2>Database Results </h2>";
 
-							echo "<ol>";
+
+							//echo "<ol>";
 							while($row = $result -> fetch_assoc()) 
 
 							{
