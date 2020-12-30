@@ -61,27 +61,27 @@
                               <label for="name">Passenger Name :</label>
                               <br>
                               <input type="text" text-align="center" id="name" name="name">
-                              <span class="error" id = "errorMsgname" >*</span>
+                              <span class="error" id = "errorMsgname" ></span>
                               <br>
 
 
                               <label for="address">Address: </label>     <br>                       
                                <input type="text" id="address" name="address">
-                               <span class="error" id = "errorMsgaddress" >*</span>
+                               <span class="error" id = "errorMsgaddress" ></span>
                               <br>
 
 
                               <label for="phone">Phone :</label>
                               <br>
                               <input type="text" id="phone" name="phone">
-                              <span class="error" id = "errorMsgphone" >*</span>
+                              <span class="error" id = "errorMsgphone" ></span>
                               <br>
 
 
                               <label for="journeydate">Journey Date :</label>
                               <br>
                               <input type="date" id="journeydate" name="journeydate">
-                              <span class="error" id = "errorMsgjourneydate" >*</span>
+                              <span class="error" id = "errorMsgjourneydate" ></span>
                               <br>
 
 

@@ -71,39 +71,38 @@
                                    Starting Station: <br>
                                    <input type="text" id = "startingstation" name="startingstation"> <br>
                                    <span class="error" id="errorMsgstartingstation"> <?php echo $startingstationErr; ?></span>
-                                    <br>
+                                    
 
 
                                     Arrival Station:<br>
 
                                      <input type="text" id ="arrivalstation" name="arrivalstation"> <br>
                                     <span class="error" id="errorMsgarrivalstation"> <?php echo $arrivalstationErr; ?></span>
-                                    <br>
+                                    
 
                                     Shovon Chair:<br>
                                      <input type="text" placeholder="Add Updated Fare" id ="shovonchair" name="shovonchair"> <br> 
                                     <span class="error" id="errorMsgshovonchair"> <?php echo $shovonchairErr; ?></span>
-                                    <br>
+                                    
 
 
 
                                     AC Chair: <br>
                                     <input type="text" placeholder="Add Updated Fare" id ="acchair" name="acchair">  <br>
                                     <span class="error" id="errorMsgacchair"> <?php echo $acchairErr; ?></span>
-                                    <br>
+                                   
 
 
                                     AC Berth: <br>
                                     <input type="text" placeholder="Add Updated Fare" id ="acberth" name="acberth"> <br>
                                     <span class="error" id="errorMsgacberth"> <?php echo $acberthErr; ?></span>
-                                    <br>
+                                    
 
 
                                     Non AC Berth:<br>
                                      <input type="text" placeholder="Add Updated Fare" id ="nonacberth" name="nonacberth"> <br> 
                                     <span class="error" id="errorMsgnonacberth"> <?php echo $nonacberthErr; ?></span>
                                     <br>
-
 
 
                                     <input class = "mainDivFormButton" type="submit" name="Update" value="Update">

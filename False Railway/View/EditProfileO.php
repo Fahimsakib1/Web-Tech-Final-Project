@@ -81,14 +81,14 @@
 
                                     Name: <br>
                                      <input type="text" id = "name" name="name">
-                                    <span class="error" >* <?php echo $nameErr; ?> </span>
+                                    <span class="error" ><?php echo $nameErr; ?> </span>
                                     <p id = "errorMsgName"></p>
                                    
 
 
                                     E-mail : <br>
                                      <input type="text" id = "email" name="email">
-                                    <span class="error" id ="errorMsgEmail">* <?php echo $emailErr; ?> </span>
+                                    <span class="error" id ="errorMsgEmail"><?php echo $emailErr; ?> </span>
                                     <br>
                                     
 
@@ -97,7 +97,7 @@
                                     <input type="radio" id = "male" name="gender" value="Male" required="">Male
                                     <input type="radio" id = "female" name="gender" value="Female">Female
                                     <input type="radio" id = "other" name="gender" value="Other">Other
-                                    <span class="error" id ="errorMsgGender">* <?php echo $genderErr; ?></span>
+                                    <span class="error" id ="errorMsgGender"><?php echo $genderErr; ?></span>
                                     <br>
 
 
@@ -111,12 +111,12 @@
 
                                 Date of Birth : <br>
                                 <input type="date" id = "dob" name="dob">
-                                <span class="error" id ="errorMsgDOB">* <?php echo $dobErr; ?></span>
+                                <span class="error" id ="errorMsgDOB"><?php echo $dobErr; ?></span>
                                     <br>
 
                                     Address : <br>
                                     <input type="text" id = "address" name="address">
-                                    <span class="error" id ="errorMsgAddress">* <?php echo $addressErr; ?></span>
+                                    <span class="error" id ="errorMsgAddress"><?php echo $addressErr; ?></span>
                                     <br>
 
 

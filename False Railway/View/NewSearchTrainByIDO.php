@@ -20,14 +20,16 @@
 </style>
 
 <head>
+  <script src="../asset/javaScript/NewSearchTrainByIDValidationO.js"></script>
   <link rel="stylesheet" href="../asset/css/styleO.css">
-  <!-- <script src="../asset/javaScript/NewSearchTrainByIDValidationO.js"></script> -->
+  
 
  
 
 </head>
 
 <body>
+
 
 
    
@@ -52,12 +54,10 @@
                       
                       
                              
-
-
                              <label for="">Enter Train ID To Search Train</label>
                              <br><br>
 
-                             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" > 
+                             <form  class = "" action="../Model/DataBaseForNewSearchTrainByIDO.php" method="post" onsubmit="return validateForm()" > 
 
 
                              Train ID : <input type="text" id = "tid" name="tid" value="">

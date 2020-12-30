@@ -8,6 +8,13 @@
 		<style>
 			.error {color: #FF0000;}
 
+			body
+            {
+
+   	        background-color: #f7d677;
+
+            }
+
 			input
 
            {
@@ -65,17 +72,17 @@
 
 
 								E-mail: <input type="text" id = "email" name="email">
-								<span class="error" id = "errorMsgemail">* <?php echo $emailErr;?></span>
+								<span class="error" id = "errorMsgemail"><?php echo $emailErr;?></span>
 								<br><br> 
 
 								Password:<input type="Password" id = "pwdN" name="pwdN">
-								<span class="error" id = "errorMsgepwdN">* <br>
+								<span class="error" id = "errorMsgepwdN"><br>
 									<?php echo $pwdNErr;?></span>
 								<br><br>
 
 
 								Confirm Password: </font><input type="Password" id = "pwdR" name="pwdR">
-								<span class="error" id = "errorMsgepwdR" >* <br>
+								<span class="error" id = "errorMsgepwdR" ><br>
 									<?php echo $pwdRErr;?></span>
 								<br><br> 
 

@@ -1,12 +1,10 @@
 
 <?php 
-$name = filter_input(INPUT_POST,'name');
-$trainname = filter_input(INPUT_POST,'trainname');
-$destination = filter_input(INPUT_POST,'destination');
-$mobile = filter_input(INPUT_POST,'mobile');
+$tid = filter_input(INPUT_POST,'tid');
 
 
-if(!empty($mobile))
+
+if(!empty($tid))
 
 {
 
@@ -31,25 +29,25 @@ if(!empty($mobile))
 					else 
 
 					{
-							echo "<h3> Data Base Connection Successful </h3>";
+							//echo "<h3> Data Base Connection Successful </h3>";
 							
 
 
 					    //$sql = "INSERT INTO buyticket (name,trainname,destination,mobile) values ('$name','$trainname','$destination','$mobile')";
 
 
-					$sql = "SELECT mobile FROM buyticket WHERE mobile='".$mobile."'"; 
+					$sql = "SELECT id FROM trainschedule WHERE id='".$tid."'"; 
 
                          if ($conn->query($sql))
 
                         {
 
                         	//echo " <h2> Your Ticket Is Verified </h2";
-                        	echo "<br>";
+                        	//echo "<br>";
                         	
 
 						    
-						    $sql = "SELECT name,trainname,destination,mobile FROM buyticket WHERE mobile='".$mobile."' "; // Query
+						    $sql = "SELECT id,trainname,startingstation,departuretime,arrivalstation,arrivaltime,offday FROM trainschedule WHERE id='".$tid."' "; // Query
 
 							$result = $conn -> query($sql); // result set
 
@@ -58,9 +56,9 @@ if(!empty($mobile))
 							{
 									// show result
 							//echo "<br>";
-							echo " <h2> Your Ticket Is Verified </h2";
+							echo " <h2> Train ID Is Verified </h2";
 							echo "<br>";
-							echo "<h2> Your Ticket Details:</h2>";
+							echo "<h2> Searched Train Details:</h2>";
 
 
 							echo "<ol>";
@@ -70,14 +68,21 @@ if(!empty($mobile))
 										/* echo " <li> id = " . $row['id'] . " and " . "fullName = " . $row['fullName'] . "</li>"; */
 
                              echo "<br>";
-                             echo " User Name = " . $row['name'];
+                             echo " Train ID = " . $row['id'];
                              echo "<br>";
                              echo " Train Name = " . $row['trainname'];
                              echo "<br>";
-                             echo " Destination = " . $row['destination'];
+                             echo " Starting Station = " . $row['startingstation'];
                              echo "<br>";
-                             echo " Mobile = " . $row['mobile'];
+                             echo " Departure Time = " . $row['departuretime'];
                              echo "<br>";
+                             echo " Arrival Station = " . $row['arrivalstation'];
+                             echo "<br>";
+                             echo " Arrival Time = " . $row['arrivaltime'];
+                             echo "<br>";
+                             echo " Off Day = " . $row['offday'];
+                             echo "<br>";
+                             
                              
 
 							}
@@ -90,9 +95,9 @@ if(!empty($mobile))
 
 							else 
 								{
-									echo "<h1> Wrong Mobile Number...</h1>";
+									echo "<h1> Wrong Train ID...</h1>";
 
-									echo "<h2> Your Ticket Is Not Verified </h2";
+									echo "<h2> Train ID Is Not Verified </h2";
 
 
 									
@@ -128,7 +133,7 @@ else
 
 {
 
-	echo " <h2> Enter Mobile Number Please </h2>";
+	echo " <h2> Please  Enter Train ID To Search Train </h2>";
 	die();
 
 
@@ -149,8 +154,9 @@ else
 			<table style="width: auto; border: 2px solid #000; border-collapse: collapse;">
 
 
-  <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/FahimFaysalSakib.html'">Back</button>
+ <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/FahimFaysalSakib.html'">Back</button>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
 
 
 

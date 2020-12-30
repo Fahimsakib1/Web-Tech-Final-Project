@@ -53,15 +53,15 @@
 							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()"> 
 
 								Current Password: <br> <input type="Password" id ="pwd" name="pwd"> 
-								<span class="error" id = "errorMsgpwd">* <?php echo $pwdErr;?></span>
+								<span class="error" id = "errorMsgpwd"><?php echo $pwdErr;?></span>
 								<br>
 
 								<font color="green">New Password: <br> </font><input type="Password" id ="pwdN" name="pwdN"> 
-								<span class="error" id = "errorMsgpwdN">* <?php echo $pwdNErr;?></span>
+								<span class="error" id = "errorMsgpwdN"><?php echo $pwdNErr;?></span>
 								<br>
 
 								Retype New Password: <br> <input type="Password" id ="pwdR" name="pwdR"> 
-								<span class="error" id = "errorMsgpwdR">* <?php echo $pwdRErr;?></span>
+								<span class="error" id = "errorMsgpwdR"><?php echo $pwdRErr;?></span>
 								<br>
 
 								<input class = "mainDivFormButton"  type="submit" name="submit" value="Submit">  

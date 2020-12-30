@@ -59,13 +59,13 @@
                               <label for="id">Train ID :</label>
                               <br>
                               <input type="text" text-align="center" id="id" name="id">
-                              <span class="error" id = "errorMsgID" >*</span>
+                              <span class="error" id = "errorMsgID" ></span>
                               <br>
 
 
                               <label for="name">Train Name: </label>     <br>                       
                                <input type="text" id="name" name="name">
-                               <span class="error" id = "errorMsgName" >*</span>
+                               <span class="error" id = "errorMsgName" ></span>
                               <br>
                               
 
@@ -73,7 +73,7 @@
                               <label for="startingstation">Starting Station :</label>
                               <br>
                               <input type="text" id="startingstation" name="startingstation">
-                              <span class="error" id = "errorMsgStartingstation" >*</span>
+                              <span class="error" id = "errorMsgStartingstation" ></span>
                               <br>
 
 
@@ -81,7 +81,7 @@
                               <label for="departuretime">Departure Time :</label>
                               <br>
                               <input type="text" id="departuretime" name="departuretime">
-                              <span class="error" id = "errorMsgDeparturetime" >*</span>
+                              <span class="error" id = "errorMsgDeparturetime" ></span>
                               <br>
 
 
@@ -89,7 +89,7 @@
                               <label for="arrivalstation">Arrival Station :</label>
                               <br>
                               <input type="text" id="arrivalstation" name="arrivalstation">
-                              <span class="error" id = "errorMsgArrivalstation" >*</span>
+                              <span class="error" id = "errorMsgArrivalstation" ></span>
                               <br>
 
 
@@ -97,14 +97,14 @@
                               <label for="arrivaltime">Arrival Time:</label>
                               <br>
                               <input type="text" id="arrivaltime" name="arrivaltime">
-                              <span class="error" id = "errorMsgArrivaltime" >*</span>
+                              <span class="error" id = "errorMsgArrivaltime" ></span>
                               <br>
 
 
                               <label for="offday">Off Day:</label>
                               <br>
                               <input type="text" id="offday" name="offday">
-                              <span class="error" id = "errorMsgOffday" >*</span>
+                              <span class="error" id = "errorMsgOffday" ></span>
                               <br>
 
 

@@ -62,13 +62,13 @@
                               <label for="id">Ticket ID :</label>
                               <br>
                               <input type="text" text-align="center" id="id" name="id">
-                              <span class="error" id = "errorMsgID" >*</span>
+                              <span class="error" id = "errorMsgID" ></span>
                               <br>
 
 
                               <label for="name">Passenger Name: </label>     <br>                       
                                <input type="text" id="name" name="name">
-                               <span class="error" id = "errorMsgName" >*</span>
+                               <span class="error" id = "errorMsgName" ></span>
                               <br>
                               
 
@@ -76,21 +76,21 @@
                               <label for="previousdate">Previous Journey Date :</label>
                               <br>
                               <input type="date" id="previousdate" name="previousdate">
-                              <span class="error" id = "errorMsgPreviousdate" >*</span>
+                              <span class="error" id = "errorMsgPreviousdate" ></span>
                               <br>
 
 
                               <label for="newdate">New Journey Date :</label>
                               <br>
                               <input type="date" id="newdate" name="newdate">
-                              <span class="error" id = "errorMsgNewdate" >*</span>
+                              <span class="error" id = "errorMsgNewdate" ></span>
                               <br>
 
 
                               <label for="previousdestination">Previous Destination :</label>
                               <br>
                               <input type="text" id="previousdestination" name="previousdestination">
-                              <span class="error" id = "errorMsgPreviousdestination" >*</span>
+                              <span class="error" id = "errorMsgPreviousdestination" ></span>
                               <br>
 
 
@@ -98,7 +98,7 @@
                               <label for="newdestination">New Destination:</label>
                               <br>
                               <input type="text" id="newdestination" name="newdestination">
-                              <span class="error" id = "errorMsgNewdestination" >*</span>
+                              <span class="error" id = "errorMsgNewdestination" ></span>
                               <br>
 
 

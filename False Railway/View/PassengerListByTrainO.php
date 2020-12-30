@@ -28,9 +28,6 @@
 
 
 
-
-
-
 <?php
           
 
@@ -67,7 +64,7 @@
                                 <font color = "blue" : align = middle> <h2>Passenger List By Train</h2> </font>
                             </td>
                         </tr>
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" > 
+                        <form method="post" action="../Model/DataBaseForPassengerListByTrainO.php" onsubmit="return validateForm()" > 
                         <tr>
                             
 
