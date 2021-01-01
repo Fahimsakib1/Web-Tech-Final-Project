@@ -68,11 +68,11 @@
                                 <p align="margin-middle">
 
 
-                                   Starting Station  : <input type="text" id = "StartingStation" name="StartingStation"> <br>
+                                   Starting Station  : <input type="text" placeholder="Enter Starting Station" id = "StartingStation" name="StartingStation"> <br>
                                    <span class="error" id="errorMsgStartingStation"> <?php echo $StartingStationErr; ?></span>
                                     <br><br>
 
-                                    Arrival Station  : <input type="text" id ="ArrivalStation" name="ArrivalStation"> <br>
+                                    Arrival Station  : <input type="text" placeholder="Enter Arrival Station" id ="ArrivalStation" name="ArrivalStation"> <br>
                                     <span class="error" id="errorMsgArrivalStation"> <?php echo $ArrivalStationErr; ?></span>
                                     <br><br>
 

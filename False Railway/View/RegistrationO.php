@@ -67,27 +67,27 @@
 							<!-- <form method="post" 	action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()"> -->
 
 							 
-							<font size="4px"> Name: </font>	 <input type="text" id="name" name="name"> <br>
+							<font size="4px"> Name: </font>	 <input type="text" placeholder="Enter Name" id="name" name="name"> <br>
 								<span class="error" id="errorMsgName" ><?php echo $nameErr;?></span>
 								<br><br>
 
 
-								<font size="4px"> E-mail:</font> <input type="text" id="email" name="email"> <br>
+								<font size="4px"> E-mail:</font> <input type="text" placeholder="Enter E-mail" id="email" name="email"> <br>
 								<span class="error" id="errorMsgEmail"> <?php echo $emailErr;?></span>
 								<br><br>
 
 
-								<font size="4px"> User Name:</font> <input type="text" id="username" name="username"> <br>
+								<font size="4px"> User Name:</font> <input type="text" placeholder="Enter User Name" id="username" name="username"> <br>
 								<span class="error" id="errorMsgUserName"><?php echo $usernameErr;?></span>
 								<br><br>
 
 
-								<font size="4px"> Password:</font><input type="Password" id="pwdN" name="pwdN"> <br>
+								<font size="4px"> Password:</font><input type="Password" placeholder="Enter Password"id="pwdN" name="pwdN"> <br>
 								<span class="error" id="errorMsgpwdN"> <?php echo $pwdNErr;?></span>
 								<br><br>
 
 
-								<font size="4px"> Confirm Password:</font></font><input type="Password" id="pwdR" name="pwdR"> <br>
+								<font size="4px"> Confirm Password:</font></font><input type="Password" placeholder="Confirm Password" id="pwdR" name="pwdR"> <br>
 								<span class="error" id="errorMsgpwdR"> <?php echo $pwdRErr;?></span>
 								<br><br>
 
@@ -100,7 +100,7 @@
 								<br><br> -->
 
 
-								<font size="4px"> Date of Birth: </font> </b><input type="date" id = "dob" name="dob"> <br>
+								<font size="4px"> Date of Birth: </font> </b><input type="date" placeholder="Enter Date of Birth" id = "dob" name="dob"> <br>
 								<span class="error" id="errorMsgDOB"> <?php echo $dobErr;?></span>
 								<br><br>
 

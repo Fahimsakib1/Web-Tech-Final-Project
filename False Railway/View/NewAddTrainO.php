@@ -57,13 +57,13 @@
 
                               <label for="Tid">Train ID  :</label>
                               <br>
-                              <input type="text" text-align="center" id="Tid" name="Tid">
+                              <input type="text" placeholder="Enter Train ID" text-align="center" id="Tid" name="Tid">
                               <span class="error" id = "errorMsgTid" ></span>
                               <br>
 
 
                               <label for="Tname">Train Name : </label>        <br>                    
-                               <input type="text" id="Tname" name="Tname">
+                               <input type="text" placeholder="Enter Train Name" id="Tname" name="Tname">
                                <span class="error" id = "errorMsgTname" ></span>
                               <br>
 
@@ -71,14 +71,14 @@
 
                               <label for="StartingStation">Starting Station :</label>
                               <br>
-                              <input type="text" id="StartingStation" name="StartingStation">
+                              <input type="text" placeholder="Enter Starting Station" id="StartingStation" name="StartingStation">
                               <span class="error" id = "errorMsgStartingStation" ></span>
                               <br>
 
 
                               <label for="ArrivalStation">Arrival Station :</label>
                               <br>
-                              <input type="text" id="ArrivalStation" name="ArrivalStation">
+                              <input type="text" placeholder="Enter Arrival Station"  id="ArrivalStation" name="ArrivalStation">
                               <span class="error" id = "errorMsgArrivalStation" ></span>
                               <br>
 

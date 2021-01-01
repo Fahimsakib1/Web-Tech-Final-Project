@@ -8,7 +8,7 @@
 
            {
 
-            width: 25%;
+            width: 45%;
             height: 5%;
             border: 10px;
             border-radius: 15px;
@@ -16,6 +16,29 @@
             margin: 10px 0px 15px 0px;
             box-shadow: 1px 1px 2px 1px blue; 
 
+           }
+
+           #startingstation
+           {
+            width: 49%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px blue;
+
+           }
+
+           #arrivalstation
+           {
+            width: 49%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px blue;
            }
 </style>
 
@@ -76,11 +99,53 @@
                                 <p align="margin-left">
 
 
-                                   Starting Station  :  <input type="text" id = "startingstation" name="startingstation"><span class="error" id = "errorMsg1" ><?php echo $startingstationErr; ?></span>
-                                    <br><br>
+                                   <!-- Starting Station  : <br>  <input type="text" placeholder="Enter Starting Station" id = "startingstation" name="startingstation"><span class="error" id = "errorMsg1" ><?php //echo $startingstationErr; ?></span>
+                                    <br> -->
 
-                                    Arrival Station  : <input type="text" id = "arrivalstation" name="arrivalstation"><span class="error" id = "errorMsg2" > <?php echo $arrivalstationErr; ?></span>
-                                    <br><br>
+
+                                    <!-- Arrival Station  : <br> <input type="text" placeholder="Enter Arrival Station" id = "arrivalstation" name="arrivalstation"><span class="error" id = "errorMsg2" > <?php //echo $arrivalstationErr; ?></span>
+                                    <br> -->
+
+
+
+                                    <label for="startingstation" >Starting Station:</label>
+                                    <br>
+                                    <select name="startingstation" id="startingstation" >
+                                    <option value="Choose">Choose Starting Station</option>    
+                                    <option value="Dinajpur">Dinajpur</option>
+                                    <option value="Panchagarh">Panchagarh</option>
+                                    <option value="Dhaka">Dhaka</option>
+                                    <option value="Rangpur">Rangpur</option>
+                                    <option value="Sylhet">Sylhet</option>
+                                    <option value="Khulna">Khulna</option>
+                                    <option value="Rajshahi">Rajshahi</option>
+                                    <option value="Thakurgaon">Thakurgaon</option>
+                                    <option value="Tangail">Tangail</option>
+                                    <option value="Gazipur">Gazipur</option>
+                                    <option value="Lalmonihaath">Lalmonihaath</option>
+                                    <span class="error" id = "errorMsg1" ><?php //echo $startingstationErr; ?></span>                                   
+                                    </select> 
+                                    <br>
+
+
+                                    <label for="arrivalstation" >Arrival Station:</label>
+                                    <br>
+                                    <select name="arrivalstation" id="arrivalstation" >
+                                    <option value="Choose">Choose Arrival Station</option>    
+                                    <option value="Dinajpur">Dinajpur</option>
+                                    <option value="Panchagarh">Panchagarh</option>
+                                    <option value="Dhaka">Dhaka</option>
+                                    <option value="Rangpur">Rangpur</option>
+                                    <option value="Sylhet">Sylhet</option>
+                                    <option value="Khulna">Khulna</option>
+                                    <option value="Rajshahi">Rajshahi</option>
+                                    <option value="Thakurgaon">Thakurgaon</option>
+                                    <option value="Tangail">Tangail</option>
+                                    <option value="Gazipur">Gazipur</option>
+                                    <option value="Lalmonihaath">Lalmonihaath</option>
+                                    <span class="error" id = "errorMsg2" > <?php //echo $arrivalstationErr; ?></span>                                   
+                                    </select> 
+                                    <br> 
 
 
                                     <input class = "mainDivFormButton" type="submit" name="submit1" value="Submit">

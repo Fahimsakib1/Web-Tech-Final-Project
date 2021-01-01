@@ -83,26 +83,26 @@
 
                               <label for="Tid">Train ID  :</label>
                               
-                              <input type="text" text-align="center" name="Tid" value="<?php echo $Tid; ?>">
+                              <input type="text" placeholder="Enter Train ID" text-align="center" name="Tid" value="<?php echo $Tid; ?>">
                               <br><br>
 
 
                               <label for="Tname">Train Name : </label>
                               
-                               <input type="text" name="Tname" value="<?php echo $Tname; ?>">
+                               <input type="text" placeholder="Enter Train Name" name="Tname" value="<?php echo $Tname; ?>">
                               <br><br>
 
 
 
                               <label for="StartingStation">Starting Station :</label>
                               
-                              <input type="text" name="StartingStation" value="<?php echo $StartingStation; ?>">
+                              <input type="text" placeholder="Enter Starting Station" name="StartingStation" value="<?php echo $StartingStation; ?>">
                               <br><br>
 
 
                               <label for="ArrivalStation">Arrival Station :</label>
                               
-                              <input type="text" name="ArrivalStation" value="<?php echo $ArrivalStation; ?>">
+                              <input type="text" placeholder="Enter Arrival Station" name="ArrivalStation" value="<?php echo $ArrivalStation; ?>">
                               <br><br>
 
 

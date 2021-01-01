@@ -71,17 +71,17 @@
 							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" > 
 
 
-								E-mail: <input type="text" id = "email" name="email">
+								E-mail: <input type="text" placeholder="Enter Email" id = "email" name="email">
 								<span class="error" id = "errorMsgemail"><?php echo $emailErr;?></span>
 								<br><br> 
 
-								Password:<input type="Password" id = "pwdN" name="pwdN">
+								Password:<input type="Password" placeholder="Enter New Password" id = "pwdN" name="pwdN">
 								<span class="error" id = "errorMsgepwdN"><br>
 									<?php echo $pwdNErr;?></span>
 								<br><br>
 
 
-								Confirm Password: </font><input type="Password" id = "pwdR" name="pwdR">
+								Confirm Password: </font><input type="Password" placeholder="Confirm New Password" id = "pwdR" name="pwdR">
 								<span class="error" id = "errorMsgepwdR" ><br>
 									<?php echo $pwdRErr;?></span>
 								<br><br> 

@@ -11,7 +11,7 @@
 
            {
 
-            width: 25%;
+            width: 38%;
             height: 5%;
             border: 10px;
             border-radius: 15px;
@@ -52,15 +52,15 @@
 							<h2> CHANGE PASSWORD</h2>
 							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()"> 
 
-								Current Password: <br> <input type="Password" id ="pwd" name="pwd"> 
+								Current Password: <br> <input type="Password" placeholder="Enter Current Password" id ="pwd" name="pwd"> 
 								<span class="error" id = "errorMsgpwd"><?php echo $pwdErr;?></span>
 								<br>
 
-								<font color="green">New Password: <br> </font><input type="Password" id ="pwdN" name="pwdN"> 
+								<font color="green">New Password: <br> </font><input type="Password" placeholder="Enter New Password" id ="pwdN" name="pwdN"> 
 								<span class="error" id = "errorMsgpwdN"><?php echo $pwdNErr;?></span>
 								<br>
 
-								Retype New Password: <br> <input type="Password" id ="pwdR" name="pwdR"> 
+								Retype New Password: <br> <input type="Password" placeholder="Retype New Password" id ="pwdR" name="pwdR"> 
 								<span class="error" id = "errorMsgpwdR"><?php echo $pwdRErr;?></span>
 								<br>
 

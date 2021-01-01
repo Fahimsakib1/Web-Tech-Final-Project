@@ -9,7 +9,8 @@
 
            {
 
-            
+            width: 31%;
+            height: 5%;
             border: 10px;
             border-radius: 15px;
             padding: 7px 15px 10px 15px;
@@ -17,6 +18,18 @@
             box-shadow: 1px 1px 2px 1px green; 
 
            }
+
+           #gender
+           {
+            width: 35%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px green; 
+           }
+
 
     
 
@@ -80,25 +93,37 @@
 
 
                                     Name: <br>
-                                     <input type="text" id = "name" name="name">
+                                     <input type="text" placeholder="Enter Name" id = "name" name="name">
                                     <span class="error" ><?php echo $nameErr; ?> </span>
                                     <p id = "errorMsgName"></p>
                                    
 
 
                                     E-mail : <br>
-                                     <input type="text" id = "email" name="email">
+                                     <input type="text" placeholder="Enter Email" id = "email" name="email">
                                     <span class="error" id ="errorMsgEmail"><?php echo $emailErr; ?> </span>
                                     <br>
                                     
 
 
-                                    Gender :
+                                    <!-- Gender :
                                     <input type="radio" id = "male" name="gender" value="Male" required="">Male
                                     <input type="radio" id = "female" name="gender" value="Female">Female
                                     <input type="radio" id = "other" name="gender" value="Other">Other
                                     <span class="error" id ="errorMsgGender"><?php echo $genderErr; ?></span>
+                                    <br> -->
+
+
+                                    <label for="gender" >Gender:</label>
                                     <br>
+                                    <select name="gender" id="gender" >
+                                    <option value="choose">Choose Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    </select> 
+                                    <br>
+
 
 
                                     <!-- Gender:
@@ -110,12 +135,12 @@
 
 
                                 Date of Birth : <br>
-                                <input type="date" id = "dob" name="dob">
+                                <input type="date" placeholder="Enter Date-of-Birth" id = "dob" name="dob">
                                 <span class="error" id ="errorMsgDOB"><?php echo $dobErr; ?></span>
                                     <br>
 
                                     Address : <br>
-                                    <input type="text" id = "address" name="address">
+                                    <input type="text" placeholder="Enter Address" id = "address" name="address">
                                     <span class="error" id ="errorMsgAddress"><?php echo $addressErr; ?></span>
                                     <br>
 

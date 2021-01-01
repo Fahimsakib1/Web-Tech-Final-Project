@@ -17,6 +17,32 @@
 
            }
 
+           #newdestination
+           {
+            width: 27%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 10px 7px 10px;
+            margin: 10px 10px 15px 0px;
+            box-shadow: 1px 1px 2px 1px blue; 
+
+           }
+
+           #previousdestination
+           { 
+
+            width: 27%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 10px 7px 10px;
+            margin: 10px 10px 15px 0px;
+            box-shadow: 1px 1px 2px 1px blue; 
+           }
+
+
+
 </style>
 
 <head>
@@ -61,13 +87,13 @@
 
                               <label for="id">Ticket ID :</label>
                               <br>
-                              <input type="text" text-align="center" id="id" name="id">
+                              <input type="text" placeholder="Enter Ticket ID" text-align="center" id="id" name="id">
                               <span class="error" id = "errorMsgID" ></span>
                               <br>
 
 
                               <label for="name">Passenger Name: </label>     <br>                       
-                               <input type="text" id="name" name="name">
+                               <input type="text" placeholder="Enter Passenger Name" id="name" name="name">
                                <span class="error" id = "errorMsgName" ></span>
                               <br>
                               
@@ -75,31 +101,73 @@
 
                               <label for="previousdate">Previous Journey Date :</label>
                               <br>
-                              <input type="date" id="previousdate" name="previousdate">
+                              <input type="date" placeholder="Enter Previous Journey Date" id="previousdate" name="previousdate">
                               <span class="error" id = "errorMsgPreviousdate" ></span>
                               <br>
 
 
                               <label for="newdate">New Journey Date :</label>
                               <br>
-                              <input type="date" id="newdate" name="newdate">
+                              <input type="date" placeholder="Enter New Journey Date" id="newdate" name="newdate">
                               <span class="error" id = "errorMsgNewdate" ></span>
                               <br>
 
 
-                              <label for="previousdestination">Previous Destination :</label>
+                              <!-- <label for="previousdestination">Previous Destination :</label>
                               <br>
-                              <input type="text" id="previousdestination" name="previousdestination">
+                              <input type="text" placeholder="Enter Previous Destination" id="previousdestination" name="previousdestination">
                               <span class="error" id = "errorMsgPreviousdestination" ></span>
+                              <br> -->
+
+
+
+                              <!-- <label for="newdestination">New Destination:</label>
                               <br>
-
-
-
-                              <label for="newdestination">New Destination:</label>
-                              <br>
-                              <input type="text" id="newdestination" name="newdestination">
+                              <input type="text" placeholder="Enter New Destination" id="newdestination" name="newdestination">
                               <span class="error" id = "errorMsgNewdestination" ></span>
+                              <br> -->
+
+                            
+                              <label for="newdestination" >Previous Destination:</label>
                               <br>
+                            <select name="previousdestination" id="previousdestination" >
+                              <option value="Choose">Choose Previous Destination</option>   
+                              <option value="Dinajpur">Dinajpur</option>
+                              <option value="Panchagarh">Panchagarh</option>
+                              <option value="Dhaka">Dhaka</option>
+                              <option value="Rangpur">Rangpur</option>
+                              <option value="Sylhet">Sylhet</option>
+                              <option value="Khulna">Khulna</option>
+                              <option value="Rajshahi">Rajshahi</option>
+                              <option value="Thakurgaon">Thakurgaon</option>
+                              <option value="Tangail">Tangail</option>
+                              <option value="Gazipur">Gazipur</option>
+                              <option value="Lalmonihaath">Lalmonihaath</option>
+                              <span class="error" id = "errorMsgPreviousdestination" ></span>                              
+                              </select> 
+                              <br> 
+
+
+
+                              <label for="newdestination" >New Destination:</label>
+                              <br>
+                              <select name="newdestination" id="newdestination" >
+                              <option value="Choose">Choose New Destination</option>    
+                              <option value="Dinajpur">Dinajpur</option>
+                              <option value="Panchagarh">Panchagarh</option>
+                              <option value="Dhaka">Dhaka</option>
+                              <option value="Rangpur">Rangpur</option>
+                              <option value="Sylhet">Sylhet</option>
+                              <option value="Khulna">Khulna</option>
+                              <option value="Rajshahi">Rajshahi</option>
+                              <option value="Thakurgaon">Thakurgaon</option>
+                              <option value="Tangail">Tangail</option>
+                              <option value="Gazipur">Gazipur</option>
+                              <option value="Lalmonihaath">Lalmonihaath</option>
+                              <span class="error" id = "errorMsgNewdestination" ></span>                              
+                              </select> 
+                              <br> 
+
 
 
                               <!--<input style="color: blue" class = "mainDivFormButton" type="submit" name="Add" value="Add"> -->

@@ -57,7 +57,7 @@
                              <label for="">Enter Train ID To Remove Train</label>
                              <br><br>
 
-                             Train ID  :<input type="text" id ="Tid" name="Tid"> <br>
+                             Train ID  :<input type="text" placeholder="Enter Train ID" id ="Tid" name="Tid"> <br>
                              <span class="error" id ="errorMsgTid" ></span>
                               <br><br>
                             

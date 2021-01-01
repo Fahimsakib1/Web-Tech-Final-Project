@@ -129,7 +129,7 @@
                              <br><br>
 
 
-                             Train ID : <input type="text" name="Tid" value="<?php echo $Tid; ?>">
+                             Train ID : <input type="text" placeholder="Enter Train ID" name="Tid" value="<?php echo $Tid; ?>">
                              <br>
 
 

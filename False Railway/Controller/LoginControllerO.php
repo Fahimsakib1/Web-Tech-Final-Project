@@ -95,7 +95,7 @@
 		 	//echo "<a href='../View/Dashboard.php'>Home</a>";
 		 	session_start();
 			$_SESSION['name']=$name;
-			header('Location: ../View/FahimFaysalsakib.html');
+			header('Location: ../View/FahimSakib.html');
 		}
 
 

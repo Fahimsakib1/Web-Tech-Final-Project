@@ -83,7 +83,7 @@
                                     <br><br> -->
 
 
-                                    Ticket ID  :  <input type="text" id = "ticketID" name="ticketID"><span class="error" id = "errorMsgticketID"> </span>
+                                    Ticket ID  :  <input type="text" placeholder="Enter Ticket ID" id = "ticketID" name="ticketID"><span class="error" id = "errorMsgticketID"> </span>
                                     <br><br>
 
 

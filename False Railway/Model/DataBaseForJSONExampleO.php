@@ -1,17 +1,18 @@
 <?php 
 $name = filter_input(INPUT_POST,'name');
 $address = filter_input(INPUT_POST,'address');
-$phone = filter_input(INPUT_POST,'phone');
-$journeydate = filter_input(INPUT_POST,'journeydate');
-
+$mobile = filter_input(INPUT_POST,'mobile');
+$university = filter_input(INPUT_POST,'university');
+$department = filter_input(INPUT_POST,'department');
+$semester = filter_input(INPUT_POST,'semester');
 
 if(!empty($name))
 
 {
 
-	    if (!empty($address))
+	    
 
-	    {
+	    
              
                     $servername = "localhost";
 					$dbusername = "root";
@@ -34,59 +35,84 @@ if(!empty($name))
 							
 
 
-					    $sql = "INSERT INTO passengerinfo (name,address,phone,journeydate) values ('$name','$address','$phone','$journeydate')";
+					    $sql = "INSERT INTO jsonexample (name,address,mobile,university,department,semester) values ('$name','$address','$mobile','$university','$department','$semester')";
+
+
 
                          if ($conn->query($sql))
 
                         {
 
-                        	echo " Passenger Added Successfully";
-                        	echo "<br>";
-                        	echo " <h2> Passenger Lists Are Given Below </h2";
-
+                        	//echo " <h2>Ticket Fare Is Updated</h2";
+                        	//echo "<br>";
 						    
-						    $sql = "SELECT name,address,phone,journeydate FROM passengerinfo"; // Query
+						    $sql = "SELECT * FROM jsonexample "; // Query
+
 							$result = $conn -> query($sql); // result set
+
+							$json_array = array();
 
 							if($result->num_rows > 0) 
 
 							{
-						    
-						    echo " <br> ";			// show result
-							echo "<h2> Results </h2>";
+									// show result
+							//echo "<br>";
+							
+							echo "<h2> List are showing in JSON Format :</h2>";
+
 
 							echo "<ol>";
 							while($row = $result -> fetch_assoc()) 
 
 							{
-										/* echo " <li> id = " . $row['id'] . " and " . "fullName = " . $row['fullName'] . "</li>"; */
+										
 
+                             /*echo "<br>";
+                             echo " Starting Station = " . $row['startingstation'];
                              echo "<br>";
-                             echo " Passenger Name = " . $row['name'];
+                             echo " Arrival Station = " . $row['arrivalstation'];
                              echo "<br>";
-                             echo " Address = " . $row['address'];
+                             echo " Shovon Chair = " . $row['shovonchair'];
                              echo "<br>";
-                             echo " Phone = " . $row['phone'];
+                             echo " AC Chair = " . $row['acchair'];
                              echo "<br>";
-                             echo " Journey Date = " . $row['journeydate'];
+                             echo " AC Berth = " . $row['acberth'];
                              echo "<br>";
+                             echo " Non AC Berth = " . $row['nonacberth'];
+                             echo "<br>"; */
+
+                             $json_array[] =$row;
+                             
+                             
                              
 
 							}
 
+							/* echo "<pre>";
+                            print_r($json_array);
+                            echo "</pre>";*/ 
 
-							echo "</ol>";
+                            print(json_encode($json_array));
+
+
+							
 							echo "<br>";
 
 								}
 
 							else 
 								{
-									echo "<p>Result is zero</p>";
+									echo "<h1> Wrong Input Inserted...</h1>";
+
+									echo "<h2> This Input Is Not Verified </h2";
+
+
+									
 								}
 							
                         } 
 
+                            
                             else
 
                            {
@@ -105,21 +131,7 @@ if(!empty($name))
 
                     }
                         
-
-
-	    }
-
-
-
-           else
-           {
-
-           	echo " Name must be filled";
-           	die();
-
-           }
-
-
+      
 
 }
 
@@ -128,7 +140,7 @@ else
 
 {
 
-	echo "Passenger Information Must Be Filled";
+	echo " <h2> Please Fill Your Name And Address </h2> ";
 	die();
 }
 

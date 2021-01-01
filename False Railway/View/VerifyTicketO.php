@@ -85,7 +85,7 @@
 
                                     
                                     Mobile:<br>
-                                    <input type="text" id="mobile" name="mobile">
+                                    <input type="text" placeholder="Enter Mobile Number" id="mobile" name="mobile">
                                     <span class="error" id ="errorMsgMobile"> <?php echo $mobileErr; ?></span>
                                     <br> 
 

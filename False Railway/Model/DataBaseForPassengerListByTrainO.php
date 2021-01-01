@@ -148,7 +148,7 @@ else
 			<table style="width: auto; border: 2px solid #000; border-collapse: collapse;">
 
 
- <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/FahimFaysalSakib.html'">Back</button>
+ <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/FahimSakib.html'">Back</button>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 
 

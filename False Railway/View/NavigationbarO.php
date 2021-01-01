@@ -6,9 +6,9 @@
 			#container a
 		{
 			
-            list-style: none;
-			
-			font-size: 19px;   
+            list-style: none;		
+			font-size: 19px; 
+			font-style: bold;  
 			color:#06248B  ;
 			text-decoration: none;	 
 			
@@ -56,9 +56,11 @@
 
 		● <a href="RemoveTrainO.php">Remove Train From Route(db)</a><br>
 
-		● <a href="NewSearchTrainByIDO.php">Search Train By ID </a><br>
+		● <a href="NewSearchTrainByIDO.php">Search Train By ID(db)</a><br>
 
 		● <a href="AJAXExampleO.php">AJAX</a><br>
+
+		● <a href="JSONViewPageO.php">JSON</a><br>
 		
 		● <a href="LoginO.php">Logout</a><br>
 
@@ -68,7 +70,7 @@
 		<!-- <br> -->
 		<!-- <button type="button" onClick="document.location.href='MainDashboardO.html'">Dashboard</button> -->
 
-		● <a href="FahimFaysalSakib.html">Dashboard</a><br>
+		● <a href="FahimSakib.html">Dashboard</a><br>
 		<br>
 		
 		</p>

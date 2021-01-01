@@ -7,7 +7,7 @@
 
            {
 
-            width: 80%;
+            width: 60%;
             height: 5%;
             border: 10px;
             border-radius: 15px;
@@ -15,6 +15,29 @@
             margin: 10px 0px 15px 0px;
             box-shadow: 1px 1px 2px 1px green; 
 
+           }
+
+           #startingstation
+           {
+            width: 69%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px blue;
+
+           }
+
+           #arrivalstation
+           {
+            width: 69%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px blue;
            }
 </style>
 
@@ -68,40 +91,82 @@
                                 <p align="margin-middle">
 
 
-                                   Starting Station: <br>
-                                   <input type="text" id = "startingstation" name="startingstation"> <br>
-                                   <span class="error" id="errorMsgstartingstation"> <?php echo $startingstationErr; ?></span>
+                                   <!-- Starting Station: <br>
+                                   <input type="text" placeholder="Enter Starting Station" id = "startingstation" name="startingstation"> <br>
+                                   <span class="error" id="errorMsgstartingstation"> <?php //echo $startingstationErr; ?></span> -->
                                     
 
 
-                                    Arrival Station:<br>
+                                    <!-- Arrival Station:<br>
+                                     <input type="text" placeholder="Enter Arrival Station" id ="arrivalstation" name="arrivalstation"> <br>
+                                    <span class="error" id="errorMsgarrivalstation"> <?php //echo $arrivalstationErr; ?></span> -->
 
-                                     <input type="text" id ="arrivalstation" name="arrivalstation"> <br>
-                                    <span class="error" id="errorMsgarrivalstation"> <?php echo $arrivalstationErr; ?></span>
+
+
+                                    <label for="startingstation" >Starting Station:</label>
+                                    <br>
+                                    <select name="startingstation" id="startingstation" >
+                                    <option value="Choose">Choose Starting Station</option>    
+                                    <option value="Dinajpur">Dinajpur</option>
+                                    <option value="Panchagarh">Panchagarh</option>
+                                    <option value="Dhaka">Dhaka</option>
+                                    <option value="Rangpur">Rangpur</option>
+                                    <option value="Sylhet">Sylhet</option>
+                                    <option value="Khulna">Khulna</option>
+                                    <option value="Rajshahi">Rajshahi</option>
+                                    <option value="Thakurgaon">Thakurgaon</option>
+                                    <option value="Tangail">Tangail</option>
+                                    <option value="Gazipur">Gazipur</option>
+                                    <option value="Lalmonihaath">Lalmonihaath</option>                                   
+                                    </select> 
+                                    <br>
+
+
+
+                                    <label for="arrivalstation" >Arrival Station:</label>
+                                    <br>
+                                    <select name="arrivalstation" id="arrivalstation" >
+                                    <option value="Choose">Choose Arrival Station</option>    
+                                    <option value="Dinajpur">Dinajpur</option>
+                                    <option value="Panchagarh">Panchagarh</option>
+                                    <option value="Dhaka">Dhaka</option>
+                                    <option value="Rangpur">Rangpur</option>
+                                    <option value="Sylhet">Sylhet</option>
+                                    <option value="Khulna">Khulna</option>
+                                    <option value="Rajshahi">Rajshahi</option>
+                                    <option value="Thakurgaon">Thakurgaon</option>
+                                    <option value="Tangail">Tangail</option>
+                                    <option value="Gazipur">Gazipur</option>
+                                    <option value="Lalmonihaath">Lalmonihaath</option>                                   
+                                    </select> 
+                                    <br> 
+
+
+
                                     
 
                                     Shovon Chair:<br>
                                      <input type="text" placeholder="Add Updated Fare" id ="shovonchair" name="shovonchair"> <br> 
-                                    <span class="error" id="errorMsgshovonchair"> <?php echo $shovonchairErr; ?></span>
+                                    <span class="error" id="errorMsgshovonchair"> <?php echo $shovonchairErr; ?></span> <br>
                                     
 
 
 
                                     AC Chair: <br>
                                     <input type="text" placeholder="Add Updated Fare" id ="acchair" name="acchair">  <br>
-                                    <span class="error" id="errorMsgacchair"> <?php echo $acchairErr; ?></span>
+                                    <span class="error" id="errorMsgacchair"> <?php echo $acchairErr; ?></span> <br>
                                    
 
 
                                     AC Berth: <br>
                                     <input type="text" placeholder="Add Updated Fare" id ="acberth" name="acberth"> <br>
-                                    <span class="error" id="errorMsgacberth"> <?php echo $acberthErr; ?></span>
+                                    <span class="error" id="errorMsgacberth"> <?php echo $acberthErr; ?></span> <br>
                                     
 
 
                                     Non AC Berth:<br>
                                      <input type="text" placeholder="Add Updated Fare" id ="nonacberth" name="nonacberth"> <br> 
-                                    <span class="error" id="errorMsgnonacberth"> <?php echo $nonacberthErr; ?></span>
+                                    <span class="error" id="errorMsgnonacberth"> <?php echo $nonacberthErr; ?></span> <br>
                                     <br>
 
 

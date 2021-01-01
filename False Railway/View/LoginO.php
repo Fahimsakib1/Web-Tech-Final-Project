@@ -69,7 +69,7 @@
 								<br> -->
 
 
-								<p style = "font-size:25px; font-weight: bold ; color:white" > User Name: </p>    <input class="mainDivFormLabel" type="text" id = "name" name="name">
+								<p style = "font-size:25px; font-weight: bold ; color:white" > User Name: </p>    <input class="mainDivFormLabel" type="text" placeholder="Enter Name" id = "name" name="name">
 
 								<!-- <p id = "errorMsgName"></p>-->
                                 <br>
@@ -78,14 +78,14 @@
 
 
 
-								<p style = "font-size:25px; font-weight: bold ; color:white"> Password: </p>      <input class ="mainDivFormLabel" type="Password" id="pwd" name="pwd">
+								<p style = "font-size:25px; font-weight: bold ; color:white"> Password: </p>      <input class ="mainDivFormLabel" type="Password" placeholder="Enter Password" id="pwd" name="pwd">
 								<br>
 								<span class="error" id = "errorMsgPwd"> <?php echo $pwdErr;?></span>
 								<br>
 
                                 
 
-								<input class = "mainDivFormButtonLogin" type="submit" name="submit1" value="Login" action = "FahimFaysalSakib.html">
+								<input class = "mainDivFormButtonLogin" type="submit" name="submit1" value="Login" action = "FahimSakib.html">
 								<br>
 								
 								

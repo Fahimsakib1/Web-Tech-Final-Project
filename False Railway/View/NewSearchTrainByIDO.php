@@ -60,7 +60,7 @@
                              <form  class = "" action="../Model/DataBaseForNewSearchTrainByIDO.php" method="post" onsubmit="return validateForm()" > 
 
 
-                             Train ID : <input type="text" id = "tid" name="tid" value="">
+                             Train ID : <input type="text" placeholder="Enter Train ID" id = "tid" name="tid" value="">
                              <br>
                              <span class="error" id ="errorMsgid"></span>
                               <br> 
