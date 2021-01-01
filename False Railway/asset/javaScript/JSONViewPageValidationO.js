@@ -3,9 +3,9 @@ function validateForm() {
 				var name = document.getElementById('name').value;
 				var address = document.getElementById('address').value;
 				var mobile = document.getElementById('mobile').value;
-				var university = document.getElementById('university').value;
-				var department= document.getElementById('department').value;
-				var semester = document.getElementById('semester').value;
+				var trainname = document.getElementById('trainname').value;
+				var startingstation= document.getElementById('startingstation').value;
+				var arrivalstation = document.getElementById('arrivalstation').value;
 				
 
 				var flag1=true;
@@ -43,28 +43,28 @@ function validateForm() {
 				}
 
 
-				else if(university == "") 
+				else if(trainname == "") 
 				{
-					document.getElementById('errorMsguniversity').innerHTML = "Fill The University Name";
-					document.getElementById('errorMsguniversity').style.color = "red";
+					document.getElementById('errorMsgtrainname').innerHTML = "Choose Train Name";
+					document.getElementById('errorMsgtrainname').style.color = "red";
 					//return false;	
 					flag4 = false;
 				}
 
 
-				else if(department == "") 
+				else if(startingstation == "") 
 				{
-					document.getElementById('errorMsgdepartment').innerHTML = "Department is Empty";
-					document.getElementById('errorMsgdepartment').style.color = "red";
+					document.getElementById('errorMsgstartingstation').innerHTML = " Choose Starting Station";
+					document.getElementById('errorMsgstartingstation').style.color = "red";
 					//return false;	
 					flag5 = false;
 				}
 
 
-				else if(semester == "") 
+				else if(arrivalstation == "") 
 				{
-					document.getElementById('errorMsgsemester').innerHTML = "Semester is Empty";
-					document.getElementById('errorMsgNewdestination').style.color = "red";
+					document.getElementById('errorMsgarrivalstation').innerHTML = "Choose Arrival Station ";
+					document.getElementById('errorMsgarrivalstation').style.color = "red";
 					//return false;	
 					flag6 = false;
 				}

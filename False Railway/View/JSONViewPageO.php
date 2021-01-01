@@ -17,7 +17,7 @@
 
            }
 
-           #university 
+           #traainname 
            {
             width: 39%;
             height: 5%;
@@ -28,7 +28,18 @@
             box-shadow: 1px 1px 2px 1px green; 
            }
 
-           #department
+           #startingstation
+           {
+            width: 39%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px green;
+           }
+
+           #arrivalstation
            {
             width: 39%;
             height: 5%;
@@ -115,42 +126,50 @@
                                    
                                     
 
-                                    <label for="university" >University:</label>
-                                    <br>
-                                    <select name="university" id="university" >
-                                    <option value="Choose">Choose University</option>    
-                                    <option value="AIUB">AIUB</option>
-                                    <option value="NSU">NSU</option>
-                                    <option value="BRAC">BRAC</option>
-                                    <option value="IUB">IUB</option>
-                                    <option value="UIU">UIU</option>
-                                    <option value="ULAB">ULAB</option>
-                                    <option value="WU">WU</option>
-                                    <option value="UODA">UODA</option>
-                                    <option value="DIU">DIU</option>
-                                    <option value="SEU">SEU</option>
-                                    <option value="APU">APU</option>
-                                    </select> 
-                                    <br>
+                                    <label for="trainname" >Train Name:</label>
+                              <br>
+                              <select name="trainname" id="traainname" >
+                              <option value="Choose">Choose Train Name</option>    
+                              <option value="Dinajpur Express">Dinajpur Express</option>
+                          <option value="Panchagarh Express">Panchagarh Express</option>
+                              <option value="Ekota Express">Ekota Express</option>
+                              <option value="Drutojan">Drutojan</option>
+                            <option value="Mohanagar Express">Mohanagar Express</option>
+                              <option value="Tista Express">Tista Express</option>
+                              <option value="Upokul Express">Upokul Express</option>
+                              <option value="Meghna Express">Meghna Express</option>
+                              <option value="Turna Express">Turna Express</option>
+                              <option value="Jamuna Express">Jamuna Express</option>
+                              <option value="Bijoy Express">Bijoy Express</option>
+                              <option value="Shonar Bangla Express">Shonar Bangla Express</option>
+                              <option value="Kishorganj Express">Kishorganj Express</option>
+                            <option value="Agni-Bina Express">Agni-Bina Express</option>
+                              <option value="Rangpur Express">Rangpur Express</option>
+                              <option value="Thakurgaon Express">Thakurgaon Express</option>
+                              <span class="error" id = "errorMsgtrainname" ></span>
+                              </select> 
+                              <br>
 
 
 
-                                    <label for="department" >Department:</label>
-                                    <br>
-                                    <select name="department" id="department" >
-                                    <option value="choose">Choose Department</option>
-                                    <option value="CSE">CSE</option>
-                                    <option value="EEE">EEE</option>
-                                    <option value="ME">ME</option>
-                                    <option value="IPE">IPE</option>
-                                    <option value="Architecture">Architecture</option>
-                                    <option value="BBA">BBA</option>
-                                    <option value="Textile">Textile</option>
-                                    <option value="Civil">Civil</option>
-                                    <option value="Pharmacy">Pharmacy</option>
-                                    <option value="LLB">LLB</option>
-                                    </select> 
-                                    <br>
+                                    <label for="startingstation" >Starting Station:</label>
+                              <br>
+                              <select name="startingstation" id="startingstation" >
+                              <option value="Choose">Choose Starting Station</option>    
+                              <option value="Dinajpur">Dinajpur</option>
+                              <option value="Panchagarh">Panchagarh</option>
+                              <option value="Dhaka">Dhaka</option>
+                              <option value="Rangpur">Rangpur</option>
+                              <option value="Sylhet">Sylhet</option>
+                              <option value="Khulna">Khulna</option>
+                              <option value="Rajshahi">Rajshahi</option>
+                              <option value="Thakurgaon">Thakurgaon</option>
+                              <option value="Tangail">Tangail</option>
+                              <option value="Gazipur">Gazipur</option>
+                              <option value="Lalmonihaath">Lalmonihaath</option>
+                              <span class="error" id = "errorMsgstartingstation" ></span>
+                              </select>
+                              <br>
 
 
 
@@ -162,11 +181,24 @@
                                     
 
 
-                                    Semester:<br>
-                                    <input type="text" placeholder="Add Semester" id ="semester" name="semester"> <br> 
-                                    <span class="error" id="errorMsgsemester"> <?//php echo $nonacberthErr; ?></span>
-                                    <br>
-
+                                    <label for="arrivalstation" >Arrival Station:</label>
+                              <br>
+                              <select name="arrivalstation" id="arrivalstation" >
+                              <option value="Choose">Choose Arrival Station</option>    
+                              <option value="Dinajpur">Dinajpur</option>
+                              <option value="Panchagarh">Panchagarh</option>
+                              <option value="Dhaka">Dhaka</option>
+                              <option value="Rangpur">Rangpur</option>
+                              <option value="Sylhet">Sylhet</option>
+                              <option value="Khulna">Khulna</option>
+                              <option value="Rajshahi">Rajshahi</option>
+                              <option value="Thakurgaon">Thakurgaon</option>
+                              <option value="Tangail">Tangail</option>
+                              <option value="Gazipur">Gazipur</option>
+                              <option value="Lalmonihaath">Lalmonihaath</option>
+                              <span class="error" id = "errorMsgarrivalstation" ></span>
+                              </select>
+                              <br>
 
                                     <input class = "mainDivFormButton" type="submit" name="Update" value="Done">
                                     <br><br>

@@ -2,9 +2,9 @@
 $name = filter_input(INPUT_POST,'name');
 $address = filter_input(INPUT_POST,'address');
 $mobile = filter_input(INPUT_POST,'mobile');
-$university = filter_input(INPUT_POST,'university');
-$department = filter_input(INPUT_POST,'department');
-$semester = filter_input(INPUT_POST,'semester');
+$trainname = filter_input(INPUT_POST,'trainname');
+$startingstation = filter_input(INPUT_POST,'startingstation');
+$arrivalstation = filter_input(INPUT_POST,'arrivalstation');
 
 if(!empty($name))
 
@@ -35,7 +35,7 @@ if(!empty($name))
 							
 
 
-					    $sql = "INSERT INTO jsonexample (name,address,mobile,university,department,semester) values ('$name','$address','$mobile','$university','$department','$semester')";
+					    $sql = "INSERT INTO jsonexample (name,address,mobile,trainname,startingstation,arrivalstation) values ('$name','$address','$mobile','$trainname','$startingstation','$arrivalstation')";
 
 
 
@@ -96,7 +96,7 @@ if(!empty($name))
 
 
 							
-							echo "<br>";
+							//echo "<br>";
 
 								}
 
