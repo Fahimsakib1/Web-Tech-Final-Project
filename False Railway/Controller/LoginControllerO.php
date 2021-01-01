@@ -93,8 +93,17 @@
 		{
 		 	echo "<p>Login Successful</p>";
 		 	//echo "<a href='../View/Dashboard.php'>Home</a>";
+
+		 	//$cookie_name ="user";
+			//$cookie_value ="Welcome to the Fahim";
+			//setcookie($cookie_name,$cookie_value,t()+60*60*10);
+
+
+
 		 	session_start();
 			$_SESSION['name']=$name;
+
+			
 			header('Location: ../View/FahimSakib.html');
 		}
 

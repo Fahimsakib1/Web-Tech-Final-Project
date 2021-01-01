@@ -32,6 +32,7 @@
 									
 									<font color = "red" > <h1>Railway Management & E-Ticketing System</h1> </font>
 									<font color = "green" : align = middle> <h1>Officer View</h1> </font>
+
 								</td>
 
 							</tr>

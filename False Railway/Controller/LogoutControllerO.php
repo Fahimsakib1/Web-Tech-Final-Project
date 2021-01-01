@@ -2,6 +2,7 @@
 
 session_start();
 
+
    if ($_SERVER["REQUEST_METHOD"] == "POST") 
 
    {
@@ -9,6 +10,7 @@ session_start();
 
         {
             session_destroy();
+            //setcookie($cookie_name,$cookie_value,t()-60*60*10);
 
             header('Location:../View/LoginO.php',true,303);
             exit;
