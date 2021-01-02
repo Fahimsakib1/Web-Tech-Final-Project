@@ -35,6 +35,11 @@
                         <label for="mobileNumberErr" id="mobileNumberErr" class="mainDivFormLabelError"><?php echo $mobileNumberErr;?></label></label>
                         <br>
                         <input type="submit" value="Submit" class="mainDivFormButton">
+                        <br>
+                        <br>
+                        <div class="backBtn backBtmergin">
+                            <a href="Xlogin.php" class="backBtnA">Back</a>
+                        </div>
                     </form>
                 </div>
             

@@ -37,6 +37,10 @@
                         <label for="discountErr" class="mainDivFormLabelError"><?php echo $removeDiscountErr;?></label>
                         <label for="removeDiscountSuccessful" class="mainDivFormLabelOk"><?php echo $removeDiscountSuccessful;?></label>
                         <input type="submit" value="Remove Discount" name="removeDiscount" class="mainDivFormRemove">
+                        <br>
+                        <div class="backBtn backBtmergin">
+                            <a href="Xhome.php" class="backBtnA">Back</a>
+                        </div>
                     </form>
                 </div>
             

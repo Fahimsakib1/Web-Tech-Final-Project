@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../asset/javaScript/XchangePasswordValidation.js"></script>
     <link rel="stylesheet" href="../asset/css/Xstyle.css">
+    <link rel="stylesheet" href="../asset/css/XchangePassword.css">
     <title>Change Password</title>
 </head>
 <body>
@@ -41,6 +42,9 @@
                         <br>
                         <input type="submit" value="Confirm" name="confirm" class="mainDivFormAdd">
                         <br>
+                        <div class="backBtn backBtmergin">
+                            <a href="Xhome.php" class="backBtnA">Back</a>
+                        </div>
                     </form>
                 </div>
 

@@ -52,6 +52,10 @@
                         </tr>
                     </table>
                     <label for="SOA" class="mainDivFormLabelOk"><?php echo $SOA;?></label>
+                    <br>
+                        <div class="backBtn backBtmergin">
+                            <a href="Xhome.php" class="backBtnA">Back</a>
+                        </div>
                 </div>
             </div>
         

@@ -31,12 +31,16 @@
                         <br>
                         <br>
                         <input type="submit" value="Refund All" name="refundAll" class="mainDivFormButton">
+                        <br>
+                        <div class="backBtn backBtmergin">
+                            <a href="Xhome.php" class="backBtnA">Back</a>
+                        </div>
                     </form>
                 </div>
             
             </main>
-            <footer class="Xfooter">
-                <?php  include('footer.php');  ?>
+            <footer class="footer">
+                <?php  include('Xfooter.php');  ?>
             </footer>
         </div>
     </div>

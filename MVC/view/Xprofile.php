@@ -45,6 +45,9 @@
                         <br>
                         <br>
                         <input type="submit" value="Update" name="update" class="mainDivFormButton">
+                        <div class="backBtn backBtmergin">
+                            <a href="Xhome.php" class="backBtnA">Back</a>
+                        </div>
                     </form>
                 </div>
             

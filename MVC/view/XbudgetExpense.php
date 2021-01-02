@@ -48,6 +48,11 @@
                         <br>
                         <input type="submit" value="Add Expense" name="addExpense" class="mainDivFormAdd">
                         <br>
+                        <br>
+                        <div class="backBtn backBtmergin">
+                            <a href="Xhome.php" class="backBtnA">Back</a>
+                        </div>
+                        
                     </form>
                 </div>
             
