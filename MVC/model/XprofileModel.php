@@ -1,8 +1,8 @@
 <?php
     require('../model/Xdb.php');
-    function loadProfile($id){
+    function loadProfile($userName){
 
-        $sql = "SELECT * FROM userinfo WHERE userName='".$id."' ";
+        $sql = "SELECT * FROM userinfo WHERE userName='".$userName."' ";
         $result = connectionOpen()->query($sql);
 
         if ($result->num_rows > 0) {
@@ -12,7 +12,6 @@
         } 
         else {
             connectionOpen()->close();
-            echo "Error";
         }
     }
 

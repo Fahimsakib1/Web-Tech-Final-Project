@@ -1,6 +1,9 @@
 <?php
+                    require('../model/XchangePasswordModel.php');
                     $currentPassword = $newPassword = $confirmPassword = $updatePassword = '';
                     $currentPasswordErr = $newPasswordErr = $confirmPasswordErr = "";
+                    session_start();
+                    $userName = $_SESSION['id'];
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if (empty($_POST["currentPassword"])) {
                         $currentPasswordErr = "Current Password is required";
@@ -35,17 +38,18 @@
                                           
                     }
                     
-                    $myfile = fopen("../asset/data/login.txt", "r") or die("Unable to open file!");
 
-                    while ($line = fgets($myfile)) {
-                        $words = explode(",",$line);
-                        if(strcmp($currentPassword,$words[1]) == 0 ) {
-                        $updatePassword = "Password Updated Successfully";
+                    if(loginCheck($userName, $currentPassword)) {
+                        if(updatePassword($userName,$newPassword)){
+                            $updatePassword = "Password Updated Successfully";
                         }
                         else{
-                            $currentPasswordErr="Current Password does not match ";   
+                            $confirmPasswordErr = "Failed";
                         }
+                       
                     }
-                    fclose($myfile);              
+                    else{
+                        $currentPasswordErr="Current Password does not match ";   
+                    }           
                 }
 ?>
