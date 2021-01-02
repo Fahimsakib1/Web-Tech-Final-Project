@@ -33,13 +33,15 @@ if(!empty($startingstation))
 					{
 							echo "<h3> Data Base Connection Successful </h3>";
 							
+                     /* MAIN */
 
-
-					    $sql = "INSERT INTO updatefareforroute (startingstation,arrivalstation,shovonchair,acchair,acberth,nonacberth) values ('$startingstation','$arrivalstation','$shovonchair','$acchair','$acberth','$nonacberth')";
+					    /* $sql = "INSERT INTO updatefareforroute (startingstation,arrivalstation,shovonchair,acchair,acberth,nonacberth) values ('$startingstation','$arrivalstation','$shovonchair','$acchair','$acberth','$nonacberth')"; MAIN */
 
 
 					//$sql = "SELECT startingstation AND arrivalstation FROM fareforroute WHERE startingstation='".$startingstation."'AND arrivalstation = '".$arrivalstation."'"; 
 
+                       
+                       $sql = "UPDATE fareforroute SET shovonchair='$shovonchair',acchair='$acchair', acberth='$acberth', nonacberth ='$nonacberth' WHERE startingstation='".$startingstation."'AND arrivalstation = '".$arrivalstation."'";
 
 
 
@@ -52,8 +54,10 @@ if(!empty($startingstation))
                         	echo "<br>";
                         	
 
-						    
-						    $sql = "SELECT startingstation,arrivalstation,shovonchair,acchair,acberth,nonacberth FROM updatefareforroute"; // Query
+						     /* MAIN */
+						    /* $sql = "SELECT startingstation,arrivalstation,shovonchair,acchair,acberth,nonacberth FROM updatefareforroute"; MAIN*/ // Query
+
+						    $sql = "SELECT startingstation,arrivalstation,shovonchair,acchair,acberth,nonacberth FROM fareforroute";
 
 							$result = $conn -> query($sql); // result set
 
