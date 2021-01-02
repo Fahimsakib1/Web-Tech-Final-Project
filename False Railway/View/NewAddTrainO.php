@@ -3,6 +3,15 @@
 <html>
 <style>
     .error {color: #FF0000;}
+     body
+        {
+            
+                
+            background-color: #C5C4C1  ;
+            
+           
+        }
+        
     input
 
            {
@@ -16,6 +25,28 @@
             box-shadow: 1px 1px 2px 1px blue; 
 
            }
+
+           /* #StartingStation
+           {
+            width: 26.6%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px green;
+           } */
+
+           /* #ArrivalStation
+           {
+            width: 26.6%;
+            height: 5%;
+            border: 10px;
+            border-radius: 15px;
+            padding: 7px 15px 10px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px green;
+           }*/
 
 </style>
 
@@ -76,11 +107,59 @@
                               <br>
 
 
+
+                              <!-- <label for="StartingStation" >Starting Station:</label>
+                              <br>
+                              <select name="StartingStation" id="StartingStation" >
+                              <option value="">Choose Starting Station</option>    
+                              <option value="Dinajpur">Dinajpur</option>
+                              <option value="Panchagarh">Panchagarh</option>
+                              <option value="Dhaka">Dhaka</option>
+                              <option value="Rangpur">Rangpur</option>
+                              <option value="Sylhet">Sylhet</option>
+                              <option value="Khulna">Khulna</option>
+                              <option value="Rajshahi">Rajshahi</option>
+                              <option value="Thakurgaon">Thakurgaon</option>
+                              <option value="Tangail">Tangail</option>
+                              <option value="Gazipur">Gazipur</option>
+                              <option value="Lalmonihaath">Lalmonihaath</option>
+                              <option value="Chandpur">Chandpur</option>
+                              <option value="Pabna">Pabna</option>
+                              <span class="error" id = "errorMsgStartingStation" ></span>
+                              </select>
+                              <br> -->
+
+
                               <label for="ArrivalStation">Arrival Station :</label>
                               <br>
                               <input type="text" placeholder="Enter Arrival Station"  id="ArrivalStation" name="ArrivalStation">
                               <span class="error" id = "errorMsgArrivalStation" ></span>
                               <br>
+
+
+
+                              <!-- <label for="ArrivalStation" >Arrival Station:</label>
+                              <br>
+                              <select name="ArrivalStation" id="ArrivalStation" >
+                              <option value="">Choose Arrival Station</option>    
+                              <option value="Dinajpur">Dinajpur</option>
+                              <option value="Panchagarh">Panchagarh</option>
+                              <option value="Dhaka">Dhaka</option>
+                              <option value="Rangpur">Rangpur</option>
+                              <option value="Sylhet">Sylhet</option>
+                              <option value="Khulna">Khulna</option>
+                              <option value="Rajshahi">Rajshahi</option>
+                              <option value="Thakurgaon">Thakurgaon</option>
+                              <option value="Tangail">Tangail</option>
+                              <option value="Gazipur">Gazipur</option>
+                              <option value="Lalmonihaath">Lalmonihaath</option>
+                              <option value="Chandpur">Chandpur</option>
+                              <option value="Pabna">Pabna</option>
+                              <span class="error" id = "errorMsgArrivalStation" ></span>
+                              </select>
+                              <br> -->
+
+
 
 
                               <input class = "mainDivFormButton" type="submit" name="Add" value="Add Train">

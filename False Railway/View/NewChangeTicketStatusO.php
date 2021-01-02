@@ -3,6 +3,16 @@
 <html>
 <style>
     .error {color: #FF0000;}
+    body
+        {
+            
+                
+            background-color: #C5C4C1  ;
+            
+            
+             
+            
+        }
     input
 
            {
@@ -67,7 +77,7 @@
                 </td> 
             </tr>
             <tr>
-                <td style="border: 2px solid #000; border-collapse: collapse; " width="20%">
+                <td style="border: 3px solid #000 ; border-collapse: collapse; " width="20%">
                     <?php include 'NavigationbarO.php'; ?>
                 </td>
                 <td>

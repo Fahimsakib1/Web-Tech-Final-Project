@@ -3,11 +3,20 @@
 <style>
     .error {color: #FF0000;}
 
+     body
+        {
+            
+                
+            background-color: #C5C4C1  ;
+            
+           
+        }
+
     input
 
            {
 
-            width: 60%;
+            width: 70%;
             height: 5%;
             border: 10px;
             border-radius: 15px;
@@ -19,7 +28,7 @@
 
            #startingstation
            {
-            width: 69%;
+            width: 80%;
             height: 5%;
             border: 10px;
             border-radius: 15px;
@@ -31,7 +40,7 @@
 
            #arrivalstation
            {
-            width: 69%;
+            width: 80%;
             height: 5%;
             border: 10px;
             border-radius: 15px;
@@ -166,8 +175,8 @@
 
                                     Non AC Berth:<br>
                                      <input type="text" placeholder="Add Updated Fare" id ="nonacberth" name="nonacberth"> <br> 
-                                    <span class="error" id="errorMsgnonacberth"> <?php echo $nonacberthErr; ?></span> <br>
-                                    <br>
+                                    <span class="error" id="errorMsgnonacberth"> <?php echo $nonacberthErr; ?></span>
+                                    
 
 
                                     <input class = "mainDivFormButton" type="submit" name="Update" value="Update">

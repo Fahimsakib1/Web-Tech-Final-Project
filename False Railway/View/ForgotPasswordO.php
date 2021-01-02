@@ -11,7 +11,7 @@
 			body
             {
 
-   	        background-color: #f7d677;
+   	        background-color:#C5C4C1;
 
             }
 

@@ -3,6 +3,15 @@
 <style>
     .error {color: #FF0000;}
 
+     body
+        {
+            
+                
+            background-color:#C5C4C1  ;
+            
+           
+        }
+
     input
 
            {
@@ -27,8 +36,7 @@
             margin: 10px 0px 15px 0px;
             box-shadow: 1px 1px 2px 1px green; 
            }
-
-           #startingstation
+#startingstation
            {
             width: 39%;
             height: 5%;
@@ -38,6 +46,7 @@
             margin: 10px 0px 15px 0px;
             box-shadow: 1px 1px 2px 1px green;
            }
+           
 
            #arrivalstation
            {
@@ -89,7 +98,7 @@
                         
                         <tr>
                             <td colspan="3">
-                                <font color = "red" : align = left> <h2> JSON </h2> </font>
+                                <font color = "blue" : align = middle> <h2> JavaScript Object Notation (JSON)</h2> </font>
                             </td>
                         </tr>
                         <form method="post" action="../Model/DataBaseForJSONExampleO.php" onsubmit="return validateForm()"> 
@@ -152,7 +161,7 @@
 
 
 
-                                    <label for="startingstation" >Starting Station:</label>
+                              <label for="startingstation" >Starting Station:</label>
                               <br>
                               <select name="startingstation" id="startingstation" >
                               <option value="Choose">Choose Starting Station</option>    
@@ -181,7 +190,7 @@
                                     
 
 
-                                    <label for="arrivalstation" >Arrival Station:</label>
+                              <label for="arrivalstation" >Arrival Station:</label>
                               <br>
                               <select name="arrivalstation" id="arrivalstation" >
                               <option value="Choose">Choose Arrival Station</option>    

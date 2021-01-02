@@ -8,11 +8,7 @@ $ArrivalStation = filter_input(INPUT_POST,'ArrivalStation');
 if(!empty($Tid))
 
 {
-
-	    
-
-	    
-             
+                   
                     $servername = "localhost";
 					$dbusername = "root";
 					$dbpassword = "";
@@ -27,9 +23,9 @@ if(!empty($Tid))
 							die("Error in Data Base Connection: " . $conn -> connect_error);
 						}
 
-					else 
+	else 
 
-					{
+	{
 							echo "<h3> Data Base Connection Successful </h3>";
 							
 
@@ -40,7 +36,7 @@ if(!empty($Tid))
 
                          if ($conn->query($sql))
 
-                        {
+                {
 
                         	//echo " Train Removed Successfully";
                         	//echo "<br>";
@@ -52,7 +48,7 @@ if(!empty($Tid))
 
 							if($result->num_rows > 0) 
 
-							{
+					{
 									// show result
 							echo " <h2> Train Removed Successfully </h2>";
 							//echo "<br>";
@@ -77,11 +73,10 @@ if(!empty($Tid))
 
 							}
 
-
 							echo "</ol>";
 							echo "<br>";
 
-								}
+					}
 
 							else 
 								{
@@ -90,7 +85,7 @@ if(!empty($Tid))
 									echo "<h2> Train ID Is Not Verified </h2";
 								}
 							
-                        } 
+                } 
 
                             else
 
@@ -108,15 +103,8 @@ if(!empty($Tid))
 
                            $conn->close();
 
-                    }
+    }
                         
-
-
-	    
-
-
-
-           
 
 
 }
@@ -149,11 +137,4 @@ else
 </table>
 
 <div> 
-
-
-
-
-	
-
-	
 

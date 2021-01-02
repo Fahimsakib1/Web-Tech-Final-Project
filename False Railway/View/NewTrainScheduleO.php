@@ -4,6 +4,17 @@
 <style>
     .error {color: #FF0000;}
 
+    body
+        {
+            
+                
+            background-color: #C5C4C1 ;
+            
+            
+             
+            
+        }
+
           input
 
            {

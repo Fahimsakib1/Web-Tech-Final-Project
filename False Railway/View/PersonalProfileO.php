@@ -1,6 +1,23 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+
+
+			<style>
+
+		  body
+		{
+			
+            	
+			background-color: #C5C4C1;
+			
+			
+			 
+			
+		}
+
+		</style>
+		
 		<title>Dashboard</title>
 
 		<link rel="stylesheet" href="../asset/css/style.css">
@@ -95,6 +112,21 @@
 				</tr>
 				<tr>
 
+					<?php
+                            //echo "I Am Fahim";
+
+                         	//session_start();
+
+							//echo "ghkf";
+							//if(isset($_COOKIE["message"]))
+							//{​​​​
+							 //echo $_COOKIE["message"];
+							//print_r($_COOKIE["message"]);
+
+							//echo "ghkf";
+							//}
+					?>
+
 
 					<td colspan="2" style="border: 2px solid #000; border-collapse: collapse;">
 						<?php include 'NewFooterO.php';?>
@@ -105,3 +137,6 @@
 		<div>
 	</body>
 </html>
+
+
+

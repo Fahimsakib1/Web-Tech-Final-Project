@@ -155,7 +155,8 @@ section .btntwo{
 	0% {content: "E-TICKETING";}
 	15% {content: "TICKET PURCHASE";}
 	30% {content: "BOOKING";}
-	45% {content: " TRAIN TIMING";}
-	60% {content: "EVENTS";}
+	45% {content: "TRAIN TIMING";}
+	50% {content: "EVENTS";}
     75% {content: "NOTICE";}
+    
 }

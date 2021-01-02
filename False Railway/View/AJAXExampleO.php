@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	 <style> 
+	 	body
+        {
+            
+                
+            background-color: #C5C4C1  ;
+          
+        }
+
+        #pagetitle
+       {
+
+       	   background-color: #C303C5  ;
+		   font-size: 20px;
+		   text-align: center;          
+       }
+        
+      </style>
 	<title> AJAX Example</title>
 </head>
 <body>
 
-	<h1> AJAX Emample</h1>
+	<div id = "pagetitle"> 
+
+	<h2> AJAX </h2>
+
+   </div>
 
 	<p id = "t1"> </p>
 	<button onclick = "createAjaxRequest()">Click</button>

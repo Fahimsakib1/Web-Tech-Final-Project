@@ -4,6 +4,15 @@
 <style>
     .error {color: #FF0000;}
 
+    body
+        {
+            
+                
+            background-color: #C5C4C1  ;
+            
+           
+        }
+
     input
 
            {
@@ -72,6 +81,7 @@
 
         
     <div style="max-width: fit-content; margin-left: auto; margin-right:auto">
+        <br> 
         <table style="width: fit-content; border: 2px solid #000; border-collapse: collapse;">
             <tr>
                 <td colspan="2" style="border: 2px solid #000; border-collapse: collapse;">

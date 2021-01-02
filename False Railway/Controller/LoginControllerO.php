@@ -1,5 +1,7 @@
 <?php
 
+   
+
 	$name = $pwd = "";
 	$nameErr = $pwdErr = ""; 
 
@@ -102,6 +104,10 @@
 
 		 	session_start();
 			$_SESSION['name']=$name;
+            
+            //$cookie_name ="user";
+			$cookie_value ="Railway Management & E-Ticketing System";
+			setcookie("message", $cookie_value, time() + (86400 * 7), "/");
 
 			
 			header('Location: ../View/FahimSakib.html');

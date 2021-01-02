@@ -16,7 +16,7 @@
 		body
 
        {
-   	     background-color: #F2FB96  ;
+   	     background-color: #C5C4C1  ;
        }
 
 	#container ul
@@ -202,7 +202,7 @@
 	<div id = "back">
 		<ul>
 			
-			<li><a href="DashboardO.php">Back</li>
+			<li><a href="FahimSakib.html">Back</li>
 		</ul>
 		
 	</div>
