@@ -23,19 +23,19 @@
                         <label for="name" class="mainDivFormLabel">Name</label>
                         <br>
                         <br>
-                        <label for="name" class="mainDivFormLabelValue">Ashik Ahmed</label>
+                        <label for="name" class="mainDivFormLabelValue"><?php  echo $name?></label>
                         <br>
                         <br>
-                        <label for="designation" class="mainDivFormLabel">Designation</label>
+                        <label for="userName" class="mainDivFormLabel">User Name</label>
                         <br>
                         <br>
-                        <label for="designation" class="mainDivFormLabelValue">Admin (Accountant)</label>
+                        <label for="userName" class="mainDivFormLabelValue"><?php  echo $userName?></label>
                         <br>
                         <br>
-                        <label for="salary" class="mainDivFormLabel">Salary</label>
+                        <label for="email" class="mainDivFormLabel">Email</label>
                         <br>
                         <br>
-                        <label for="salary" class="mainDivFormLabelValue">50,000/=</label>
+                        <label for="email" class="mainDivFormLabelValue"><?php  echo $email?></label>
                         <br>
                         <br>
                         <label for="mobile" class="mainDivFormLabel">Mobile No</label>

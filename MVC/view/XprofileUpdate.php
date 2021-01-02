@@ -30,7 +30,11 @@
                         <br>
                         <br>
                         <input type="submit" value="Submit" name="submit" class="mainDivFormButton">
+                        <div class="backBtn backBtmergin">
+                            <a href="Xprofile.php" class="backBtnA">Back</a>
+                        </div>
                     </form>
+                    
                 </div>
             
             </main>

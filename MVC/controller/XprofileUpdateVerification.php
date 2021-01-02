@@ -1,6 +1,9 @@
 <?php
-     $mobile = '';
-     $mobileErr = $mobileOk = "";
+    require('../model/XprofileModel.php');
+    $mobile = '';
+    $mobileErr = $mobileOk = "";
+    session_start();
+    $userName = $_SESSION['id'];
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["mobile"])) {
             $mobileErr = "A Mobile Number is required";
@@ -16,11 +19,12 @@
             }
             else{
                 $mobile=$_POST["mobile"];
-                $user = fopen("../asset/data/mobileNumber.txt", "w") or die("Unable to open file!");
-                fwrite($user, $mobile);
-                fwrite($user, "\n");
-                fclose($user);
-                $mobileOk = "Update Successful";
+                if(updatePhone($userName,$mobile)){
+                    $mobileOk = "Update Successful";
+                }
+                else{
+                    $mobileErr = "Failed to Update";
+                }
             }
         }
     }
