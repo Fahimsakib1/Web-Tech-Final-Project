@@ -66,7 +66,7 @@
 					<td>
 						<div style="max-width:790px; margin-left: auto; margin-right:auto">
 							<h2> CHANGE PASSWORD</h2>
-							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()"> 
+							<form method="post" action="../Model/DataBaseForChangePasswordO.php" onsubmit="return validateForm()"> 
 
 								Current Password: <br> <input type="Password" placeholder="Enter Current Password" id ="pwd" name="pwd"> 
 								<span class="error" id = "errorMsgpwd"><?php echo $pwdErr;?></span>

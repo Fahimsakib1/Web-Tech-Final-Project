@@ -3,58 +3,29 @@
 <html>
 <head>
 	<title>Sign Up</title>
-
-	<style>
-	form {
-  		display: inline-block;
-    	width:auto;
-    	text-align: right;
-    	background-color:white;
-    	padding: 10px;
-
-	}
-	</style>
-
-	<h1 style="text-align: center;">Sign Up now</h1>
-	<hr>
+	<link rel="stylesheet" href="../view/css/signup.css">
+	<script src="/final_rms/view/js/signup.js"></script>
 
 </head>
-<body style="background-color:#cccccc;">
+<body>
 
-<center>
+</center>
 
-	<form method="POST" action="/rms/controller/action_signup.php" >
+	<form method="POST" class="signup_box" action="/final_rms/controller/action_signup.php" onsubmit="return validate()">
 
-		<label style="font-size:20px" border-style: groove;>User name: </label>
-		<input type="text" name="user_name" required>
-		<br/>
-		<br/>
-
-		<label style="font-size:20px">Phone: </label>
-		<input type="text" name="phone" required>
-		<br/><br/>
-
-		<label style="font-size:20px">Email: </label>
-		<input type="Email" name="email" required>
-		<br/><br/>
-
-		<label style="font-size:20px">Password: </label>
-		<input type="password" name="password" required>
-		<br/><br/>
-		<label style="font-size:20px">Repeat Password: </label>
-		<input type="password" name="repassword" required>
-		<br/><br/>
-
+		<h1>Sign Up</h1>
+		<hr>
+		<input type="text" name="user_name" id="user_name" placeholder="Username" required>
+		<input type="text" name="phone" id="phone" placeholder="Phone number" required>
+		<input type="Email" name="email" id="email" placeholder="Email" required>
+		<input type="password" name="password" id="password" placeholder="Password" required>
+		<input type="password" name="repassword" id="repassword" placeholder="Repet Password" required>
 		<hr>
 		<input type="Submit" value=" Submit">
-
-		<input type="button" value=" Back " onClick="location.href='http://localhost/rms/index.php'">
-		<br/>
+		<input type="button" value=" Back " onClick="location.href='http://localhost/final_rms/index.php'">
 
 	</form>	
-</center>
+	<p id="errorMsg"></p>
 
 </body>
 </html>
-
-<?php include 'footer.php';?>

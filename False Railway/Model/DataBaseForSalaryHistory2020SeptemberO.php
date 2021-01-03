@@ -7,6 +7,7 @@
 					$dbusername = "root";
 					$dbpassword = "";
 					$dbname = "project";
+					$month = "September";
 
 					$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
 
@@ -26,7 +27,11 @@
 					    //$sql = "INSERT INTO buyticket (name,trainname,destination,mobile) values ('$name','$trainname','$destination','$mobile')";
 
 
-					    $sql = "SELECT employeeid,employeename,salarymonth,salary,bonus,total FROM salary2020september"; 
+					    //$sql = "SELECT employeeid,employeename,salarymonth,salary,bonus,total FROM salary2020april"; 
+                        
+
+                        $sql = "SELECT salarymonth,salary,bonus,total FROM personalsalaryhistory WHERE salarymonth='".$month."' ";
+
 
                          if ($conn->query($sql))
 
@@ -37,7 +42,11 @@
                         	
 
 						    
-						    $sql = "SELECT employeeid,employeename,salarymonth,salary,bonus,total FROM salary2020september";  // Query
+						    //$sql = "SELECT employeeid,employeename,salarymonth,salary,bonus,total FROM salary2020april";  // Query
+
+
+						$sql = "SELECT salarymonth,salary,bonus,total FROM personalsalaryhistory WHERE salarymonth='".$month."' ";
+
 
 							$result = $conn -> query($sql); // result set
 
@@ -58,11 +67,11 @@
 							       {
 										/* echo " <li> id = " . $row['id'] . " and " . "fullName = " . $row['fullName'] . "</li>"; */
                              
-		                             echo "<br>";
-		                             echo " Employee  ID = " . $row['employeeid']; 
-		                             echo "<br>";
-		                             echo " Employee Name = " . $row['employeename'];
-		                             echo "<br>";
+		                             //echo "<br>";
+		                             //echo " Employee  ID = " . $row['employeeid']; 
+		                             //echo "<br>";
+		                             //echo " Employee Name = " . $row['employeename'];
+		                             //echo "<br>";
 		                             echo " Month of Salary = " . $row['salarymonth'];
 		                             echo "<br>";
 		                             echo " Salary = " . $row['salary']; echo " Taka";
@@ -85,7 +94,7 @@
 
 								{									
 
-									echo "<h2> Employee ID Is Not Verified </h2";
+									echo "<h2> Month Is Not Verified </h2";
 									
 								}
 							
@@ -118,8 +127,9 @@
    <table style="width: auto; border: 2px solid #000; border-collapse: collapse;">
 
 
-  <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/NewSalaryHistoryO.php'">Back</button>
+ <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/NewSalaryHistoryO.php'">Back</button>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
 
 
 

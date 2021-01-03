@@ -1,4 +1,5 @@
 <?php 
+
 $startingstation = filter_input(INPUT_POST,'startingstation');
 $arrivalstation = filter_input(INPUT_POST,'arrivalstation');
 $shovonchair = filter_input(INPUT_POST,'shovonchair');
@@ -10,10 +11,7 @@ if(!empty($startingstation))
 
 {
 
-	    
-
-	    
-             
+            
                     $servername = "localhost";
 					$dbusername = "root";
 					$dbpassword = "";
@@ -31,7 +29,7 @@ if(!empty($startingstation))
 					else 
 
 					{
-							echo "<h3> Data Base Connection Successful </h3>";
+							//echo "<h3> Data Base Connection Successful </h3>";
 							
                      /* MAIN */
 
@@ -51,13 +49,13 @@ if(!empty($startingstation))
                         {
 
                         	//echo " <h2>Ticket Fare Is Updated</h2";
-                        	echo "<br>";
+                        	//echo "<br>";
                         	
 
 						     /* MAIN */
 						    /* $sql = "SELECT startingstation,arrivalstation,shovonchair,acchair,acberth,nonacberth FROM updatefareforroute"; MAIN*/ // Query
 
-						    $sql = "SELECT startingstation,arrivalstation,shovonchair,acchair,acberth,nonacberth FROM fareforroute";
+						    $sql = "SELECT startingstation,arrivalstation,shovonchair,acchair,acberth,nonacberth FROM fareforroute WHERE startingstation='".$startingstation."'AND arrivalstation = '".$arrivalstation."'";
 
 							$result = $conn -> query($sql); // result set
 
@@ -104,9 +102,9 @@ if(!empty($startingstation))
 
 							else 
 								{
-									echo "<h1> Wrong Input Inserted...</h1>";
+									echo "<h1> Wrong Station Inserted...</h1>";
 
-									echo "<h2> This Input Is Not Verified </h2";
+									echo "<h2> This Station Is Not Verified For Update Fare</h2";
 
 
 									

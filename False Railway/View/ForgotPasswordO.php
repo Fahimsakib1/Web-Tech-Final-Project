@@ -19,7 +19,7 @@
 
            {
 
-            width: 75%;
+            width: 85%;
             height: 5%;
             border: 10px;
             border-radius: 15px;
@@ -68,23 +68,27 @@
 						<div style="max-width:fit-content; margin-left: auto; margin-right:auto">
 							<h2>FORGOT PASSWORD</h2>
 
-							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()" > 
+							<form method="post" action="../Model/DataBaseForForgotPasswordO.php" onsubmit="return validateForm()" > 
 
 
-								E-mail: <input type="text" placeholder="Enter Email" id = "email" name="email">
-								<span class="error" id = "errorMsgemail"><?php echo $emailErr;?></span>
-								<br><br> 
+								E-mail:<br>
+								 <input type="text" placeholder="Enter Email" id = "email" name="email">
+								<span class="error" id = "errorMsgemail"><br>
+									<?php echo $emailErr;?></span>
+								<br>
 
-								Password:<input type="Password" placeholder="Enter New Password" id = "pwdN" name="pwdN">
+								New Password: <br>
+								<input type="Password" placeholder="Enter New Password" id = "pwdN" name="pwdN">
 								<span class="error" id = "errorMsgepwdN"><br>
 									<?php echo $pwdNErr;?></span>
-								<br><br>
+								<br>
 
 
-								Confirm Password: </font><input type="Password" placeholder="Confirm New Password" id = "pwdR" name="pwdR">
+								Confirm New Password: <br>
+								 </font><input type="Password" placeholder="Confirm New Password" id = "pwdR" name="pwdR">
 								<span class="error" id = "errorMsgepwdR" ><br>
 									<?php echo $pwdRErr;?></span>
-								<br><br> 
+								
 
 
 								<input class = "mainDivFormButton" type="submit" name="submit1" value="Submit">

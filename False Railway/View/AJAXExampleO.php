@@ -18,8 +18,32 @@
 		   font-size: 20px;
 		   text-align: center;          
        }
+
+       .mainDivFormButton1{
+    margin-top: 2%;
+    margin-bottom: 40%;
+    margin-left: 2px; */
+    font-size: 25px;
+    font-weight: bold;
+    background-color:#3A43DC ;
+   
+    border: none;
+    color: black;
+    border-radius: 10px;
+    padding: 15px 22px; 
+    text-decoration: none;
+    width:170px;
+    margin-left: 470px;
+}
+
+.mainDivFormButton1:hover
+{
+	background-color:#4ACC55  ;
+}
         
       </style>
+
+
 	<title> AJAX Example</title>
 </head>
 <body>
@@ -31,7 +55,7 @@
    </div>
 
 	<p id = "t1"> </p>
-	<button onclick = "createAjaxRequest()">Click</button>
+	<button class = "mainDivFormButton1" onclick = "createAjaxRequest()">Click Here</button>
 
 	<script>
 

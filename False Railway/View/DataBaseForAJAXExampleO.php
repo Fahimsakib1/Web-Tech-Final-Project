@@ -22,7 +22,7 @@
 
 					}
 
-						    $sql = "SELECT trainid,trainname,passengername,address,mobile,age,startingstation,arrivalstation FROM passengerlistbytrain "; // Query
+						    $sql = "SELECT id,trainname,startingstation,arrivalstation FROM addtrain "; // Query
 
 							$result = $conn -> query($sql); // result set
 
@@ -33,7 +33,7 @@
 							//echo "<br>";
 							//echo " <h2> Train ID & Train Name Are Verified </h2";
 							//echo "<br>";
-							echo "<h2> Showing Passenger Details</h2>";
+							echo "<h2> Showing Trains</h2>";
 
 
 							echo "<ol>";
@@ -43,17 +43,9 @@
 										
 
                              echo "<br>";
-                             echo " Train ID = " . $row['trainid'];
+                             echo " Train ID = " . $row['id'];
                              echo "<br>";
                              echo " Train Name = " . $row['trainname'];
-                             echo "<br>";
-                             echo " Passenger Name = " . $row['passengername'];
-                             echo "<br>";
-                             echo " Address = " . $row['address'];
-                             echo "<br>";
-                             echo " Mobile = " . $row['mobile'];
-                             echo "<br>";
-                             echo " Age = " . $row['age'];
                              echo "<br>";
                              echo " Starting Station = " . $row['startingstation'];
                              echo "<br>";
@@ -84,6 +76,42 @@
 
  ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+	.mainDivFormButton1{
+    margin-top: 7%;
+    margin-bottom: 40%;
+    margin-left: 2px; */
+    font-size: 32px;
+    font-weight: bold;
+    background-color:  #ab8d1d ;
+    height: 35px;
+    border: none;
+    color: black;
+    border-radius: 10px;
+    padding: 15px 25px; 
+    text-decoration: none;
+    width:170px;
+    margin-left: 30px;
+}
+
+.mainDivFormButton1:hover
+{
+	background-color:#4ACC55  ;
+}
+
+</style>
+
+	<title> </title>
+</head>
+<body>
+
+</body>
+</html>
+
 
 
  <br><br>
@@ -92,15 +120,16 @@
   <table style="width: auto; border: 2px solid #000; border-collapse: collapse;">
 
 
- <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/FahimSakib.html'">Back</button>
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+ <!-- <button style="color:green; font-size:17px; font-weight: bold" type="button" onClick="document.location.href='../View/FahimSakib.html'">Back</button>-->
 
 
+<button class = "mainDivFormButton1" type="button" onClick="document.location.href='../View/FahimSakib.html'">Back</button>  
+        
 
 
 </table>
 
-<div> 
+</div> 
 
 
 
