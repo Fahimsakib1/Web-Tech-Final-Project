@@ -1,18 +1,11 @@
 <?php
-    $budget = $addBudget = $budgetErr = $budgetSuccessful = "";
+    require('../model/XbudgetExpenseModel.php');
+    $remainingAmount = $addBudget = $budgetErr = $budgetSuccessful = "";
     $expense= $addExpense = $expenseErr = $expenseSuccessful = "";
-
-    $myfile = fopen("../asset/data/remainingBudget.txt", "r") or die("Unable to open file!");
-
-    while ($line = fgets($myfile)) {
-        $words = explode(",",$line);
-        if(strcmp("1",$words[1]) == 0) {
-            $budget = $words[0]; 
-        }
+    $remainingAmount=loadRemainingAmount();
+    if($remainingAmount==0){
+        $x=addBudget(0);
     }
-    fclose($myfile);
-
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST['addBudget'])) {
             if (empty($_POST["budget"])) {
@@ -27,36 +20,19 @@
                 else{
                     $addBudget=$_POST["budget"];
 
-                    $myfile = fopen("../asset/data/remainingBudget.txt", "r") or die("Unable to open file!");
-
-                    while ($line = fgets($myfile)) {
-                        $words = explode(",",$line);
-                        if(strcmp("1",$words[1]) == 0 && $words[0]>0) {
-                            $budgetErr = "There is already a Budget. You can not add twice"; 
-                        }
-                        else{  
-                            $user = fopen("../asset/data/budget.txt", "w") or die("Unable to open file!");
-                            fwrite($user, $addBudget. "," . "1");
-                            fclose($user);
+                    if(loadPrevBudgetExistance()){
+                        $budgetErr = "There is already a Budget. You can not add twice"; 
+                    }
+                    else{
+                        if(addBudget($addBudget)){
+                            $val=addremaining($addBudget);
+                            $remainingAmount=loadRemainingAmount();
                             $budgetSuccessful = "Budget added Successfully";
-
-                            $user1 = fopen("../asset/data/remainingBudget.txt", "w") or die("Unable to open file!");
-                            fwrite($user1, $addBudget. "," . "1");
-                            fclose($user1);
-
-                            $myfilex = fopen("../asset/data/remainingBudget.txt", "r") or die("Unable to open file!");
-
-                            while ($line = fgets($myfilex)) {
-                                $words = explode(",",$line);
-                                if(strcmp("1",$words[1]) == 0) {
-                                    $budget = $words[0]; 
-                                }
-                            }
-                            fclose($myfilex);
+                        }   
+                        else{
+                            $budgetErr = "Failed to add Budget"; 
                         }
                     }
-                    fclose($myfile);
-
                 }    
             }
         }
@@ -72,48 +48,20 @@
                     $expenseErr = "Only Numbers are allowed";
                 }
                 else{
-                    if($_POST['expense']>$budget){
+                    $remainingAmount=loadRemainingAmount();
+                    if($_POST['expense']>$remainingAmount){
                         $expenseErr = "Expense can not be greater than remaining amount";
                     }
                     else{
                         $expense=$_POST['expense'];
-                        $ans=$budget-$expense;
-                        if($ans==0){
-                            $user1 = fopen("../asset/data/remainingBudget.txt", "w") or die("Unable to open file!");
-                            fwrite($user1, "0". "," . "0");
-                            fclose($user1);
-                            $expenseSuccessful = "Expense added successfully";
-
-                            $myfile = fopen("../asset/data/remainingBudget.txt", "r") or die("Unable to open file!");
-
-                            while ($line = fgets($myfile)) {
-                                $words = explode(",",$line);
-                                if(strcmp("1",$words[1]) == 0) {
-                                    $budget = $words[0]; 
-                                }
-                            }
-                            fclose($myfile);
+                        if(addExpense($expense) && addremaining($remainingAmount-$expense) ){
+                            $expenseSuccessful = "Expense added Successfully";
+                            $remainingAmount=loadRemainingAmount();  
                         }
                         else{
-                            $user1 = fopen("../asset/data/remainingBudget.txt", "w") or die("Unable to open file!");
-                            fwrite($user1, $ans. "," . "1");
-                            fclose($user1);
-                            $expenseSuccessful = "Expense added successfully";
-
-                            $myfile = fopen("../asset/data/remainingBudget.txt", "r") or die("Unable to open file!");
-
-                            while ($line = fgets($myfile)) {
-                                $words = explode(",",$line);
-                                $budget = $words[0]; 
-                            }
-                            fclose($myfile);
-                        }
-                        
+                            $expenseErr = "Failed to add Expense";
+                        }    
                     }
-
-
-
-
                 }
             }
 

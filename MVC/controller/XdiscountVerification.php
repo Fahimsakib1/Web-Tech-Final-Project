@@ -1,4 +1,5 @@
 <?php
+    require('../model/XdiscountModel.php');
     $addDiscount = '';
     $addDiscountErr = "";
     $addDiscountSuccessful = "";
@@ -21,48 +22,32 @@
                 }
                 else{
                     $addDiscount=$_POST["discount"];
-
-                    $userFound = false;
-
-                    $myfile = fopen("../asset/data/discount.txt", "r") or die("Unable to open file!");
-
-                        while ($line = fgets($myfile)) {
-                            $words = explode(",",$line);
-                            if(strcmp("1",$words[1]) == 0 ) {
-                                $addDiscountErr = "There is already a Discount. Please Remove it First"; 
-                                break;
-                            }
-                            else{  
-                                $user = fopen("../asset/data/discount.txt", "w") or die("Unable to open file!");
-                                fwrite($user, $addDiscount. "," . "1");
-                                fclose($user);
-                                $addDiscountSuccessful = "Discount added Successfully";
-                                break;
-                            }
+                    if(loadPrevDiscount()){
+                        $addDiscountErr = "There is already a Discount. Please Remove it First"; 
+                    }
+                    else{
+                        if(addDiscount($addDiscount)){
+                            $addDiscountSuccessful = "Discount added Successfully";
                         }
-                        fclose($myfile);
-
+                        else{
+                            $addDiscountErr = "Failed To add Discount"; 
+                        }
+                    } 
                 }    
             }
         }
         if (isset($_POST['removeDiscount'])) {
-
-            $myfile = fopen("../asset/data/discount.txt", "r") or die("Unable to open file!");
-
-            while ($line = fgets($myfile)) {
-                $words = explode(",",$line);
-                if(strcmp("1",$words[1]) == 0 ) {
-                    $user = fopen("../asset/data/discount.txt", "w") or die("Unable to open file!");
-                    fwrite($user, "0". "," . "0");
-                    fclose($user);
-                    $removeDiscountSuccessful = "Discount Removed Successfully";
-                    break;
+            if(!loadPrevDiscount()){
+                $removeDiscountErr = "No previous discount is found. Please add first";
+            }
+            else{
+                if(removeDiscount()){
+                    $removeDiscountSuccessful = "Discount Removed Successfully";               
                 }
                 else{
-                    $removeDiscountErr = "No previous discount is found. Please add first";
-                    break;
+                    $removeDiscountErr = "Failed to Remove Discount";
                 }
-            }
+            }                  
         }
     }
 ?>

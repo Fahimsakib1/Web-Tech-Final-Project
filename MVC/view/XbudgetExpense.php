@@ -36,7 +36,7 @@
                         <label for="budget" class="mainDivFormLabel">Remaining Amount</label>
                         <br>
                         <br>
-                        <label for="budget" class="mainDivFormLabelValue"><?php echo $budget;?></label>
+                        <label for="budget" class="mainDivFormLabelValue"><?php echo $remainingAmount;?></label>
                         <br>
                         <br>
                         <label for="expense" class="mainDivFormLabel">Enter Expense Amount</label>
