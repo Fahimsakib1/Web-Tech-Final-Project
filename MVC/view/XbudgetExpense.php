@@ -33,10 +33,10 @@
                         <br>
                     </form>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateFormX()" method="post" class="mainDivFormDis">
-                        <label for="budget" class="mainDivFormLabel">Remaining Amount</label>
+                        <label for="remainingAmount" class="mainDivFormLabel">Remaining Amount</label>
                         <br>
                         <br>
-                        <label for="budget" class="mainDivFormLabelValue"><?php echo $remainingAmount;?></label>
+                        <label for="remainingAmount" id="remainingAmount" class="mainDivFormLabelValue"><?php echo $remainingAmount;?></label>
                         <br>
                         <br>
                         <label for="expense" class="mainDivFormLabel">Enter Expense Amount</label>
@@ -46,7 +46,7 @@
                         <label for="expenseErr" id="expenseErr" class="mainDivFormLabelError"><?php echo $expenseErr;?></label>
                         <label for="expenseSuccessful" id="expenseSuccessful" class="mainDivFormLabelOk"><?php echo $expenseSuccessful;?></label>
                         <br>
-                        <input type="submit" value="Add Expense" name="addExpense" class="mainDivFormAdd">
+                        <input type="submit" value="Add Expense" name="addExpense" class="mainDivFormAdd" >
                         <br>
                         <br>
                         <div class="backBtn backBtmergin">
