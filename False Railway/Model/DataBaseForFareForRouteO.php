@@ -28,7 +28,7 @@ if(!empty($startingstation))
 					else 
 
 					{
-							echo "<h3> Data Base Connection Successful </h3>";
+							//echo "<h3> Data Base Connection Successful </h3>";
 							
 
 

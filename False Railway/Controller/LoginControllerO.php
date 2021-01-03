@@ -1,6 +1,8 @@
 <?php
 
-   
+   require ('../Model/DataBaseForLoginO.php');
+
+   //require('../Controller/LoginControllerO.php');
 
 	$name = $pwd = "";
 	$nameErr = $pwdErr = ""; 
@@ -61,27 +63,10 @@
 
    		$userFound = false;
 
-   		$myfile = fopen("../Data/LoginData.txt", "r") or die("Unable to open file!");
-   		//$myfile = fopen("/WEB TECH CODES PHP/MID TERM/False Railway/Data/LoginData.txt", "r") or die("Unable to open file!");
-         
-        /*echo "hello";*/
-        while ($line = fgets($myfile)) 
-
-        {
-         	$words = explode(",", $line);
-			$val1 = strcmp(trim($name, ""), trim($words[2], ""));
-			$val2 = strcmp(trim($pwd, ""), trim($words[3]));
-
-			if($val1 == 0 && $val2 == 0 ) 
-
-			{
-				$userFound = true;
-			}
-
-		}
-
-      	fclose($myfile);
-      	
+      	if (login($name, $pwd))
+      	{
+      		$userFound = true;
+      	}
 
 		if($userFound == false) 
 
@@ -90,7 +75,7 @@
 		}
 
 
-		if($counter == 0) 
+		if($userFound) 
 
 		{
 		 	echo "<p>Login Successful</p>";
@@ -106,7 +91,7 @@
 			$_SESSION['name']=$name;
             
             //$cookie_name ="user";
-			$cookie_value ="Railway Management & E-Ticketing System";
+			$cookie_value ="Our Project Is: Railway Management & E-Ticketing System";
 			setcookie("message", $cookie_value, time() + (86400 * 7), "/");
 
 			
@@ -127,75 +112,6 @@
 		}
 
 	}
-
-
-
-				/*if (empty($_POST["name"])) 
-			  	{
-			  		$nameErr = "Name is Required";
-			  	}
-
-			  	else
-			  	{
-			  		$name = test_input($_POST["name"]);
-
-			  		if (strlen($name)<3) 
-
-			  		{
-	      				$nameErr = "Name Must be greater then 3 letters";
-	      				$pwd = "";
-	    			}
-			  
-			  	}
-
-			  	if (empty($_POST["pwd"])) 
-
-			  	{
-			  		$pwdErr = "Password is required";
-			  	}
-
-			  	else
-			  	{
-			  		$pwd = test_input($_POST["pwd"]);
-
-			  		
-	    			
-			  	}
-		  	}
-
-
-			function test_input($data) 
-
-			{
-	 			$data = trim($data);
-	 			$data = stripslashes($data);
-	  			$data = htmlspecialchars($data);
-	  			return $data;
-			}
-
-
-           if( !empty($_POST["name"]) && !empty($_POST["pwd"]) )
-
-           {
-
-
-                    if ( $name == Fahim && $pwd == 123 )
-
-                    {
-                        
-                        header('Location: Dashboard.php');
-                        exit;
-
-                    }
-
-                    else
-                        {
-                        	header('Location: LoginFailed.php');
-                             exit;
-                        }
-
-                        
-           } */
 
 
 

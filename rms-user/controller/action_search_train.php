@@ -2,71 +2,46 @@
   session_start();
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Search train</title>
-  <h1><center>Searced Result</center></h1>
-  <hr>
-</head>
-<body style="background-color:#cccccc;">
-  <center>
-    
-  <?php
+<?php
+	include 'C:\xampp\htdocs\final_rms\controller\action_db_connect.php';
+	$train_name = "";
+	$train_name_Err = "";
 
-  $fn = fopen("../data/trains.txt", "r") or die("Unable to open file!");
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  		if (isset($_POST["train_name"]) & !empty($_POST["train_name"])) {
+    		$train_name = test_input($_POST["train_name"]);
+  		}
+  		else {
+    		echo "Invalid Train Name";
+  		}
+  	}
+	function test_input($data) { 
+          $data = trim($data); 
+          $data = stripslashes($data); 
+          $data = htmlspecialchars($data); 
+          return $data; 
+        }
+    $sql = "SELECT * FROM train WHERE train_name = '$train_name'"; // Query
+	$result = $conn -> query($sql); // result set
 
-  $status = 0;
-  echo "<br/>";
-  echo "<br/>";
+	if($result->num_rows > 0) {
+	echo "<ol>";
+	while($row = $result -> fetch_assoc()) {
+		echo "<li style='background-color: white;'>--Train name: " . $row['train_name'] . " <br>" .
+		 "--Source: " . $row['source'] . " <br>" .
+		 "--Destionation: " . $row['destination'] . "<br> " .
+		 "--Class: " . $row['class'] . " <br>" .
+		 "--Start time: " . $row['start_time'] . "<br> " .
+		 "<hr> " .
+		 "</li>";
+	}
+	echo "</ol>";
+	echo "<a href='../view/uHome.php'>Back</a>";
+}
+else {
+	echo "<p>NO TRAIN FOUND</p>";
+}
 
-  while (! feof($fn)) {
-    $line = fgets($fn);
-    $words = explode(",",$line);
-    $train_name = $words[0];
-      $train_from = $words[1];
-      $train_to = $words[2];
-      $train_class = $words[3];
-      $train_time = $words[4];
+$conn -> close();
 
-      if (strcmp(strtolower($train_name),strtolower($_POST["train"])) == 0) {
-        echo "Train Name: " . $train_name;
-        echo "<br/>";
-        echo "Starting from: " . $train_from;
-        echo "<br/>";
-        echo "Destination: " . $train_to;
-        echo "<br/>";
-        echo "Class: " . $train_class;
-        echo "<br/>";
-        echo "Starting time: " . $train_time;
-        echo "<br/>";
-        echo "<br/>";
-        $status = 1;
-        break;
-      }
-      else{
-        $status = 0;
-      }
-  }
-
-  fclose($fn);
-
-  if($status == 0){
-    echo "*Please try differnet name*";
-    echo "<br/>";
-    echo "<br/>";
-  }
-  else{
-
-  }
-
-  ?>
-
-  <input type=button onClick="location.href='http://localhost/rms/view/uHome.php'" value='Back'>
-    
-
-  </center>
-</body>
-</html>
-
-<?php include '../view/footer.php';?>
+?>

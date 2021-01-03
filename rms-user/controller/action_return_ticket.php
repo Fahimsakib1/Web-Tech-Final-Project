@@ -1,98 +1,36 @@
 <?php
   session_start();
 ?>
+<?php 
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Return</title>
-</head>
-<body>
+include 'C:\xampp\htdocs\final_rms\controller\action_db_connect.php';
 
-<?php
+$email = $_SESSION["email"];
+$sql = "SELECT * FROM ticket WHERE status = 'active' AND sold_to = '$email'"; // Query
+$result = $conn -> query($sql); // result set
 
-$ticket_number = $status = $sold_to = $date = $from = $to="";
-$ticket_numberErr = $statusErr = $sold_toErr = $dateErr = $fromErr = $toErr="";
+if($result->num_rows > 0) {
+	echo "<ol>";
+	while($row = $result -> fetch_assoc()) {
+		$_SESSION["ticket_id"] = $row['ticket_id'];
+		$id = $row['ticket_id'];
+		echo "<li style='background-color: white;'>Ticket id: " . $row['ticket_id'] . " " .
+		 "--Source: " . $row['source'] . " " .
+		 "--Destionation: " . $row['destination'] . " " .
+		 "--Adult Fare: " . $row['adult_fare'] . " " .
+		 "--Date: " . $row['date'] . "<br>" .
+		 "<button style='background-color: red; float: right;'>Return Ticket".$row['ticket_id']."</button>" . " " .
+		 "<a href='../controller/action_return_ticket_2.php?t_id=$id' style='color: red;'>Return ticket number ".$id."</a>" .
+		 "<hr> " .
+		 "</li>";
+	}
+	echo "</ol>";
 
-$update_status = "";
-
-$myfile = fopen("../data/tickets.txt", "r") or die("Unable to open file!");
-  while ($line = fgets($myfile)) {
-    $words = explode(",",$line);
-    //$ticket_number = $words[5];
-  }
-  fclose($myfile);
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $counter = 0;
-  if (isset($_POST["ticket_number"]) & !empty($_POST["ticket_number"])) {
-    $ticket_number = test_input($_POST["ticket_number"]);
-  }
-  else {
-    $ticket_numberErr = "Invalid ticket number";
-    $counter = $counter + 1;
-  }
-
-
-  if($counter == 0) {
-    $update_status = "Return requested";
-    
-    $count = 0;
-
-    $fn = fopen("../data/tickets.txt", "r") or die("Unable to open file!");
-    while (!feof($fn)) {
-      $lines = fgets($fn);
-      $words = explode(",",$lines);
-      if($ticket_number."\n" == $words[5]){
-        $delete = $lines;
-        $date = $words[2];
-        $from = $words[3];
-        $to = $words[4];
-        break;
-      }
-    }
-    $data = file("../data/tickets.txt");
-    $out = array();
-
-    foreach ($data as $line) {
-      if (strcmp($line,$delete) != 0)  {
-        $out[] = $line;
-      }
-    }
-    $fp = fopen("../data/tickets.txt", "w");
-    flock($fp, LOCK_EX);
-    foreach ($out as $line) {
-      fwrite($fp, $line);
-    }
-    flock($fp, LOCK_UN);
-    fclose($fp);
-
-    $user = fopen("../data/tickets.txt", "a") or die("Unable to open file!");
-    fwrite($user, "returned". "," . $_SESSION['mail']. ",". $date. ",". $from . ",". $to . ",". $ticket_number . "\n");
-   }
-  else {
-    $update_status = "Return Failed";
-    $counter = 0;
-  }
 }
 else {
-  $update_status = "Return Failed ";
+	echo "<p>NO TICKET FOUND FOR SELL</p>";
 }
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-?>
-<?php 
-  echo "<br/>";
-  echo $update_status;
-  echo "<br/>";
-  echo "<a href='../view/uHome.php'>Back</a>";
-  echo "<br/>";
-?>
+$conn -> close();
 
-</body>
-</html>
+?>

@@ -5,9 +5,7 @@ $StartingStation = filter_input(INPUT_POST,'StartingStation');
 $ArrivalStation = filter_input(INPUT_POST,'ArrivalStation');
 
 
-if(!empty($Tid))
 
-{
                    
                     $servername = "localhost";
 					$dbusername = "root";
@@ -26,13 +24,17 @@ if(!empty($Tid))
 	else 
 
 	{
-							echo "<h3> Data Base Connection Successful </h3>";
+							//echo "<h3> Data Base Connection Successful </h3>";
 							
 
 
 					    /*$sql = "INSERT INTO addtrain (id,trainname,startingstation,arrivalstation) values ('$Tid','$Tname','$StartingStation','$ArrivalStation')"; */
 
-					    $sql = "DELETE FROM addtrain WHERE id='".$Tid."'";
+
+					    if($Tid<=10)
+
+					    {
+                          	  $sql = "DELETE FROM addtrain WHERE id='".$Tid."'";
 
                          if ($conn->query($sql))
 
@@ -52,7 +54,7 @@ if(!empty($Tid))
 									// show result
 							echo " <h2> Train Removed Successfully </h2>";
 							//echo "<br>";
-							echo "<h2>Database Results After Train Removed</h2>";
+							echo "<h2>Results After Train Removed</h2>";
 
 							echo "<ol>";
 							while($row = $result -> fetch_assoc()) 
@@ -78,6 +80,10 @@ if(!empty($Tid))
 
 					}
 
+					    }
+
+				
+
 							else 
 								{
 									echo "<h1> Wrong Train ID Inserted...</h1>";
@@ -93,32 +99,16 @@ if(!empty($Tid))
 
                         	/* echo " No Records Uploaded.....  Error is : ".$sql ."<br>"; */
 
-                        	echo " No Record Uploaded....."."<br>";
+                        	echo "<h1> Wrong Train ID Inserted...</h1>";
+                        	echo "<h2> Train ID Is Not Verified </h2";
 
                            }
-
-
-
 
 
                            $conn->close();
 
     }
                         
-
-
-}
-
-
-else
-
-{
-
-	echo " Train ID Must be filled";
-	die();
-}
-
-
 
  ?>
 
