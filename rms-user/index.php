@@ -1,60 +1,17 @@
-<?php
-include 'view/header.php'
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>User Login</title>
-
-	<style>
-	form {
-  		border-style: ridge;
-  		background-color: white;
-  		padding: 20px;
-  		left: 41%;
-   		top: 28%;
-    	
-    	position: absolute;
-
-	}
-	body{
-		background-color: #cccccc;
-	}
-	</style>
-
-	<h1 style="text-align: center;">Welcome to Railway</h1>
-
+	<link rel="stylesheet" href="../final_rms/view/css/index.css">
 </head>
 <body >
-	<center>
-		<hr/>
-
-	<form method="POST" action="/rms/controller/action_login.php" >
-
-		<label style="font-size:20px" border-style: groove;>Email</label>
-		<br/>
-		<input type="text" name="mail" required>
-		<br/>
-		<br/>
-		<label style="font-size:20px">Password</label>
-		<br/>
-		<input type="password" name="password" required>
-		<br/><br/>
-		<input type="Submit" value=" Sign in ">
-		<br/>
-		<hr>
-		<input type="button" onClick="location.href='http://localhost/rms/view/signUp.php'" name="button" value="Sign Up">
-		<br/>
-
-		<?php include 'view/footer.php';?>
-
-
+	<form class="box" method="POST" action="../final_rms/controller/action_login.php" >
+		<h1>Login</h1>
+		<input type="text" name="email" placeholder="email" required>
+		<input type="password" name="password" placeholder="password" required>
+		<input type="Submit" name="Submit" value=" Sign in ">
+		<button type="button" onClick="location.href='../final_rms/view/signup.php'">Sign UP</button>
 	</form>	
-		
-	</center>
-
-
 </body>
 </html>
 

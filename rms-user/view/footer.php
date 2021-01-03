@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 
-<body">
+<body>
 	<center>
 	<?php
 		echo "Copyright @ 2020";
