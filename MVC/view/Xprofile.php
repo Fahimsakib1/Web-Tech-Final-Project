@@ -49,6 +49,9 @@
                             <a href="Xhome.php" class="backBtnA">Back</a>
                         </div>
                     </form>
+                    <!-- <label for="" id="loadProfile">.</label>
+                        <br>
+                        <button onclick="loadProfile()">Ajax Button</button> -->
                 </div>
             
             </main>
@@ -57,5 +60,23 @@
             </footer>
         </div>
     </div>
+    <script>
+
+            function loadProfile() {
+                    var xhttp;
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log("hello");
+                        document.getElementById("loadProfile").innerHTML = this.responseText;
+                    }
+                    };
+                    xhttp.open("GET", "XrmModel.php", true);
+                    xhttp.send();
+                }
+    
+    
+
+    </script>
 </body>
 </html>

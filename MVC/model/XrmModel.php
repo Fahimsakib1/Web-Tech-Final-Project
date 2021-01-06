@@ -8,18 +8,20 @@
             die("Connection failed: " . $conn->connect_error);
             }
             return $conn;
+            
 
-            $sql = "SELECT COUNT(*) FROM ticket WHERE status='".$val."' ";
+            $sql = "SELECT * FROM userinfo WHERE userName='".$userName."' ";
             $result = connectionOpen()->query($sql);
-
-            if($result->num_rows > 0) {
-                $ret = $result->fetch_assoc();
-                connectionOpen()->close();
-                echo  $ret["COUNT(*)"];
-
-            }
-            else{
-                echo  "0";
+            echo "working";
+            if ($result->num_rows > 0) {
+                echo "Hello";
+                while($ret = $result -> fetch_assoc()){
+                    echo $ret['name']." ".$ret['userName']." ".$ret['email']." ".$ret['phone'];
+                }             
+                
+            } 
+            else {
+                echo "Error";
             }
 
             $conn -> close();
